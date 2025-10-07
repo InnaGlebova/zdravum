@@ -1,0 +1,243 @@
+/* who */
+.who__inner {
+  position: relative;
+  display: flex;
+  min-height: 430px;
+  align-items: center;
+  justify-content: center;
+}
+
+.who__list {
+  counter-reset: list 0;
+}
+
+.who__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.who__list li p {
+  color: #333333;
+  max-width: 180px;
+  font-weight: 500;
+}
+
+.who__list li::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: counter(list, decimal-leading-zero);
+  counter-increment: list;
+  width: 36px;
+  height: 36px;
+  color: #e4ecee;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 82px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.who__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+  max-width: 420px;
+  max-height: 420px;
+  min-width: 420px;
+  min-height: 420px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  border-radius: 50%;
+
+  & img {
+    max-width: 420px;
+    max-height: 420px;
+    min-width: 420px;
+    min-height: 420px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+.who__content {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.who__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 270px;
+}
+
+.who__subtitle {
+  max-width: 240px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1300px) {
+  .who__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 450px;
+    grid-row-gap: 135px;
+  }
+
+  .who__list li:nth-child(1) {
+    grid-area: 1/1/2/2;
+    padding-left: 80px;
+    &:before {
+      left: -70px;
+    }
+  }
+
+  .who__list li:nth-child(2) {
+    grid-area: 2/1/3/2;
+    &:before {
+      left: -130px;
+    }
+  }
+
+  .who__list li:nth-child(3) {
+    grid-area: 3/1/4/2;
+    padding-left: 80px;
+    &:before {
+      left: -70px;
+    }
+  }
+
+  .who__list li:nth-child(4) {
+    grid-area: 1/2/2/3;
+    padding-left: 20px;
+    &:before {
+      right: -20px;
+    }
+  }
+
+  .who__list li:nth-child(5) {
+    grid-area: 2/2/3/3;
+    padding-left: 90px;
+    &:before {
+      right: -70px;
+    }
+  }
+
+  .who__list li:nth-child(6) {
+    grid-area: 3/2/4/3;
+    padding-left: 20px;
+    &:before {
+      right: -20px;
+    }
+  }
+  .who__list li:nth-child(-n + 3) {
+    text-align: right;
+  }
+}
+
+@media (max-width: 1299px) {
+  .who__item {
+    display: none;
+  }
+  .who__list li p {
+    max-width: fit-content;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .who__list li {
+    max-width: fit-content;
+    padding-bottom: 20px;
+    &::before {
+      left: -130px;
+    }
+  }
+
+  .who__list {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .who__list li:nth-child(1) {
+    margin-left: 130px;
+  }
+
+  .who__list li:nth-child(2) {
+    margin-left: auto;
+    margin-right: 46px;
+  }
+
+  .who__list li:nth-child(3) {
+    margin-left: 130px;
+  }
+
+  .who__list li:nth-child(4) {
+    margin-left: auto;
+  }
+  .who__list li:nth-child(5) {
+    margin-left: 130px;
+  }
+
+  .who__list li:nth-child(6) {
+    margin-left: auto;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .who__list li {
+    margin: 0 auto !important;
+    margin-left: 130px !important;
+  }
+}
+
+@media (max-width: 550px) {
+    .who__list li::before {
+      font-size: 62px;
+      left: -100px;
+      height: auto;
+      transform: translate3d(0, 0, 0);
+      top: 0;
+    }
+
+    .who__list li {
+        margin-left: 100px !important;
+      }
+  }

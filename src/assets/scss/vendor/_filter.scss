@@ -1,0 +1,219 @@
+/* filter */
+.filter__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 17px 20px;
+  right: 0;
+  background-color: #e1eeed;
+  color: #349c83;
+  -webkit-transition: opacity 0.2s linear, top 0.4s linear,
+    border-radius 0.3s linear;
+  transition: opacity 0.2s linear, top 0.4s linear, border-radius 0.3s linear;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 10px;
+  z-index: 30;
+}
+
+.filter__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter__list ul button {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.filter__list ul button:hover {
+  color: $primary-color;
+}
+
+.filter__current {
+  border-radius: 10px;
+  position: relative;
+  z-index: 31;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 25px;
+  background-color: #e1eeed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #349c83;
+  border: 1px solid transparent;
+  -webkit-transition: border-radius 0.3s linear;
+  transition: border-radius 0.3s linear;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter__current::after {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #349c83;
+  border-bottom: 2px solid #349c83;
+  -webkit-transition: border-color 0.4s linear, -webkit-transform 0.4s linear;
+  transition: border-color 0.4s linear, -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear, border-color 0.4s linear;
+  transition: transform 0.4s linear, border-color 0.4s linear,
+    -webkit-transform 0.4s linear;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.filter__wrappper {
+  width: 100%;
+  max-width: 315px;
+  min-width: fit-content;
+}
+
+@-webkit-keyframes filterHide {
+  0% {
+    display: -webkit-box;
+    display: flex;
+    scale: 1;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+@keyframes filterHide {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    scale: 1;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes filterShow {
+  0% {
+    display: none;
+    scale: 0.5;
+    opacity: 0;
+  }
+
+  100% {
+    display: -webkit-box;
+    display: flex;
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes filterShow {
+  0% {
+    display: none;
+    scale: 0.5;
+    opacity: 0;
+  }
+
+  100% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.filter__item {
+  -webkit-animation: filterShow 0.5s forwards;
+  animation: filterShow 0.5s forwards;
+}
+
+.filter__item.hide {
+  -webkit-animation: filterHide 0.5s forwards;
+  animation: filterHide 0.5s forwards;
+  display: none;
+}
+
+.filter__wrappper {
+  position: relative;
+}
+
+/* filter media */
+@media (min-width: 1024px) {
+  .filter__wrappper:hover .filter__list {
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .filter__wrappper:hover .filter__current {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .filter__wrappper:hover .filter__current::after {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .filter__list.active {
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .filter__current.active {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .filter__current.active::after {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .filter__wrappper {
+    max-width: 100%;
+  }
+
+  .filter__current {
+    padding: 15px 18px;
+    font-size: 12px;
+  }
+
+  .filter__list ul button {
+    font-size: 12px;
+  }
+
+  .filter__list {
+    padding: 15px 18px;
+  }
+}

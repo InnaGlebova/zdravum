@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Bold'), local('Manrope-Bold'),
+      url('../fonts/Manrope/Manrope-Bold.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Semibold'), local('Manrope-Semibold'),
+      url('../fonts/Manrope/Manrope-Semibold.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Regular'), local('Manrope-Regular'),
+      url('../fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Light'), local('Manrope-Light'),
+      url('../fonts/Manrope/Manrope-Light.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Thin'), local('Manrope-Thin'),
+      url('../fonts/Manrope/Manrope-Thin.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Medium'), local('Manrope-Medium'),
+      url('../fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope ExtraBold'), local('Manrope-ExtraBold'),
+      url('../fonts/Manrope/Manrope-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Manrope/Manrope-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
