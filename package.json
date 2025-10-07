@@ -1,7 +1,7 @@
 {
-  "name": "inna",
+  "name": "zdravum",
   "version": "1.0.0",
-  "description": "no",
+  "description": "Многостраничный сайт медицинской клиники",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,26 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "inna",
+  "homepage": "https://innaglebova.github.io/zdravum/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InnaGlebova/zdravum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/InnaGlebova/zdravum/issues"
+  },
+  "keywords": ["multipage", "adaptive", "bem", "scss", "gulp"],
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "chalk": "^5.3.0",
     "del": "^6.1.1",
     "fs": "^0.0.1-security",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0"
   },
@@ -32,6 +44,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
     "panini": "^1.7.2",
     "sass": "^1.63.3",
     "swiper": "^9.4.1",
