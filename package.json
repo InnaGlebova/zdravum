@@ -4,7 +4,11 @@
   "description": "no",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "inna",
   "license": "ISC",
