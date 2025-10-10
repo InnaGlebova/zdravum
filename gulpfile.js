@@ -11,7 +11,6 @@ const cssnano = require("cssnano");
 const rigger = require("gulp-rigger");
 const uglify = require("gulp-uglify");
 const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
 const webp = require('gulp-webp');
 const plumber = require("gulp-plumber");
 const del = require("del");
