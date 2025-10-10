@@ -21,7 +21,6 @@
 }
 .header__center {
   padding: 20px 0;
-  border-bottom: 1px solid #e2ebee;
 }
 
 .header__inner {
@@ -63,7 +62,7 @@
 .header__location-btn {
   text-align: left;
   text-decoration: underline;
-  color: $primary-text;
+  color: $secondary-color;
   font-size: 14px;
   margin-bottom: 5px;
   &:hover {
@@ -580,7 +579,7 @@
 
   .header__nav-item {
     width: 100%;
-    border-bottom: 1px solid rgba($primary-stroke, 0.5);
+    border-bottom: 1px solid rgba($primary-color, 0.5);
   }
 
   .header__nav-item:last-child {

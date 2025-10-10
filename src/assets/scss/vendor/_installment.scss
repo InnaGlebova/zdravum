@@ -1,0 +1,218 @@
+/* installment */
+
+.installment {
+  padding: 80px 0;
+  margin: 80px 0;
+  background: $primary-color;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    color: white;
+    height: 100%;
+    min-height: 100%;
+    gap: 100px;
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      color: white;
+      height: 100%;
+    }
+  }
+
+  &__badge {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    padding: 15px 30px;
+    background: #ffffff;
+    color: $primary-color;
+    border: none;
+    border-radius: $border-radius-large;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__picture {
+    max-width: 752px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  // Карточки
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 250px;
+    margin-left: 65px;
+    width: 100%;
+  }
+
+  &__card {
+    background: $primary-background;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 24px;
+    border-radius: $border-radius-large;
+    position: relative;
+    gap: 28px;
+    line-height: 1;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 4px;
+      height: 66%;
+      background-color: $primary-color;
+      position: absolute;
+      right: 24px;
+    }
+
+    .card__value {
+      font-size: 64px;
+      font-weight: 700;
+      color: $primary-color;
+
+      & span {
+        font-size: 24px;
+      }
+    }
+
+    .card__label {
+      font-size: 20px;
+      font-weight: 500;
+      color: $secondary-color;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    &__content {
+      padding-right: 0;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__cards {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__card {
+      flex: 1;
+      max-width: 150px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__cards {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__card {
+      max-width: 100%;
+    }
+
+    &__visual {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__description {
+      font-size: 15px;
+    }
+
+    &__btn {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+
+    &__visual {
+      height: 150px;
+    }
+
+    .terminal {
+      width: 100px;
+      height: 70px;
+
+      &__body {
+        height: 50px;
+      }
+
+      &__screen {
+        width: 84px;
+        height: 34px;
+      }
+    }
+  }
+}

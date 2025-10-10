@@ -11,6 +11,7 @@ const cssnano = require("cssnano");
 const rigger = require("gulp-rigger");
 const uglify = require("gulp-uglify");
 const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
 const webp = require('gulp-webp');
 const plumber = require("gulp-plumber");
 const del = require("del");
@@ -135,13 +136,13 @@ function images(cb) {
      gulp.src(path.src.images)
    .pipe(imagemin( [
 	imagemin.mozjpeg({quality: 95, progressive: true}),
-	imagemin.optipng({optimizationLevel: 3}),],
+	imagemin.optipng({optimizationLevel: 3, bitDepthReduction: false, colorTypeReduction: false, paletteReduction: false}),],
     ))
     .pipe(dest(path.build.images))
     return src(path.src.imagesWebp)
     .pipe(imagemin( [
 	imagemin.mozjpeg({quality: 100, progressive: true}),
-	imagemin.optipng({optimizationLevel: 3}),],
+	imagemin.optipng({optimizationLevel: 3, bitDepthReduction: false, colorTypeReduction: false, paletteReduction: false}),],
     ))
     .pipe(webp({quality: 95}))
     .pipe(dest(path.build.images))

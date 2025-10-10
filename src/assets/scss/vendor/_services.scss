@@ -1,120 +1,83 @@
 /* services */
-.services__inner {
+.services {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__badge {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__title {
+margin-bottom: 60px;
+  }
+}
+.tabs__wrapper.services-tabs__tabs__wrapper {
+  gap: 10px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-width: 100%;
-  width: 100%;
-  gap: 20px;
+  max-width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.services-tabs__tab.tab {
+  flex-basis: calc(33.333% - 6.67px);
+  max-width: calc(33.333% - 6.67px);
+  background-color: $primary-background;
+
+  &.active {
+    background-color: $primary-gradient !important;
+    color: white;
+  }
 }
 
 .services__item {
-  flex-basis: calc(25% - 15px);
-  max-height: 315px;
-  min-height: 315px;
-  height: 100%;
+  flex-basis: calc(25% - 7.5px);
+  max-width: calc(25% - 7.5px);
   width: 100%;
   display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 20px;
-    background: rgb(6, 38, 45, 0.5);
-    transition: background 0.3s linear;
-  }
-}
-
-.services__item:hover::before {
-  background: #10586880;
-}
-
-.services__picture {
-  width: 100%;
-  max-height: 315px;
-  min-height: 315px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  & img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 315px;
-    min-height: 315px;
-    height: 100%;
-    border-radius: 20px;
-  }
-}
-
-.services__item-wrap {
-  position: absolute;
-  height: fit-content;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-
-  & p {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: left;
-  }
-
-  & span {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.4;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: $border-radius-medium;
+  background-color: white;
+  border: 1px solid $primary-color;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover {
+    background: rgba($primary-color, 0.3);
   }
 }
 
 .services__arrow {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 10px;
+  width: 54px;
+  height: 54px;
+  background-color: $primary-background;
+  border-radius: $border-radius-small;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid transparent;
   transition: border 0.3s linear;
 
-  & span {
-    position: relative;
-    display: flex;
-    width: 12px;
-    height: 12px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      display: block;
-      background: url(../img/icons/services-arrow.svg);
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 14px;
+    background: url(../img/icons/arrow-link.svg) no-repeat center center;
   }
 }
 
@@ -130,12 +93,6 @@
     max-height: 250px;
     min-height: 250px;
   }
-
-  .services__picture,
-  .services__picture img {
-    max-height: 250px;
-    min-height: 250px;
-  }
 }
 
 @media (max-width: 951px) {
@@ -143,25 +100,10 @@
     max-height: 185px;
     min-height: 185px;
   }
-
-  .services__picture,
-  .services__picture img {
-    max-height: 185px;
-    min-height: 185px;
-  }
-
-  .services__item-wrap p {
-    font-size: 20px;
-  }
   .services__arrow {
     width: 35px;
     height: 35px;
     border-radius: 5px;
-
-  }
-
-  .services__item-wrap span {
-    font-size: 14px;
   }
 }
 
@@ -177,12 +119,6 @@
     border-radius: 10px;
   }
 
-  .services__picture {
-    border-radius: 10px;
-    & img {
-      border-radius: 10px;
-    }
-  }
   .services__item:before {
     border-radius: 10px;
   }

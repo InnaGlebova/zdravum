@@ -2,29 +2,13 @@
 $primary-color: #139297;
 $secondary-color: #03363c;
 $tertiary-color: #dbffff;
-$gradient-color: linear-gradient(
+$primary-gradient: linear-gradient(
   90deg,
   rgba(0, 115, 122, 1) 0%,
   rgba(1, 184, 180, 1) 100%
 );
 
 $primary-background: #edf6f6;
-$secondary-background: #dbffff;
-$tertiary-background: #ffffff;
-$gradient-background: linear-gradient(
-  90deg,
-  rgba(0, 115, 122, 1) 0%,
-  rgba(1, 184, 180, 1) 100%
-);
-
-$primary-text: #03363c;
-$secondary-text: #03373db3;
-$tertiary-text: #139297;
-$quaternary-text: #ffffff;
-
-$primary-stroke: #139297;
-$secondary-stroke: #03363c;
-$tertiary-stroke: #ffffff;
 
 /* Border radius variables */
 $border-radius-large: 30px;
@@ -83,7 +67,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.43;
-  color: #333;
+  color: $secondary-color;
   font-family: "Manrope", sans-serif;
   background-color: #fff;
 
@@ -103,7 +87,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1800px;
+  max-width: 1850px;
   padding: 0 60px;
   margin: 0 auto;
 }
@@ -259,19 +243,29 @@ h4 {
   margin-bottom: 160px;
 }
 
-.section-title {
-  display: block;
-  margin-bottom: 60px;
-  width: 100%;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1;
-  text-align: center;
-  color: #001b21;
+.section-padding {
+  padding: 80px 0;
 }
 
-.section-title_sm {
-  margin-bottom: 30px;
+.section-title {
+  color: $secondary-color;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  & span {
+    color: $primary-color;
+  }
+}
+
+.section-badge {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .page-title {
@@ -284,11 +278,10 @@ h4 {
 }
 
 .page-subtitle {
-  color: #738285;
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.56;
+  line-height: 1.1;
   text-align: center;
 }
 
@@ -306,10 +299,6 @@ h4 {
 
   & a {
     white-space: nowrap;
-  }
-
-  & .section-title {
-    margin-bottom: 0;
   }
 }
 
@@ -465,6 +454,32 @@ textarea {
   }
 }
 
+.tertiary-btn {
+  background-color: white;
+  color: $primary-color;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
+}
+
+.quaternary-btn {
+  background-color: $primary-color;
+  color: white;
+  border: 1px solid white;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: white;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
 .swiper-btns {
   display: flex;
   justify-content: center;
@@ -601,7 +616,7 @@ textarea {
     font-size: 9.41px;
     line-height: 1;
     font-weight: 400;
-    color: $primary-text;
+    color: $secondary-color;
   }
 
   & span {
@@ -690,7 +705,7 @@ textarea {
 }
 
 .color-bg {
-  background-color: #f2f8f9;
+  background-color: $primary-background;
 }
 
 .section-padding-bottom {
@@ -841,11 +856,6 @@ textarea {
     margin-bottom: 100px;
   }
 
-  .section-title {
-    font-size: 38px;
-    margin-bottom: 35px;
-  }
-
   .section__plashka {
     border-radius: 10px;
     display: flex;
@@ -907,10 +917,6 @@ textarea {
     margin-bottom: 70px;
   }
 
-  .section-title {
-    font-size: 25px;
-    margin-bottom: 25px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -929,13 +935,20 @@ textarea {
 @import "vendor/_swiperCustom";
 @import "vendor/_header";
 @import "vendor/_intro";
+@import "vendor/_help";
+@import "vendor/_about";
+@import "vendor/_installment";
+@import "vendor/_guarantees";
+@import "vendor/_stocks";
+@import "vendor/_stages";
+@import "vendor/_assistance";
 @import "vendor/_footer";
 @import "vendor/_popup";
 @import "vendor/_price";
 @import "vendor/_advantages";
+@import "vendor/_offer";
 @import "vendor/_services";
 @import "vendor/_consultation";
-@import "vendor/_stocks";
 @import "vendor/_text";
 @import "vendor/_faq";
 @import "vendor/_reviews";
@@ -944,7 +957,6 @@ textarea {
 @import "vendor/_gallery";
 @import "vendor/_callback";
 @import "vendor/_articles";
-@import "vendor/_who";
 @import "vendor/_navigation";
 @import "vendor/_reviewer";
 @import "vendor/_filter";

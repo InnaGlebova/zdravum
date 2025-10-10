@@ -1120,3 +1120,34 @@ if (filters.length > 0) {
   });
 }
 // /* end  filter */
+
+// Intro wave animation
+document.addEventListener("DOMContentLoaded", function() {
+  const introTitle = document.querySelector('.intro__title');
+  if (introTitle) {
+    const spans = introTitle.querySelectorAll('span');
+    
+    // Функция для остановки анимации
+    function stopWaveAnimation() {
+      spans.forEach(span => {
+        span.style.animation = 'letterAppear 0.6s ease-out forwards';
+        span.style.animationFillMode = 'forwards';
+      });
+    }
+    
+    // Останавливаем волновую анимацию через 4 секунды после загрузки страницы
+    setTimeout(() => {
+      stopWaveAnimation();
+    }, 4000);
+    
+    // Также останавливаем при взаимодействии пользователя
+    spans.forEach(span => {
+      span.addEventListener('animationend', function(e) {
+        if (e.animationName === 'wave') {
+          span.style.animation = 'letterAppear 0.6s ease-out forwards';
+          span.style.animationFillMode = 'forwards';
+        }
+      });
+    });
+  }
+});

@@ -1,0 +1,169 @@
+/* guarantees */
+
+.guarantees {
+  padding: 80px 0;
+  margin: 80px 0;
+  background: $primary-background;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__badge {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: $border-radius-medium;
+    transition: all 0.3s linear;
+    height: auto;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    background: $primary-color;
+    border-radius: $border-radius-small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  &__card-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.5;
+  }
+
+  // Адаптивность
+  @media (max-width: 1200px) {
+    &__grid {
+      gap: 24px;
+    }
+
+    &__card {
+      padding: 25px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+
+    &__header {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    &__card {
+      padding: 20px;
+    }
+
+    &__card-title {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__grid {
+      gap: 16px;
+    }
+
+    &__card {
+      padding: 18px;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
+    }
+
+    &__card-title {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    &__card-description {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    &__card {
+      padding: 16px;
+      text-align: center;
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 16px auto;
+    }
+
+    &__card-title {
+      font-size: 14px;
+    }
+
+    &__card-description {
+      font-size: 12px;
+    }
+  }
+}
