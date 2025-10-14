@@ -11,6 +11,7 @@
     <meta name='keywords' content='' />
     <meta name='description' content='' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="assets/js/swiper-bundle.min.js" defer></script> 
     <script src="assets/js/fancybox.min.js" defer></script>
@@ -1247,52 +1248,62 @@
     
     <section class="guarantees">
       <div class="container">
-        <div class="guarantees__header">
+        <div class="guarantees__header animation-item transform-item">
           <div class="guarantees__badge section-badge">[ Гарантии обслуживания ]</div>
           <h2 class="guarantees__title section-title"><span>Здравум</span> — надежная клиника</h2>
         </div>
     
         <div class="guarantees__grid">
-          <div class="guarantees__card">
-            <picture class="guarantees__picture">
-              <source srcset="assets/img/guarantees/1.svg" type="image/svg+xml" />
-              <img src="assets/img/guarantees/1.png" alt="Проверенные методики" />
-            </picture>
-            <h3 class="guarantees__card-title">Проверенные методики</h3>
+          <div class="guarantees__card animation-item transform-item">
+            <div class="guarantees__card-wrap">
+              <h3 class="guarantees__card-title">Проверенные методики</h3>
+              <picture class="guarantees__picture">
+                <source srcset="assets/img/guarantees/1.svg" type="image/svg+xml" />
+                <img src="assets/img/guarantees/1.png" alt="Проверенные методики" />
+              </picture>
+            </div>
             <p class="guarantees__card-description">
               Работаем по клиническим стандартам, используем только сертифицированные препараты и доказательные подходы
             </p>
           </div>
     
-          <div class="guarantees__card">
-            <picture class="guarantees__picture">
-              <source srcset="assets/img/guarantees/2.svg" type="image/svg+xml" />
-              <img src="assets/img/guarantees/2.png" alt="Ответственность за результат" />
-            </picture>
-            <h3 class="guarantees__card-title">Ответственность за результат</h3>
+          <div class="guarantees__card animation-item transform-item">
+            <div class="guarantees__card-wrap">
+              <h3 class="guarantees__card-title">Ответственность за результат</h3>
+              <picture class="guarantees__picture">
+                <source srcset="assets/img/guarantees/2.svg" type="image/svg+xml" />
+                <img src="assets/img/guarantees/2.png" alt="Ответственность за результат" />
+              </picture>
+            </div>
             <p class="guarantees__card-description">
               Мы сопровождаем пациента до стойкой ремиссии, поддерживаем после завершения курса и не оставляем наедине с
               проблемой
             </p>
           </div>
     
-          <div class="guarantees__card">
-            <picture class="guarantees__picture">
-              <source srcset="assets/img/guarantees/3.svg" type="image/svg+xml" />
-              <img src="assets/img/guarantees/3.png" alt="Ответственность за результат" />
-            </picture>
-            <h3 class="guarantees__card-title">Полная защита данных</h3>
+          <div class="guarantees__card animation-item transform-item">
+            <div class="guarantees__card-wrap">
+              <h3 class="guarantees__card-title">Полная защита данных</h3>
+              <picture class="guarantees__picture">
+                <source srcset="assets/img/guarantees/3.svg" type="image/svg+xml" />
+                <img src="assets/img/guarantees/3.png" alt="Ответственность за результат" />
+              </picture>
+    
+            </div>
             <p class="guarantees__card-description">
               Вся информация о лечении остаётся строго внутри клиники. Мы ценим доверие и репутацию пациентов
             </p>
           </div>
     
-          <div class="guarantees__card">
-            <picture class="guarantees__picture">
-              <source srcset="assets/img/guarantees/4.svg" type="image/svg+xml" />
-              <img src="assets/img/guarantees/4.png" alt="Ответственность за результат" />
-            </picture>
-            <h3 class="guarantees__card-title">Прозрачные условия</h3>
+          <div class="guarantees__card animation-item transform-item">
+            <div class="guarantees__card-wrap">
+              <h3 class="guarantees__card-title">Прозрачные условия</h3>
+              <picture class="guarantees__picture">
+                <source srcset="assets/img/guarantees/4.svg" type="image/svg+xml" />
+                <img src="assets/img/guarantees/4.png" alt="Ответственность за результат" />
+              </picture>
+            </div>
+    
             <p class="guarantees__card-description">
               Фиксированные цены, удобные способы оплаты и возможность рассрочки без переплат
             </p>
@@ -1301,428 +1312,394 @@
       </div>
     </section>
     
-    <section class="stocks section-offset">
+    <section class="stocks section-padding">
       <div class="container">
         <div class="stocks__header">
           <div class="stocks__header-left">
-            <div class="stocks__badge">Акции и скидки</div>
-            <h2 class="stocks__title">Начать лечение проще, чем кажется</h2>
+            <div class="stocks__badge section-badge">[Акции и скидки]</div>
+            <h2 class="stocks__title section-title"><span>Начать лечение проще,</span> чем кажется</h2>
           </div>
-          <button class="stocks__view-all-btn" type="button">
+          <a class="stocks__view-all-btn secondary-btn standart-btn" href="#">
             Смотреть все акции
-          </button>
+          </a>
         </div>
     
-        <div class="stocks__grid">
-          <!-- Большая карточка слева -->
-          <div class="stocks__card stocks__card--large">
+        <div class="stocks__inner">
+          <div class="stocks__card change__item-title stocks__card--first">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
-                <h3 class="stocks__card-title">Скидка на первый приём врача</h3>
-                <p class="stocks__card-description">
+                <h3 class="stocks__card-title current-title">Скидка на первый приём врача</h3>
+                <p class="stocks__card-description current-subtitle">
                   Первичная консультация и диагностика нарколога со скидкой 30% в течение месяца
                 </p>
-                <button class="stocks__card-btn" type="button">
-                  Узнать подробнее
-                </button>
               </div>
-              <div class="stocks__card-image">
-                <picture>
-                  <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                  <img src="assets/img/intro/doctor.png" alt="Врач с диагностикой" />
-                </picture>
+              <button class="stocks__card-btn popup-btn secondary-btn standart-btn change__item-btn"
+                data-path="popup-change">
+                Узнать подробнее
+              </button>
+            </div>
+            <picture class="stocks__card-picture stocks__card-picture--first">
+              <source srcset="assets/img/stocks/doc.webp" type="image/webp" />
+              <img src="assets/img/stocks/doc.png" alt="Врач с диагностикой" />
+            </picture>
+          </div>
+    
+          <div class="stocks__card change__item-title">
+            <div class="stocks__card-content">
+              <div class="stocks__card-text">
+                <h3 class="stocks__card-title current-title">«Первая неделя трезвости»</h3>
+                <p class="stocks__card-description current-subtitle">
+                  Пройди детокс – получи 7 дней психологической поддержки бесплатно
+                </p>
               </div>
-            </div>
-          </div>
-    
-          <!-- Маленькие карточки справа -->
-          <div class="stocks__card stocks__card--small">
-            <div class="stocks__card-overlay"></div>
-            <div class="stocks__card-content">
-              <h3 class="stocks__card-title">«Первая неделя трезвости»</h3>
-              <p class="stocks__card-description">
-                Пройди детокс – получи 7 дней психологической поддержки бесплатно
-              </p>
-              <button class="stocks__card-btn" type="button">
+              <button class="stocks__card-btn popup-btn primary-btn standart-btn change__item-btn" data-path="popup-change">
                 Узнать подробнее
               </button>
             </div>
-            <div class="stocks__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Мужчина в размышлениях" />
-              </picture>
-            </div>
+            <picture class="stocks__card-picture">
+              <source srcset="assets/img/stocks/1.webp" type="image/webp" />
+              <img src="assets/img/stocks/1.jpg" alt="мужчина в размышлениях" />
+            </picture>
           </div>
     
-          <div class="stocks__card stocks__card--small">
-            <div class="stocks__card-overlay"></div>
+          <div class="stocks__card change__item-title">
             <div class="stocks__card-content">
-              <h3 class="stocks__card-title">«Здоровье без возраста»</h3>
-              <p class="stocks__card-description">
-                Пенсионерам предоставляются льготные условия и скидки на лечение
-              </p>
-              <button class="stocks__card-btn" type="button">
+              <div class="stocks__card-text">
+                <h3 class="stocks__card-title current-title">«Здоровье без возраста»</h3>
+                <p class="stocks__card-description current-subtitle">
+                  Пенсионерам предоставляются льготные условия и скидки на лечение
+                </p>
+              </div>
+              <button class="stocks__card-btn popup-btn primary-btn standart-btn change__item-btn" data-path="popup-change">
                 Узнать подробнее
               </button>
             </div>
-            <div class="stocks__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Пожилой мужчина" />
-              </picture>
-            </div>
+            <picture class="stocks__card-picture">
+              <source srcset="assets/img/stocks/2.webp" type="image/webp" />
+              <img src="assets/img/stocks/2.jpg" alt="Пожилой мужчина" />
+            </picture>
           </div>
     
-          <div class="stocks__card stocks__card--small">
-            <div class="stocks__card-overlay"></div>
+          <div class="stocks__card change__item-title">
             <div class="stocks__card-content">
-              <h3 class="stocks__card-title">«Новый старт»</h3>
-              <p class="stocks__card-description">
-                Скидка 30% на программы, начатые в течение 48 часов после обращения
-              </p>
-              <button class="stocks__card-btn" type="button">
+              <div class="stocks__card-text">
+                <h3 class="stocks__card-title current-title">«Новый старт»</h3>
+                <p class="stocks__card-description current-subtitle">
+                  Скидка 30% на программы, начатые в течение 48 часов после обращения
+                </p>
+              </div>
+              <button class="stocks__card-btn popup-btn primary-btn standart-btn change__item-btn" data-path="popup-change">
                 Узнать подробнее
               </button>
             </div>
-            <div class="stocks__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Молодой мужчина" />
-              </picture>
-            </div>
+            <picture class="stocks__card-picture">
+              <source srcset="assets/img/stocks/3.webp" type="image/webp" />
+              <img src="assets/img/stocks/3.jpg" alt="Молодой мужчина" />
+            </picture>
+    
           </div>
     
-          <div class="stocks__card stocks__card--small">
-            <div class="stocks__card-overlay"></div>
+          <div class="stocks__card change__item-title">
             <div class="stocks__card-content">
-              <h3 class="stocks__card-title">«Забота о героях»</h3>
-              <p class="stocks__card-description">
-                Специальные скидки участникам СВО – на все программы лечения
-              </p>
-              <button class="stocks__card-btn" type="button">
+              <div class="stocks__card-text">
+                <h3 class="stocks__card-title current-title">«Забота о героях»</h3>
+                <p class="stocks__card-description current-subtitle">
+                  Специальные скидки участникам СВО – на все программы лечения
+                </p>
+              </div>
+              <button class="stocks__card-btn popup-btn primary-btn standart-btn change__item-btn" data-path="popup-change">
                 Узнать подробнее
               </button>
             </div>
-            <div class="stocks__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Военнослужащий" />
-              </picture>
-            </div>
+            <picture class="stocks__card-picture">
+              <source srcset="assets/img/stocks/4.webp" type="image/webp" />
+              <img src="assets/img/stocks/4.jpg" alt="Военнослужащий" />
+            </picture>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="stages section-offset">
+    <section class="stages section-padding">
       <div class="container">
         <div class="stages__header">
-          <div class="stages__badge">Этапы лечения</div>
-          <h2 class="stages__title">Как проходит лечение в клинике «Здравум»</h2>
+          <div class="stages__badge section-badge">[ Этапы лечения ]</div>
+          <h2 class="stages__title section-title">Как проходит лечение <br> <span>в клинике «Здравум»</span></h2>
+        </div>
+        <div class="stages__inner custom-wrapper__swiper">
+          <div class="swiper stages-swiper">
+            <div class="swiper-wrapper">
+              <div class="stages__card swiper-slide">
+                <div class="stages__card-number">1</div>
+                <div class="stages__card-wrap">
+                  <h3 class="stages__card-title">Первичная встреча</h3>
+                  <picture class="stages__card-picture">
+                    <source srcset="assets/img/stages/1.svg" type="image/webp" />
+                    <img src="assets/img/stages/1.png" alt="Первичная встреча" />
+                  </picture>
+                </div>
+                <p class="stages__card-description">
+                  Врач оценивает состояние, выявляет сопутствующие проблемы и выслушивает самого пациента – первый шаг к
+                  осознанному решению лечиться
+                </p>
+              </div>
+    
+              <div class="stages__card swiper-slide">
+                <div class="stages__card-number">2</div>
+                <div class="stages__card-wrap">
+                  <h3 class="stages__card-title">Мотивационная беседа</h3>
+                  <picture class="stages__card-picture">
+                    <source srcset="assets/img/stages/2.svg" type="image/webp" />
+                    <img src="assets/img/stages/2.png" alt="Мотивационная беседа" />
+                  </picture>
+                </div>
+                <p class="stages__card-description">
+                  Специалист помогает человеку понять последствия зависимости и внутренние ресурсы для изменений
+                </p>
+              </div>
+    
+              <div class="stages__card swiper-slide">
+                <div class="stages__card-number">3</div>
+                <div class="stages__card-wrap">
+                  <h3 class="stages__card-title">Диагностика и планирование</h3>
+                  <picture class="stages__card-picture">
+                    <source srcset="assets/img/stages/3.svg" type="image/webp" />
+                    <img src="assets/img/stages/3.png" alt="Диагностика и планирование" />
+                  </picture>
+    
+                </div>
+                <p class="stages__card-description">
+                  Подробное обследование и составление индивидуальной программы с учётом физического и психического
+                  состояния
+                </p>
+              </div>
+    
+              <div class="stages__card swiper-slide">
+                <div class="stages__card-number">4</div>
+                <div class="stages__card-wrap">
+                  <h3 class="stages__card-title">Детоксикация и снятие симптомов</h3>
+                  <picture class="stages__card-picture">
+                    <source srcset="assets/img/stages/4.svg" type="image/webp" />
+                    <img src="assets/img/stages/4.png" alt="Детоксикация и снятие симптомов" />
+                  </picture>
+                </div>
+                <p class="stages__card-description">
+                  Безопасное очищение организма и снятие острых проявлений зависимости
+                </p>
+              </div>
+    
+              <div class="stages__card swiper-slide">
+                <div class="stages__card-number">5</div>
+                <div class="stages__card-wrap">
+                  <h3 class="stages__card-title">Медикаментозное лечение</h3>
+                  <picture class="stages__card-picture">
+                    <source srcset="assets/img/stages/1.svg" type="image/webp" />
+                    <img src="assets/img/stages/1.png" alt="Медикаментозное лечение" />
+                  </picture>
+                </div>
+                <p class="stages__card-description">
+                  Применение современных препаратов для восстановления работы органов и систем организма
+                </p>
+              </div>
+    
+            </div>
+          </div>
+          <div class="stages-pagination swiper-pagination"></div>
         </div>
     
-        <div class="stages__grid">
-          <div class="stages__card">
-            <div class="stages__card-number">1</div>
-            <div class="stages__card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" />
-                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" />
-              </svg>
-            </div>
-            <h3 class="stages__card-title">Первичная встреча</h3>
-            <p class="stages__card-description">
-              Врач оценивает состояние, выявляет сопутствующие проблемы и выслушивает самого пациента – первый шаг к
-              осознанному решению лечиться
-            </p>
-          </div>
-    
-          <div class="stages__card">
-            <div class="stages__card-number">2</div>
-            <div class="stages__card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3 class="stages__card-title">Мотивационная беседа</h3>
-            <p class="stages__card-description">
-              Специалист помогает человеку понять последствия зависимости и внутренние ресурсы для изменений
-            </p>
-          </div>
-    
-          <div class="stages__card">
-            <div class="stages__card-number">3</div>
-            <div class="stages__card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" />
-                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3 class="stages__card-title">Диагностика и планирование</h3>
-            <p class="stages__card-description">
-              Подробное обследование и составление индивидуальной программы с учётом физического и психического состояния
-            </p>
-          </div>
-    
-          <div class="stages__card">
-            <div class="stages__card-number">4</div>
-            <div class="stages__card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3 class="stages__card-title">Детоксикация и снятие симптомов</h3>
-            <p class="stages__card-description">
-              Безопасное очищение организма и снятие острых проявлений зависимости
-            </p>
-          </div>
-    
-          <div class="stages__card">
-            <div class="stages__card-number">5</div>
-            <div class="stages__card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
-                <path
-                  d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"
-                  stroke="currentColor" stroke-width="2" />
-              </svg>
-            </div>
-            <h3 class="stages__card-title">Медикаментозное лечение</h3>
-            <p class="stages__card-description">
-              Применение современных препаратов для восстановления работы органов и систем организма
-            </p>
-          </div>
-        </div>
       </div>
     </section>
     
-    <section class="assistance section-offset">
+    <section class="assistance section-padding">
       <div class="container">
-        <div class="assistance__inner">
-          <div class="assistance__content">
-            <div class="assistance__header">
-              <div class="assistance__badge">[Психологическая помощь]</div>
-              <h2 class="assistance__title">
-                <span class="assistance__title-highlight">Мотивация на лечение —</span>
-                первый шаг к свободе
-              </h2>
-            </div>
+        <div class="assistance__header">
+          <div class="assistance__header-wrap">
+            <div class="assistance__badge section-badge">[ Психологическая помощь ]</div>
+            <h2 class="assistance__title section-title">
+              <span>Мотивация на лечение —</span>
+              первый шаг к свободе
+            </h2>
+          </div>
+          <p class="assistance__stats-intro">
+            Мы умеем находить слова даже тогда, когда близкие уже не могут
+          </p>
+        </div>
     
-            <div class="assistance__info-block">
-              <p class="assistance__text">
+        <div class="assistance__inner">
+          <div class="assistance__info-block">
+            <div class="assistance__text">
+              <p>
                 Многие зависимые отказываются признавать проблему и отвергают помощь, даже если рядом семья и друзья. В
                 таких случаях важно не давить и не спорить, а грамотно мотивировать человека на осознанный выбор лечения.
               </p>
-              <p class="assistance__text">
+              <p>
                 В клинике «Здравум» наши врачи используют проверенные методики мотивационного интервьюирования и
                 психологического влияния, основанные на доказательной медицине и многолетнем опыте. Мы создаём доверительный
                 диалог, выявляем внутренние сопротивления и показываем реальные последствия зависимости.
               </p>
-    
-              <div class="assistance__contact">
-                <p class="assistance__contact-text">Звоните нам:</p>
-                <div class="assistance__phone">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <a href="tel:+78005553535">8 800 555-35-35</a>
-                </div>
-                <button class="assistance__btn primary-btn" type="button">
-                  Обратиться за помощью
-                </button>
-              </div>
-    
-              <div class="assistance__decoration">
-                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                  <path d="M60 10C60 10 80 30 80 60C80 90 60 110 60 110C60 110 40 90 40 60C40 30 60 10 60 10Z"
-                    fill="rgba(0,0,0,0.05)" />
-                  <path d="M60 20C60 20 70 35 70 60C70 85 60 100 60 100C60 100 50 85 50 60C50 35 60 20 60 20Z"
-                    fill="rgba(0,0,0,0.03)" />
+            </div>
+            <div class="assistance__contact">
+              <p class="assistance__contact-text">Звоните нам:</p>
+              <a href="tel:+78005553535" class="assistance__phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7.72931 5.20545L8.56018 6.69421C9.31 8.03774 9.00899 9.80022 7.82804 10.9812C7.82804 10.9812 6.39559 12.4136 8.99277 15.0108C11.5899 17.6079 13.0224 16.1755 13.0224 16.1755C14.2034 14.9945 15.9659 14.6935 17.3094 15.4434L18.7982 16.2742C20.827 17.4064 21.0666 20.2515 19.2833 22.0348C18.2118 23.1063 16.8991 23.94 15.448 23.995C13.0053 24.0876 8.85677 23.4694 4.69539 19.3081C0.534006 15.1468 -0.0842184 10.9983 0.00838741 8.55558C0.0633979 7.10451 0.897167 5.79185 1.9687 4.72034C3.75195 2.93711 6.59709 3.1767 7.72931 5.20545Z"
+                    fill="#139297" />
+                  <path
+                    d="M11.854 0.806299C11.9387 0.282845 12.4336 -0.0722445 12.957 0.0125003C12.9894 0.0187026 13.0937 0.0381874 13.1483 0.0503525C13.2575 0.07468 13.4099 0.112135 13.5999 0.167473C13.9798 0.278135 14.5106 0.460439 15.1477 0.752495C16.4231 1.33722 18.1204 2.3601 19.8817 4.12137C21.643 5.88265 22.6659 7.57993 23.2506 8.85535C23.5427 9.49238 23.725 10.0232 23.8357 10.4031C23.891 10.5931 23.9284 10.7454 23.9528 10.8547C23.9649 10.9093 23.9738 10.9532 23.98 10.9856L23.9874 11.0255C24.0721 11.549 23.7203 12.0643 23.1968 12.149C22.6749 12.2335 22.1831 11.8801 22.0963 11.3591C22.0936 11.3451 22.0863 11.3076 22.0784 11.2721C22.0626 11.2012 22.0353 11.0888 21.992 10.9401C21.9053 10.6427 21.7549 10.2006 21.505 9.65562C21.006 8.56707 20.1086 7.0639 18.5238 5.47921C16.9391 3.89452 15.4359 2.99712 14.3474 2.49806C13.8024 2.24823 13.3603 2.09776 13.0629 2.01113C12.9142 1.96782 12.7273 1.92492 12.6564 1.90913C12.1354 1.82231 11.7695 1.32826 11.854 0.806299Z"
+                    fill="#139297" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.1436 5.22224C12.2893 4.71238 12.8207 4.41714 13.3306 4.56282L13.0668 5.48601C13.3306 4.56282 13.3306 4.56282 13.3306 4.56282L13.3324 4.56335L13.3344 4.56391L13.3387 4.56516L13.3486 4.56812L13.3739 4.57601C13.3932 4.58219 13.4173 4.59023 13.4461 4.60043C13.5036 4.62083 13.5796 4.64984 13.6728 4.68979C13.8593 4.76972 14.1141 4.89315 14.4271 5.07841C15.0537 5.44926 15.9092 6.06525 16.9141 7.07016C17.919 8.07506 18.535 8.93047 18.9059 9.55707C19.0911 9.87009 19.2146 10.1249 19.2945 10.3114C19.3344 10.4046 19.3634 10.4806 19.3838 10.5381C19.394 10.5669 19.4021 10.591 19.4083 10.6103L19.4161 10.6356L19.4191 10.6455L19.4204 10.6498L19.4209 10.6518C19.4209 10.6518 19.4215 10.6536 18.4982 10.9174L19.4215 10.6536C19.5671 11.1635 19.2719 11.6949 18.762 11.8406C18.2565 11.985 17.7297 11.696 17.5788 11.1941L17.5741 11.1803C17.5673 11.161 17.5532 11.1232 17.5294 11.0679C17.4821 10.9573 17.3962 10.7765 17.2533 10.5351C16.9678 10.0528 16.4523 9.32406 15.5562 8.428C14.6601 7.53193 13.9314 7.01639 13.4491 6.73095C13.2077 6.58806 13.0269 6.50217 12.9163 6.4548C12.861 6.43109 12.8231 6.41697 12.8039 6.41014L12.7901 6.40541C12.2882 6.25451 11.9992 5.72778 12.1436 5.22224Z"
+                    fill="#139297" />
                 </svg>
-              </div>
+                <span>8 800 555-35-35</span>
+              </a>
+              <button class="assistance__btn primary-btn standart-btn popup-btn" data-path="popup__call">
+                Обратиться за помощью
+              </button>
+            </div>
+    
+            <div class="assistance__decoration">
+              <source srcset="assets/img/icons/decor.svg" type="image/webp">
+              <img src="assets/img/icons/decor.png" alt="Decoration">
+    
             </div>
           </div>
     
           <div class="assistance__stats">
-            <p class="assistance__stats-intro">
-              Мы умеем находить слова даже тогда, когда близкие уже не могут
-            </p>
+            <div class="assistance__stats-badge">[ Подтверждённая статистика ]</div>
     
-            <div class="assistance__stats-block">
-              <div class="assistance__stats-badge">[Подтверждённая статистика]</div>
-    
-              <div class="assistance__stats-circle">
-                <div class="stats-circle">
-                  <div class="stats-circle__inner">
-                    <div class="stats-circle__value">97%</div>
-                  </div>
-                  <div class="stats-circle__progress">
-                    <div class="stats-circle__fill"></div>
-                  </div>
-                </div>
-              </div>
-    
-              <p class="assistance__stats-description">
-                наших пациентов соглашаются на лечение уже после первой беседы с врачом
-              </p>
+            <div class="assistance__stats-circle">
+              <picture>
+                <source srcset="assets/img/assistance/circle.svg" type="image/webp">
+                <img src="assets/img/assistance/circle.png" alt="circle">
+              </picture>
+              <div class="assistance__stats-circle-value">97%</div>
             </div>
+            <p class="assistance__stats-description">
+              наших пациентов соглашаются на лечение уже после первой беседы с врачом
+            </p>
           </div>
         </div>
       </div>
+      </div>
     </section>
     
-    <section class="advantages section-offset">
+    <section class="advantages section-padding">
       <div class="container">
         <div class="advantages__inner">
           <div class="advantages__content">
-            <div class="advantages__badge">Наши преимущества</div>
-            <h2 class="advantages__title">Почему выбирают «Здравум»</h2>
-            <p class="advantages__description">
-              «Здравум» — это сервис, ориентированный на комфорт и удобство пациента на каждом этапе лечения. Наши
-              специалисты обеспечивают индивидуальную поддержку, внимание к деталям и заботу о теле и душе.
-            </p>
-            <p class="advantages__description">
-              Мы не просто лечим, мы поддерживаем и мотивируем наших пациентов чувствовать себя в безопасности и знать, что
-              команда готова прийти на помощь в любой момент.
-            </p>
+            <div class="advantages__badge section-badge">[ Наши преимущества ]</div>
+            <h2 class="advantages__title section-title">Почему выбирают <span>«Здравум»</span></h2>
+            <div class="advantages__description">
+              <p>
+                «Здравум» — это сервис, ориентированный на комфорт и удобство пациента на каждом этапе лечения. Наши
+                специалисты обеспечивают индивидуальную поддержку, внимание к деталям и заботу о теле и душе.
+              </p>
+              <p>
+                Мы не просто лечим, мы поддерживаем и мотивируем наших пациентов чувствовать себя в безопасности и знать,
+                что
+                команда готова прийти на помощь в любой момент.
+              </p>
+            </div>
           </div>
     
-          <div class="advantages__grid">
+          <div class="advantages__blocks">
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M12 6L13 8L15 9L13 10L12 12L11 10L9 9L11 8L12 6Z" fill="currentColor" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Опытные врачи</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/1.svg" type="image/webp">
+                  <img src="assets/img/advantages/1.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Опытные врачи</h3>
               <p class="advantages__item-description">Долгие годы практики в наркологии и психиатрии</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Индивидуальный подход</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/2.svg" type="image/webp">
+                  <img src="assets/img/advantages/2.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Индивидуальный подход</h3>
               <p class="advantages__item-description">Подбираем лечение под конкретного человека</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Комфортные условия</h3>
+                < <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/3.svg" type="image/webp">
+                  <img src="assets/img/advantages/3.png" alt="icon">
+                  </picture>
               </div>
-              <h3 class="advantages__item-title">Комфортные условия</h3>
               <p class="advantages__item-description">Пространство для спокойного восстановления</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M12 7v6l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Забота о психике</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/4.svg" type="image/webp">
+                  <img src="assets/img/advantages/4.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Забота о психике</h3>
               <p class="advantages__item-description">Поддержка психологов и мотивация</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-              <h3 class="advantages__item-title">Полная конфиденциальность</h3>
-              <p class="advantages__item-description">Гарантируем защиту данных пациентов</p>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Полная конфиденциальность</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/5.svg" type="image/webp">
+                  <img src="assets/img/advantages/5.png" alt="icon">
+                </picture>
+              </div <p class="advantages__item-description">Гарантируем защиту данных пациентов</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <polyline points="10,9 9,9 8,9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Прозрачная оплата</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/6.svg" type="image/webp">
+                  <img src="assets/img/advantages/6.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Прозрачная оплата</h3>
               <p class="advantages__item-description">Фиксированные цены и рассрочка</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Долгосрочные результаты</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/7.svg" type="image/webp">
+                  <img src="assets/img/advantages/7.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Долгосрочные результаты</h3>
               <p class="advantages__item-description">Стабильная ремиссия и восстановление</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
-                  <path
-                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Комплексное восстановление</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/8.svg" type="image/webp">
+                  <img src="assets/img/advantages/8.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Комплексное восстановление</h3>
               <p class="advantages__item-description">Тело, ум и эмоциональное состояние</p>
             </div>
     
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <div class="advantages__item-wrap">
+                <h3 class="advantages__item-title">Поддержка семьи</h3>
+                <picture class="advantages__picture">
+                  <source srcset="assets/img/advantages/9.svg" type="image/webp">
+                  <img src="assets/img/advantages/9.png" alt="icon">
+                </picture>
               </div>
-              <h3 class="advantages__item-title">Поддержка семьи</h3>
               <p class="advantages__item-description">Помощь родственникам и совместные сессии</p>
             </div>
           </div>
@@ -1730,108 +1707,150 @@
       </div>
     </section>
     
-    <section class="offer section-offset">
+    <section class="offer section-padding">
       <div class="container">
         <div class="offer__header">
-          <div class="offer__badge">[Что мы можем предложить]</div>
-          <h2 class="offer__title">Формы предоставления услуг клиники «Здравум»</h2>
+          <div class="offer__badge section-badge">[ Что мы можем предложить ]</div>
+          <h2 class="offer__title section-title">Формы предоставления услуг <br> <span>клиники «Здравум»</span></h2>
         </div>
     
-        <div class="offer__grid">
-          <div class="offer__card offer__card--primary">
+        <div class="offer__inner">
+          <div class="offer__card">
             <h3 class="offer__card-title">Амбулаторное лечение</h3>
-            <p class="offer__card-description">
-              Специалисты принимают пациентов непосредственно в клинике. Проводятся консультации, диагностика, детокс,
-              психотерапия и наблюдение врача. Подходит для тех, кто может регулярно посещать клинику.
-            </p>
-            <div class="offer__card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+            <picture class="offer__card-picture">
+              <source srcset="assets/img/offer/1.webp" type="image/webp" />
+              <img src="assets/img/offer/1.jpg" alt="Амбулаторное лечение" />
+            </picture>
+            <div class="offer__card-description">
+              <p>
+                Специалисты принимают пациентов непосредственно в клинике. Проводятся консультации, диагностика, детокс,
+                психотерапия и наблюдение врача. Подходит для тех, кто может регулярно посещать клинику.
+              </p>
             </div>
           </div>
-    
-          <div class="offer__card offer__card--secondary">
+          <div class="offer__card">
             <h3 class="offer__card-title">Выезд нарколога на дом</h3>
-            <div class="offer__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Нарколог на дому" />
-              </picture>
+            <picture class="offer__card-picture">
+              <source srcset="assets/img/offer/2.webp" type="image/webp" />
+              <img src="assets/img/offer/2.jpg" alt="Выезд нарколога на дом" />
+            </picture>
+            <div class="offer__card-description">
+              <p>
+                Специалисты принимают пациентов непосредственно в клинике. Проводятся консультации, диагностика, детокс,
+                психотерапия и наблюдение врача. Подходит для тех, кто может регулярно посещать клинику.
+              </p>
             </div>
           </div>
-    
-          <div class="offer__card offer__card--secondary">
+          <div class="offer__card">
             <h3 class="offer__card-title">Стационарное лечение и реабилитация</h3>
-            <div class="offer__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Стационарное лечение" />
-              </picture>
+            <picture class="offer__card-picture">
+              <source srcset="assets/img/offer/3.webp" type="image/webp" />
+              <img src="assets/img/offer/3.jpg" alt="Стационарное лечение и реабилитация" />
+            </picture>
+            <div class="offer__card-description">
+              <p>
+                Специалисты принимают пациентов непосредственно в клинике. Проводятся консультации, диагностика, детокс,
+                психотерапия и наблюдение врача. Подходит для тех, кто может регулярно посещать клинику.
+              </p>
             </div>
           </div>
-    
-          <div class="offer__card offer__card--secondary">
+          <div class="offer__card">
             <h3 class="offer__card-title">Онлайн-консультации и сопровождение</h3>
-            <div class="offer__card-image">
-              <picture>
-                <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                <img src="assets/img/intro/doctor.png" alt="Онлайн консультация" />
-              </picture>
+            <picture class="offer__card-picture">
+              <source srcset="assets/img/offer/1.webp" type="image/webp" />
+              <img src="assets/img/offer/1.jpg" alt="Онлайн-консультации и сопровождение" />
+            </picture>
+            <div class="offer__card-description">
+              <p>
+                Специалисты принимают пациентов непосредственно в клинике. Проводятся консультации, диагностика, детокс,
+                психотерапия и наблюдение врача. Подходит для тех, кто может регулярно посещать клинику.
+              </p>
             </div>
           </div>
+    
         </div>
       </div>
     </section>
     
-    <section class="licences section-offset">
+    <section class="licences section-padding color-bg">
       <div class="container licences__container">
-        <div class="licences__title-wrap">
-          <div class="section-title licences__title">Лицензии</div>
-          <div class="licences__descr">
-            Повседневная практика показывает, что укреплениеи развитие структуры
-            позволяет выполнять важные задания по разработке соответствующий
-            условий активизации. Идейные соображения порядка, а также.
+        <div class="licences__inner-main">
+          <div class="licences__content">
+            <div class="licences__header">
+              <div class="licences__badge section-badge">[ Сертификаты ]</div>
+              <h2 class="licences__title section-title">Наши сертификаты <br> <span>и лицензии</span></h2>
+              <div class="licences__descr">Подтверждение качества и безопасности предоставляемых услуг</div>
+            </div>
+            <a href="" class="licences__btn primary-btn standart-btn">Смотреть все документы</a>
           </div>
-          <div class="licences__plashka">
-            <span>Медицинская лицензия от 22.04.2020</span>
-          </div>
-        </div>
-        <div class="licences__inner custom-wrapper__swiper">
-          <div class="swiper licences-swiper">
-            <div class="swiper-wrapper">
-              <a class="swiper-slide licences__item" data-fancybox href="assets/img/lic.webp">
-                <picture class="licences__picture zoom zoom-border10">
-                  <source srcset="assets/img/lic.webp" type="image/webp" />
-                  <img src="assets/img/lic.jpg" loading="lazy" alt="" />
-                </picture>
-              </a>
-              <a class="swiper-slide licences__item" data-fancybox href="assets/img/lic.webp">
-                <picture class="licences__picture zoom zoom-border10">
-                  <source srcset="assets/img/lic.webp" type="image/webp" />
-                  <img src="assets/img/lic.jpg" loading="lazy" alt="" />
-                </picture>
-              </a>
-              <a class="swiper-slide licences__item" data-fancybox href="assets/img/lic.webp">
-                <picture class="licences__picture zoom zoom-border10">
-                  <source srcset="assets/img/lic.webp" type="image/webp" />
-                  <img src="assets/img/lic.jpg" loading="lazy" alt="" />
-                </picture>
-              </a>
-              <a class="swiper-slide licences__item" data-fancybox href="assets/img/lic.webp">
-                <picture class="licences__picture zoom zoom-border10">
-                  <source srcset="assets/img/lic.webp" type="image/webp" />
-                  <img src="assets/img/lic.jpg" loading="lazy" alt="" />
-                </picture>
-              </a>
+          <div class="licences__inner custom-wrapper__swiper">
+            <div class="licences-decor"></div>
+            <div class="licences-decor-wrap">
+              <div class="swiper licences-swiper">
+                <div class="swiper-wrapper">
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 1" />
+                    </picture>
+                  </a>
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 2" />
+                    </picture>
+                  </a>
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 3" />
+                    </picture>
+                  </a>
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 4" />
+                    </picture>
+                  </a>
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 5" />
+                    </picture>
+                  </a>
+                  <a class="swiper-slide licences__item" data-fancybox href="assets/img/licences/1.webp">
+                    <picture class="licences__picture zoom zoom-border10">
+                      <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                      <img src="assets/img/licences/1.jpg" loading="lazy" alt="Сертификат 6" />
+                    </picture>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-btns licences_swiper-btns">
+                <div class="slider-button slider-button_prev licences-button_prev licences__slider-button_prev"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <g>
+                      <path d="M19 8L6.4 8M6.4 8L11.8 13.25M6.4 8L11.8 2.75" stroke="#139297" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M1 15L0.999999 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+                    </g>
+                  </svg></div>
+                <div class="slider-button slider-button_next licences-button_next licences__slider-button_next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path d="M1 8L13.6 8M13.6 8L8.2 13.25M13.6 8L8.2 2.75" stroke="#139297" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M19 15L19 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="licences-pagination swiper-pagination"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="doctors section-offset">
+    <section class="doctors section-padding">
       <div class="container doctors__container">
         <div class="section-title doctors__title">Специалисты клининки</div>
         <div class="doctors__inner custom-wrapper__swiper">
@@ -1905,18 +1924,28 @@
             </div>
           </div>
           <div class="swiper-btns doctors_swiper-btns">
-            <div class="slider-button slider-button_prev doctors-button_prev doctors__slider-button_prev"></div>
-            <a class="standart-btn secondary-btn swiper-btn" href="http://localhost:3000/doctors.html">
-              Смотреть всех врачей
-            </a>
-            <div class="slider-button slider-button_next doctors-button_next doctors__slider-button_next"></div>
+            <div class="slider-button slider-button_prev doctors-button_prev doctors__slider-button_prev"><svg
+                xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <g>
+                  <path d="M19 8L6.4 8M6.4 8L11.8 13.25M6.4 8L11.8 2.75" stroke="#139297" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 15L0.999999 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+              </svg></div>
+            <div class="slider-button slider-button_next doctors-button_next doctors__slider-button_next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <path d="M1 8L13.6 8M13.6 8L8.2 13.25M13.6 8L8.2 2.75" stroke="#139297" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 15L19 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
           </div>
           <div class="doctors-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
     
-    <section class="gallery section-offset">
+    <section class="gallery section-padding">
       <div class="container swiper__container">
         <div class="section-title">Фотогалерея</div>
         <div class="gallery__inner custom-wrapper__swiper">
@@ -1964,43 +1993,65 @@
                   <img src="assets/img/1.jpg" loading="lazy" alt="" />
                 </picture>
               </a>
-              <a class="gallery__item swiper-slide" data-fancybox href="assets/img/intro/bg.webp">
-                <picture class="gallery__picture">
-                  <source srcset="assets/img/intro/bg.webp" type="image/webp" />
-                  <img src="assets/img/intro/bg.jpg" loading="lazy" alt="" />
-                </picture>
-              </a>
             </div>
           </div>
-          <div class="swiper-btns doctors_swiper-btns">
-            <div class="slider-button slider-button_prev gallery-button_prev gallery__slider-button_prev"></div>
-            <a class="standart-btn secondary-btn swiper-btn" href="#">
-              Смотреть все фото
-            </a>
-            <div class="slider-button slider-button_next gallery-button_next gallery__slider-button_next"></div>
+          <div class="swiper-btns gallery_swiper-btns">
+            <div class="slider-button slider-button_prev gallery-button_prev gallery__slider-button_prev"><svg
+                xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <g>
+                  <path d="M19 8L6.4 8M6.4 8L11.8 13.25M6.4 8L11.8 2.75" stroke="#139297" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 15L0.999999 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+              </svg></div>
+            <div class="slider-button slider-button_next gallery-button_next gallery__slider-button_next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <path d="M1 8L13.6 8M13.6 8L8.2 13.25M13.6 8L8.2 2.75" stroke="#139297" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 15L19 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
           </div>
           <div class="gallery-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
     
-    <section class="reviews section-offset">
+    <section class="reviews section-padding">
       <div class="container reviews__container swiper__container">
         <div class="section-title reviews__title">Отзывы о нашей работе</div>
         <div class="reviews__inner custom-wrapper__swiper">
+          <div class="swiper-btns reviews_swiper-btns">
+            <div class="slider-button slider-button_prev reviews-button_prev reviews__slider-button_prev"><svg
+                xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <g>
+                  <path d="M19 8L6.4 8M6.4 8L11.8 13.25M6.4 8L11.8 2.75" stroke="#139297" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 15L0.999999 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+              </svg></div>
+            <div class="slider-button slider-button_next reviews-button_next reviews__slider-button_next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                <path d="M1 8L13.6 8M13.6 8L8.2 13.25M13.6 8L8.2 2.75" stroke="#139297" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 15L19 1" stroke="#139297" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
           <div class="swiper reviews-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide reviews__item">
-                <div class="reviews__top">
-                  <picture>
-                    <source srcset="assets/img/man2.webp" type="image/webp" />
-                    <img src="assets/img/man2.jpg" loading="lazy" alt="" />
+                <div class="reviews__header">
+                  <picture class="reviews__header-picture">
+                    <!-- <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                    <img src="assets/img/help/woman.png" loading="lazy" alt="" /> -->
                   </picture>
-                  <div class="reviews-top__info-inner">
-                    <span class="reviews__name">Сергей Иванов Иванович</span>
-                    <div class="reviews-top__info-wrap">
-                      <span>Кодирование от алкоголизма</span>
-                      <span>29 лет</span>
+                  <div class="reviews__header-wrapper">
+                    <div class="reviews__header-top">
+                      <p>Елизавета,</p><span>г. Санкт-Петербург</span>
+                    </div>
+                    <div class="reviews__header-bottom">
+                      <span>Дата отзыва: 22.09.2025</span>
                     </div>
                   </div>
                 </div>
@@ -2017,45 +2068,50 @@
                   Читать полностью
                 </button>
                 <div class="reviews__bottom">
-                  <span class="reviews__date"> 10.10.2023 </span>
+                  <p> Вид услуги: </p>
+                  <span>Кодирование от алкоголизма</span>
                 </div>
               </div>
               <div class="swiper-slide reviews__item">
-                <div class="reviews__top">
-                  <picture>
-                    <source srcset="assets/img/man2.webp" type="image/webp" />
-                    <img src="assets/img/man2.jpg" loading="lazy" alt="" />
+                <div class="reviews__header">
+                  <picture class="reviews__header-picture">
+                    <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                    <img src="assets/img/help/woman.png" loading="lazy" alt="" />
                   </picture>
-                  <div class="reviews-top__info-inner">
-                    <span class="reviews__name">Сергей Иванов Иванович</span>
-                    <div class="reviews-top__info-wrap">
-                      <span>Кодирование от алкоголизма</span>
-                      <span>29 лет</span>
+                  <div class="reviews__header-wrapper">
+                    <div class="reviews__header-top">
+                      <p>Елизавета,</p><span>г. Санкт-Петербург</span>
+                    </div>
+                    <div class="reviews__header-bottom">
+                      <span>Дата отзыва: 22.09.2025</span>
                     </div>
                   </div>
                 </div>
                 <div class="reviews__text">
                   Сестра больна шизофренией. Болезнь выявили, когда она заканчивала
-                  институт.
+                  институт. Хороших специалистов искали долго. Наконец нашли службу
+                  психиатрической помощи. Т.к.
                 </div>
                 <button class="reviews__btn popup-btn" data-path="popup__review">
                   Читать полностью
                 </button>
                 <div class="reviews__bottom">
-                  <span class="reviews__date"> 10.10.2023 </span>
+                  <p> Вид услуги: </p>
+                  <span>Кодирование от алкоголизма</span>
                 </div>
               </div>
               <div class="swiper-slide reviews__item">
-                <div class="reviews__top">
-                  <picture>
-                    <source srcset="assets/img/man2.webp" type="image/webp" />
-                    <img src="assets/img/man2.jpg" loading="lazy" alt="" />
+                <div class="reviews__header">
+                  <picture class="reviews__header-picture">
+                    <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                    <img src="assets/img/help/woman.png" loading="lazy" alt="" />
                   </picture>
-                  <div class="reviews-top__info-inner">
-                    <span class="reviews__name">Сергей Иванов Иванович</span>
-                    <div class="reviews-top__info-wrap">
-                      <span>Кодирование от алкоголизма</span>
-                      <span>29 лет</span>
+                  <div class="reviews__header-wrapper">
+                    <div class="reviews__header-top">
+                      <p>Елизавета,</p><span>г. Санкт-Петербург</span>
+                    </div>
+                    <div class="reviews__header-bottom">
+                      <span>Дата отзыва: 22.09.2025</span>
                     </div>
                   </div>
                 </div>
@@ -2072,25 +2128,77 @@
                   Читать полностью
                 </button>
                 <div class="reviews__bottom">
-                  <span class="reviews__date"> 10.10.2023 </span>
+                  <p> Вид услуги: </p>
+                  <span>Кодирование от алкоголизма</span>
+                </div>
+              </div>
+              <div class="swiper-slide reviews__item">
+                <div class="reviews__header">
+                  <picture class="reviews__header-picture">
+                    <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                    <img src="assets/img/help/woman.png" loading="lazy" alt="" />
+                  </picture>
+                  <div class="reviews__header-wrapper">
+                    <div class="reviews__header-top">
+                      <p>Елизавета,</p><span>г. Санкт-Петербург</span>
+                    </div>
+                    <div class="reviews__header-bottom">
+                      <span>Дата отзыва: 22.09.2025</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__text">
+                  Сестра больна шизофренией. Болезнь выявили, когда она заканчивала
+                  институт. Хороших специалистов искали долго. Наконец нашли службу
+                  психиатрической помощи. Т.к. болезнь неизлечима, периодически
+                  отправляем сестру на лечение в стационар. Условия там отличные,
+                  доброжелательные специалисты. После стационара наступает довольно
+                  продолжительная ремиссия. Также она проходит лечение амбулаторно,
+                  что позволяет нашей семье жить нормальной жизнью.
+                </div>
+                <button class="reviews__btn popup-btn" data-path="popup__review">
+                  Читать полностью
+                </button>
+                <div class="reviews__bottom">
+                  <p> Вид услуги: </p>
+                  <span>Кодирование от алкоголизма</span>
+                </div>
+              </div>
+              <div class="swiper-slide reviews__item">
+                <div class="reviews__header">
+                  <picture class="reviews__header-picture">
+                    <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                    <img src="assets/img/help/woman.png" loading="lazy" alt="" />
+                  </picture>
+                  <div class="reviews__header-wrapper">
+                    <div class="reviews__header-top">
+                      <p>Елизавета,</p><span>г. Санкт-Петербург</span>
+                    </div>
+                    <div class="reviews__header-bottom">
+                      <span>Дата отзыва: 22.09.2025</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__text">
+                  Сестра больна шизофренией. Болезнь выявили, когда она заканчивала
+                  институт. Хороших специалистов искали долго. Наконец нашли службу
+                  психиатрической помощи. Т.к.
+                </div>
+                <button class="reviews__btn popup-btn" data-path="popup__review">
+                  Читать полностью
+                </button>
+                <div class="reviews__bottom">
+                  <p> Вид услуги: </p>
+                  <span>Кодирование от алкоголизма</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-btns reviews_swiper-btns">
-            <div class="slider-button slider-button_prev reviews-button_prev reviews__slider-button_prev"></div>
-            <a class="standart-btn secondary-btn swiper-btn" href="#">
-              Смотреть все отзывы
-            </a>
-            <div class="slider-button slider-button_next reviews-button_next reviews__slider-button_next"></div>
           </div>
           <div class="reviews-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
     
-    
-    <h1>КАРТА</h1>
     
     
     <!-- <section class="consultation">
@@ -2855,7 +2963,7 @@
             <img src="assets/img/icons/close.png" alt="close_popup" />
           </picture>
           <p class="popup__title original-title">Оставьте заявку!</p>
-          <p class="popup__subtitle">И мы перезвоним в течние одной минуты</p>
+          <p class="popup__subtitle original-subtitle">И мы перезвоним в течние одной минуты</p>
           <form class="form popup__form">
             <input
               type="text"
@@ -2973,7 +3081,7 @@
             <img src="assets/img/icons/close.png" alt="close" />
           </picture>
           <div class="reviews__item reviews__item_original">
-            <div class="reviews__top reviews__top_original"></div>
+            <div class="reviews__header reviews__header_original"></div>
             <div class="reviews__text reviews__text_original"></div>
             <div class="reviews__bottom reviews__bottom_original"></div>
           </div>

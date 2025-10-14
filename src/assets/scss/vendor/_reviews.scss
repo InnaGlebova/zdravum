@@ -1,19 +1,50 @@
 /* reviews */
-.reviews__top {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 15px;
 
-  & picture {
-    & img {
-      min-width: 80px;
-      min-height: 80px;
-      max-width: 80px;
-      max-height: 80px;
+.reviews {
+  &__header {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+
+    &-picture {
+      position: relative;
+      background-color: white;
+      border-radius: $border-radius-small;
+      min-width: 56px;
+      min-height: 56px;
+      max-width: 56px;
+      max-height: 56px;
       width: 100%;
       height: 100%;
-      border-radius: 10px;
-      object-fit: cover;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 24px;
+        background: url(../img/icons/user.svg) no-repeat center center;
+        z-index: 1;
+      }
+
+
+      & img {
+        min-width: 56px;
+        min-height: 56px;
+        max-width: 56px;
+        max-height: 56px;
+        border-radius: $border-radius-small;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -156,7 +187,7 @@
     gap: 10px;
   }
 
-  .reviews__top {
+  .reviews__header {
     gap: 10px;
     margin-bottom: 5px;
     & picture {
@@ -205,7 +236,6 @@
   }
 }
 
-
 @media (max-width: 750px) {
   .reviews__container {
     padding: 0;
@@ -214,7 +244,6 @@
   .rewiews-swiper {
     padding: 0 10px;
   }
-
 }
 
 @media (max-width: 660px) {
@@ -227,7 +256,7 @@
 }
 
 @media (max-width: 470px) {
-  .reviews__top picture {
+  .reviews__header picture {
     display: none;
   }
 
