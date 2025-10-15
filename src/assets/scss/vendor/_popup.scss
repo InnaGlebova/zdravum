@@ -10,7 +10,8 @@
   z-index: 1000;
   transition: opacity 0.4s ease;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba($secondary-color, 0.2);
+  backdrop-filter: blur(8px);
   &.open {
     opacity: 1;
     pointer-events: all;
@@ -37,9 +38,9 @@
   align-items: flex-start;
   border-radius: 20px;
   gap: 10px;
-  padding: 55px 60px;
+  padding: 42px 50px;
   transition: transform 0.3s linear;
-  background: #fff;
+  background: $primary-gradient;
   transform: rotateY(90deg);
 }
 .popup__content_city,
@@ -49,9 +50,10 @@
 
 .popup__content-reviews {
   max-width: 700px;
-  background-color: #f2f7f9;
+  background: $primary-gradient;
   padding: 20px;
 }
+
 
 .popup__response-wrap {
   display: flex;

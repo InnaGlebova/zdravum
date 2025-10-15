@@ -25,6 +25,26 @@ $border-radius-small: 12px;
   }
 }
 
+@keyframes driving {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 250;
+    stroke: transparent;
+  }
+
+  70% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+    stroke: $secondary-color;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: $secondary-color;
+    stroke: transparent;
+  }
+}
+
 html {
   &::before {
     position: fixed;
@@ -302,57 +322,8 @@ h4 {
   }
 }
 
-@keyframes transformItem {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.scale-item {
-  scale: 0.6;
-  opacity: 0;
-  transition: scale 0.4s ease, opacity 0.3s linear;
-}
-
-.rotate-item {
-  transform: rotateY(180deg);
-  opacity: 0;
-  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    opacity 0.3s linear;
-
-  &:nth-child(2n) {
-    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-      opacity 0.3s linear;
-  }
-
-  &:nth-child(3n) {
-    transition: transform 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-      opacity 0.3s linear;
-  }
-
-  &:nth-child(5n) {
-    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1),
-      opacity 0.3s linear;
-  }
-}
-
-@keyframes textAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-120px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 textarea {
   align-items: center;
@@ -367,51 +338,6 @@ textarea {
   }
 }
 
-.transform-item {
-  opacity: 0;
-}
-
-.text-animation {
-  opacity: 0;
-}
-
-.animation-active {
-  &.scale-item {
-    opacity: 1;
-    scale: 1;
-  }
-
-  &.rotate-item {
-    transform: rotateY(0);
-    opacity: 1;
-  }
-
-  &.text-animation {
-    opacity: 1;
-    animation: textAnimation 0.4s forwards;
-  }
-
-  &.transform-item {
-    opacity: 1;
-    animation: transformItem 0.4s forwards;
-
-    &:nth-child(2n) {
-      animation: transformItem 0.6s forwards;
-    }
-
-    &:nth-child(3n) {
-      animation: transformItem 0.7s forwards;
-    }
-
-    &:nth-child(5n) {
-      animation: transformItem 0.8s forwards;
-    }
-
-    &:nth-child(7n) {
-      animation: transformItem 0.9s forwards;
-    }
-  }
-}
 
 /* btn */
 .standart-btn {
@@ -967,3 +893,4 @@ textarea {
 @import "vendor/_privacy";
 @import "vendor/_notfound";
 @import "vendor/_pay";
+@import "vendor/_animations";

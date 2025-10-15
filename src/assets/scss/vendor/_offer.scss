@@ -81,6 +81,10 @@
     font-weight: 600;
   }
 
+  &__card-description {
+    max-height: 232px;
+  }
+
   // Адаптивность
   @media (max-width: 1200px) {
     &__inner {

@@ -216,6 +216,75 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /* end popups */
 
+  //Анимации
+  function formatNumber(num) {
+    return String(num)
+      .replace(/\D/g, '')
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
+
+  function updateCounter(element, stop, increment) {
+    if (parseInt(element.innerText) + increment > stop) {
+      element.innerText = formatNumber(stop)
+    } else {
+      setTimeout(() => {
+        element.innerText = (parseInt(element.innerText) + increment)
+        updateCounter(element, stop, increment)
+      }, 1);
+    }
+  }
+
+  function counterAnimate(element, start, stop, time) {
+    element.innerText = start;
+    increment = Math.trunc((stop - start) / time)
+    updateCounter(element, stop, increment)
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    let width = 0;
+    entries.forEach(entry => {
+      if (entry.target.getAttribute("data-min-width")) {
+        width = entry.target.getAttribute("data-min-width")
+      }
+      if (entry.isIntersecting && window.innerWidth > width) {
+        if (entry.target.classList.contains("counter")) {
+          stop = parseInt(entry.target.innerText.replaceAll(" ", ""))
+          counterAnimate(entry.target, 0, stop, 250)
+        }
+
+        // Для элементов в animation-group задержка обрабатывается через CSS
+        if (entry.target.closest(".animation-group")) {
+          entry.target.classList.add("animated");
+        } else {
+          // Для обычных элементов можно использовать data-delay
+          const delay = entry.target.getAttribute("data-delay");
+          if (delay) {
+            setTimeout(() => {
+              entry.target.classList.add("animated")
+            }, parseInt(delay));
+          } else {
+            entry.target.classList.add("animated");
+          }
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px',
+  });
+
+  const animatedItems = document.querySelectorAll(".to_animate")
+
+  if (animatedItems.length > 0) {
+    animatedItems.forEach(item => {
+      observer.observe(item)
+    })
+  }
+  //Анимации
+
+
+
   /* tabbs */
   const tabbs = document.querySelectorAll(".tabbs");
   if (tabbs.length > 0) {
@@ -945,45 +1014,60 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-  const gallerySliderCheck = document.querySelectorAll(".gallery");
-  if (gallerySliderCheck.length > 0) {
-    gallerySliderCheck.forEach((slider) => {
-      const swiperGallery = new Swiper(slider.querySelector(".swiper"), {
-        direction: "horizontal",
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: slider.querySelector(".gallery__slider-button_next"),
-          prevEl: slider.querySelector(".gallery__slider-button_prev"),
-        },
-        slidesPerView: 1.4,
-        grabCursor: true,
-        spaceBetween: 10,
 
-        centerSlides: false,
-        breakpoints: {
-          1250: {
-            slidesPerView: 4,
-            centerSlides: true,
-            spaceBetween: 20,
+  // gallery slider
+  SwiperCheck1 = document.querySelector(".mySwiper")
+  SwiperCheck2 = document.querySelector(".mySwiper2")
+  if (SwiperCheck1 && SwiperCheck2) {
+    var swiper = false;
+    var swiper2 = false;
+
+    function initSwiper() {
+      if (!swiper) {
+        swiper = new Swiper(".mySwiper", {
+          spaceBetween: 8,
+          slidesPerView: window.innerWidth < 1024 ? 5.2 : 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+
+        swiper2 = new Swiper(".mySwiper2", {
+          spaceBetween: 10,
+          thumbs: {
+            swiper: swiper,
           },
-          800: {
-            slidesPerView: 3,
-            centerSlides: true,
-            spaceBetween: 20,
+          navigation: {
+            nextEl: ".gallery__slider-button_next",
+            prevEl: ".gallery__slider-button_prev",
           },
-          550: {
-            slidesPerView: 2,
-            centerSlides: true,
-            spaceBetween: 20,
+          pagination: {
+            el: ".gallery-pagination",
+            type: "fraction",
+            renderFraction: function (currentClass, totalClass) {
+              return `<span class="${currentClass}"></span> / <span class="${totalClass}"></span>`;
+            },
+            clickable: true,
           },
-        },
-      });
-    });
+        });
+      }
+    }
+
+    ['resize', 'load'].forEach((event) => {
+      window.addEventListener(event, function () {
+        if (swiper) {
+          swiper.destroy(true, true);
+          swiper = false;
+          swiper2.destroy(true, true);
+          swiper2 = false;
+        }
+        initSwiper();
+      })
+    })
   }
+  Fancybox.bind("[data-fancybox]", {});
+  // gallery slider end
+
+
   const doctorLicencesCheck = document.querySelectorAll(
     ".doctor-licences"
   );
@@ -1202,3 +1286,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+

@@ -2,7 +2,7 @@
 .swiper {
   width: 100%;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .swiper-pag {
   pointer-events: none;
@@ -35,16 +35,83 @@
   justify-content: center;
   border-radius: $border-radius-small;
   background-color: $primary-background;
-  transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear, border-color 0.3s linear,
+    color 0.3s linear, fill 0.3s linear, stroke 0.3s linear;
+  background-color: $primary-color;
+  border: 1px solid transparent;
+  & svg {
+    path {
+      fill: white;
+      stroke: white;
+    }
+  }
+
   &:hover {
-    background-color: $primary-color;
+    background-color: $primary-background;
+    border-color: $primary-color;
 
     & svg {
       path {
-        fill: white;
-        stroke: white;
+        fill: $primary-color;
+        stroke: $primary-color;
       }
     }
+  }
+}
+
+.custom-wrapper__swiper {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  max-width: 400px;
+  z-index: 3;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+  border-radius: 4px;
+  height: 8px;
+  background-color: $primary-background;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  flex: 1;
+  border-radius: 50px;
+  height: 3px;
+  background-color: $primary-color;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  margin: 0;
+  border-radius: 4px;
+  height: 8px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.swiper-pagination-horizontal.swiper-pagination-fraction {
+  background-color: $primary-background;
+  max-width: fit-content;
+  max-height: fit-content;
+  padding: 16px 19px;
+  font-size: 20px;
+  line-height: 1;
+  color: rgba($primary-color, 0.5);
+  border-radius: $border-radius-small;
+  & .swiper-pagination-current {
+    color: $primary-color;
+    font-weight: 600;
+  }
+  & .swiper-pagination-total {
+    font-weight: 500;
   }
 }
 
@@ -55,7 +122,14 @@
 .swiper-button-disabled {
   cursor: auto;
   pointer-events: none;
-  opacity: 0.6;
+  background: $primary-background;
+  border-color: $primary-background;
+  & svg {
+    path {
+      fill: $primary-color;
+      stroke: $primary-color;
+    }
+  }
 }
 .slider-button_prev {
   &::after {
@@ -64,8 +138,6 @@
     margin-left: 3px;
   }
 }
-
-
 
 @media (max-width: 1400px) {
   .swiper-pag_outside {
