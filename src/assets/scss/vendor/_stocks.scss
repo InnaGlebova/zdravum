@@ -7,7 +7,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     text-align: start;
     margin-bottom: 60px;
     gap: 30px;
@@ -26,6 +26,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 10px;
+  }
+
+  &__view-all-btn {
+    margin-bottom: 24px;
   }
 
   &__card {
@@ -137,7 +141,6 @@
     max-width: fit-content;
     padding: 21px 57px;
   }
-  &__card-
 
   &__card-title {
     font-size: 32px;

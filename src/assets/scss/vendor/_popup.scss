@@ -167,24 +167,7 @@
   }
 }
 
-.form__input {
-  padding: 17px 20px;
-  border-radius: 8px;
-  width: 100%;
-  align-items: center;
-  background-color: #f2f7f9;
-  color: #738285;
-  border-radius: 8px;
-  font-size: 13px;
-  border: none;
-}
 
-.form__input::placeholder,
-.popup__textarea::placeholder {
-  color: #738285;
-  font-size: 13px;
-
-}
 
 .popup__textarea {
   padding: 17px 20px;
@@ -293,6 +276,7 @@
     }
   }
 }
+
 
 @media (max-width: 950px) {
   .close {

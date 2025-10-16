@@ -1,83 +1,146 @@
 /* doctors */
-.doctors__item {
-  display: flex;
-  flex-direction: column;
-  transition: border 0.3s linear;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  &:hover  {
-    border-color: $primary-color;
+.doctors {
+  .swiper-slide {
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    transform: scale(0.8);
+    filter: grayscale(100%);
+
+    &.swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+      filter: grayscale(0%);
+      z-index: 2;
+      margin: 0 60px !important;
+    }
+  }
+  &__item {
+    background: $primary-background;
+    border-radius: $border-radius-large;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 6px;
   }
 
-  &:hover {
-    border-color: $primary-color;
-  }
-}
-
-.doctors__top {
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 25px 15px 0 15px;
-  border: 1px solid transparent;
-  transition: border 0.3s linear;
-
-  & picture {
+  .swiper-btns.doctors_swiper-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    max-width: 554px;
+    z-index: 2;
+  }
+
+  &__top {
+    border-radius: 20px 20px 0 0;
+    position: relative;
     display: flex;
     justify-content: center;
-    bottom: 0;
-    padding-top: 40px;
+    border-radius: $border-radius-large;
+    overflow: hidden;
+    background-color: #fff;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/icons/decor.png) no-repeat 50%;
+      max-width: 360px;
+      z-index: 1
+    }
+
+    & picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      padding-top: 40px;
+      z-index: 2;
+    }
+
+    & picture img {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      overflow: visible;
+    }
   }
 
-  & picture img {
-    max-width: 200px;
-    max-height: 320px;
-    min-width: 200px;
-    min-height: 320px;
-    object-fit: cover;
-    overflow: visible;
-  }
-
-  & span {
+  & .doctors__top-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: absolute;
-    padding: 6px 12px;
-    background-color: $primary-color;
-    color: #fff;
-    font-size: 14px;
-    border-radius: 5px;
-    top: 15px;
+    bottom: 15px;
     left: 15px;
+    z-index: 2;
+
+    & span {
+      padding: 13px 21px;
+      background-color: #fff;
+      border-radius: $border-radius-small;
+      line-height: 1;
+      border: 1px solid rgba($primary-color, 0.2);
+    }
+
+    & a {
+      width: 46px;
+      height: 46px;
+      background-color: #fff;
+      border-radius: $border-radius-small;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s linear;
+      border: 1px solid rgba($primary-color, 0.2);
+      &:hover {
+        background-color: $primary-color;
+      }
+      & svg {
+        path {
+          stroke: $primary-color;
+          transition: stroke 0.3s linear;
+        }
+      }
+      &:hover svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
   }
-}
 
-.doctors__bottom {
-  border-radius: 0 0 20px 20px;
-  background-color: #e1ebef;
-  padding: 15px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  border: 1px solid transparent;
-  transition: border 0.3s linear;
+  &__bottom {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    gap: 10px;
+    border: 1px solid transparent;
+    transition: border 0.3s linear;
 
-  & p {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #001b21;
-  }
+    & p {
+      font-size: 20px;
+      font-weight: 600;
+    }
 
-  & span {
-    color: #738285;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
+    & span {
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    & button {
+      width: 100%;
+    }
   }
 }
 

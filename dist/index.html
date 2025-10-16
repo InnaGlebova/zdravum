@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preload" href="assets/img/intro/doctor.png" as="image">
+    <link rel="preload" href="assets/img/intro/doctor.webp" as="image">
     <script src="assets/js/swiper-bundle.min.js" defer></script> 
     <script src="assets/js/fancybox.min.js" defer></script>
     <script src="assets/js/app.js" defer></script>
@@ -426,9 +428,9 @@
       </div>
     </header><main class="main">
     <section class="intro section-padding">
-      <div class="container animation-group">
+      <div class="container">
         <div class="intro__header">
-          <div class="intro__header-text to_animate right-fade">Наркологическая клиника</div>
+          <div class="intro__header-text to_animate left-fade">Наркологическая клиника</div>
           <div class="intro__header-slogan to_animate right-fade">Здоровье тела и ясность ума начинаются здесь</div>
         </div>
     
@@ -530,17 +532,18 @@
             <div class="help__badge">
               <span class="help__badge-text section-badge">[ Круглосуточная поддержка врачей «Здравум» ]</span>
             </div>
-            <h2 class="help__title">Вам нужна помощь прямо сейчас?</h2>
+            <h2 class="help__title text-animation to_animate">Вам нужна помощь прямо сейчас?</h2>
             <p class="help__description">
               Если ситуация требует срочного вмешательства — оставьте заявку на звонок. Наш специалист свяжется с вами в
               ближайшие минуты, чтобы обсудить дальнейшие шаги. При тяжелом состоянии наши специалисты незамедлительно
               прибудут к вам
             </p>
             <div class="help__buttons">
-              <button class="popup-btn help__btn standart-btn tertiary-btn" type="button" data-path="popup__call">
+              <button class="popup-btn help__btn standart-btn tertiary-btn pulse-animation to_animate" type="button"
+                data-path="popup__call">
                 Срочный звонок
               </button>
-              <a href="tel:+78005553535" class="help__btn standart-btn quaternary-btn">
+              <a href="tel:+78005553535" class="help__btn standart-btn quaternary-btn pulse-animation to_animate">
                 8 800 555-35-35
               </a>
             </div>
@@ -557,14 +560,15 @@
       <div class="container">
         <div class="about__header">
           <div class="about__badge section-badge">[ О клинике «Здравум» ]</div>
-          <h2 class="about__title section-title">Здесь помогают вернуть <span>силы и спокойствие</span></h2>
+          <h2 class="about__title section-title down-fade to_animate">Здесь помогают вернуть <span>силы и спокойствие</span>
+          </h2>
           <p class="about__subtitle">
             «Здравум» — это не просто наркологическая клиника, а место, где человеку помогают начать жизнь заново
           </p>
         </div>
     
-        <div class="about__content">
-          <div class="about__text-block about__text-block--left">
+        <div class="about__content animation-group">
+          <div class="about__text-block about__text-block--left rotate-left to_animate">
             <p class="about__text">
               Мы создаём атмосферу доверия и поддержки, где нет осуждений и равнодушия. Наши врачи и психологи работают
               вместе, чтобы восстановить здоровье тела, ясность ума и внутренний баланс
@@ -573,7 +577,7 @@
               Мы рядом на каждом этапе — от первого звонка до полного восстановления!
             </p>
             <div class="about__action">
-              <a href="#" class="about__btn standart-btn primary-btn">
+              <a href="#" class="about__btn standart-btn primary-btn pulse-animation to_animate">
                 Узнать больше о клинике
               </a>
               <picture class="about__icon">
@@ -583,12 +587,12 @@
             </div>
           </div>
     
-          <picture class="about__image">
+          <picture class="about__image rotate-left to_animate">
             <source srcset="assets/img/about/about.webp" type="image/webp" />
             <img src="assets/img/about/about.jpeg" alt="Команда врачей клиники" />
           </picture>
     
-          <div class="about__text-block about__text-block--right">
+          <div class="about__text-block about__text-block--right rotate-left to_animate">
             <div class="about__value-header">Главная ценность для нас</div>
             <h3 class="about__value-title">Видеть, как люди возвращаются к себе и своим близким</h3>
             <picture class="about__cross-icon">
@@ -668,7 +672,7 @@
     <section class="services-tabs section-padding tabs-container">
       <div class="container filter search-wrapper">
         <div class="services__badge section-badge">[ Наши услуги ]</div>
-        <div class="services__title section-title">С какими проблемами<br>
+        <div class="services__title section-title down-fade to_animate">С какими проблемами<br>
           <span>вы можете к нам обратиться</span>
         </div>
         <div class="services-tabs__inner">
@@ -900,7 +904,8 @@
                 Оплачивайте курс постепенно – без лишнего стресса для бюджета!
               </p>
             </div>
-            <button class="popup-btn installment__btn change__item-btn standart-btn secondary-btn to_animate fade-in"
+            <button
+              class="popup-btn installment__btn change__item-btn standart-btn secondary-btn pulse-animation to_animate"
               data-path="popup-change">
               Узнать подробнее о рассрочке
             </button>
@@ -932,11 +937,11 @@
     
     <section class="price section-padding">
       <div class="container">
-        <div class="section-badge price__badge">[ Прайс-лист ]</div>
-        <h1 class="section-title price__title"> <span>Цены</span> на услуги клиники</h1>
+        <div class="section-badge price__badge left-fade to_animate">[ Прайс-лист ]</div>
+        <h1 class="section-title price__title left-fade to_animate"> <span>Цены</span> на услуги клиники</h1>
     
-        <div class="faq__inner hide-items">
-          <div class="faq__item hide-item">
+        <div class="faq__inner hide-items animation-group">
+          <div class="faq__item hide-item to_animate down-fade">
             <p class="faq__item-title hide-item__title">
               Вывод из запоя
             </p>
@@ -982,7 +987,7 @@
               </div>
             </div>
           </div>
-          <div class="faq__item hide-item">
+          <div class="faq__item hide-item to_animate down-fade">
             <p class="faq__item-title hide-item__title">
               Нарколог на дом
             </p>
@@ -1028,7 +1033,7 @@
               </div>
             </div>
           </div>
-          <div class="faq__item hide-item active">
+          <div class="faq__item hide-item active to_animate down-fade">
             <p class="faq__item-title hide-item__title active">
               Лечение алкоголизма
             </p>
@@ -1074,7 +1079,7 @@
               </div>
             </div>
           </div>
-          <div class="faq__item hide-item">
+          <div class="faq__item hide-item to_animate down-fade">
             <p class="faq__item-title hide-item__title">
               Кодирование от алкоголизма
             </p>
@@ -1120,7 +1125,7 @@
               </div>
             </div>
           </div>
-          <div class="faq__item hide-item">
+          <div class="faq__item hide-item to_animate down-fade">
             <p class="faq__item-title hide-item__title">
               Лечение наркомании
             </p>
@@ -1166,7 +1171,7 @@
               </div>
             </div>
           </div>
-          <div class="faq__item hide-item">
+          <div class="faq__item hide-item to_animate down-fade">
             <p class="faq__item-title hide-item__title">
               Психиатрия </p>
             <div class="hide-item__content">
@@ -1213,7 +1218,7 @@
           </div>
         </div>
     
-        <div class="payment-methods">
+        <div class="payment-methods to_animate pulse-animation">
           <div class="payment-methods__title">Принимаем к оплате:</div>
           <div class="payment-methods__list">
             <div class="payment-methods__item">
@@ -1270,7 +1275,7 @@
     
     <section class="guarantees">
       <div class="container">
-        <div class="guarantees__header to_animate left-fade">
+        <div class="guarantees__header left-fade to_animate">
           <div class="guarantees__badge section-badge">[ Гарантии обслуживания ]</div>
           <h2 class="guarantees__title section-title"><span>Здравум</span> — надежная клиника</h2>
         </div>
@@ -1336,18 +1341,18 @@
     
     <section class="stocks section-padding">
       <div class="container">
-        <div class="stocks__header">
+        <div class="stocks__header left-fade to_animate">
           <div class="stocks__header-left">
             <div class="stocks__badge section-badge">[Акции и скидки]</div>
             <h2 class="stocks__title section-title"><span>Начать лечение проще,</span> чем кажется</h2>
           </div>
-          <a class="stocks__view-all-btn secondary-btn standart-btn" href="#">
+          <a class="stocks__view-all-btn secondary-btn standart-btn pulse-animation to_animate" href="#">
             Смотреть все акции
           </a>
         </div>
     
-        <div class="stocks__inner">
-          <div class="stocks__card change__item-title stocks__card--first">
+        <div class="stocks__inner animation-group">
+          <div class="stocks__card change__item-title stocks__card--first down-fade to_animate">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
                 <h3 class="stocks__card-title current-title">Скидка на первый приём врача</h3>
@@ -1366,7 +1371,7 @@
             </picture>
           </div>
     
-          <div class="stocks__card change__item-title">
+          <div class="stocks__card change__item-title down-fade to_animate">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
                 <h3 class="stocks__card-title current-title">«Первая неделя трезвости»</h3>
@@ -1384,7 +1389,7 @@
             </picture>
           </div>
     
-          <div class="stocks__card change__item-title">
+          <div class="stocks__card change__item-title down-fade to_animate">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
                 <h3 class="stocks__card-title current-title">«Здоровье без возраста»</h3>
@@ -1402,7 +1407,7 @@
             </picture>
           </div>
     
-          <div class="stocks__card change__item-title">
+          <div class="stocks__card change__item-title down-fade to_animate">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
                 <h3 class="stocks__card-title current-title">«Новый старт»</h3>
@@ -1421,7 +1426,7 @@
     
           </div>
     
-          <div class="stocks__card change__item-title">
+          <div class="stocks__card change__item-title down-fade to_animate">
             <div class="stocks__card-content">
               <div class="stocks__card-text">
                 <h3 class="stocks__card-title current-title">«Забота о героях»</h3>
@@ -1444,7 +1449,7 @@
     
     <section class="stages section-padding">
       <div class="container">
-        <div class="stages__header">
+        <div class="stages__header  down-fade to_animate">
           <div class="stages__badge section-badge">[ Этапы лечения ]</div>
           <h2 class="stages__title section-title">Как проходит лечение <br> <span>в клинике «Здравум»</span></h2>
         </div>
@@ -1534,7 +1539,7 @@
     
     <section class="assistance section-padding">
       <div class="container">
-        <div class="assistance__header">
+        <div class="assistance__header  left-fade to_animate">
           <div class="assistance__header-wrap">
             <div class="assistance__badge section-badge">[ Психологическая помощь ]</div>
             <h2 class="assistance__title section-title">
@@ -1547,8 +1552,8 @@
           </p>
         </div>
     
-        <div class="assistance__inner">
-          <div class="assistance__info-block">
+        <div class="assistance__inner animation-group">
+          <div class="assistance__info-block down-fade to_animate">
             <div class="assistance__text">
               <p>
                 Многие зависимые отказываются признавать проблему и отвергают помощь, даже если рядом семья и друзья. В
@@ -1588,7 +1593,7 @@
             </div>
           </div>
     
-          <div class="assistance__stats">
+          <div class="assistance__stats right-fade to_animate">
             <div class="assistance__stats-badge">[ Подтверждённая статистика ]</div>
     
             <div class="assistance__stats-circle">
@@ -1610,7 +1615,7 @@
     <section class="advantages section-padding">
       <div class="container">
         <div class="advantages__inner">
-          <div class="advantages__content">
+          <div class="advantages__content left-fade to_animate">
             <div class="advantages__badge section-badge">[ Наши преимущества ]</div>
             <h2 class="advantages__title section-title">Почему выбирают <span>«Здравум»</span></h2>
             <div class="advantages__description">
@@ -1626,8 +1631,8 @@
             </div>
           </div>
     
-          <div class="advantages__blocks">
-            <div class="advantages__item">
+          <div class="advantages__blocks animation-group">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Опытные врачи</h3>
                 <picture class="advantages__picture">
@@ -1638,7 +1643,7 @@
               <p class="advantages__item-description">Долгие годы практики в наркологии и психиатрии</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Индивидуальный подход</h3>
                 <picture class="advantages__picture">
@@ -1649,7 +1654,7 @@
               <p class="advantages__item-description">Подбираем лечение под конкретного человека</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Комфортные условия</h3>
                 < <picture class="advantages__picture">
@@ -1660,7 +1665,7 @@
               <p class="advantages__item-description">Пространство для спокойного восстановления</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Забота о психике</h3>
                 <picture class="advantages__picture">
@@ -1671,7 +1676,7 @@
               <p class="advantages__item-description">Поддержка психологов и мотивация</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Полная конфиденциальность</h3>
                 <picture class="advantages__picture">
@@ -1681,7 +1686,7 @@
               </div <p class="advantages__item-description">Гарантируем защиту данных пациентов</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Прозрачная оплата</h3>
                 <picture class="advantages__picture">
@@ -1692,7 +1697,7 @@
               <p class="advantages__item-description">Фиксированные цены и рассрочка</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Долгосрочные результаты</h3>
                 <picture class="advantages__picture">
@@ -1703,7 +1708,7 @@
               <p class="advantages__item-description">Стабильная ремиссия и восстановление</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Комплексное восстановление</h3>
                 <picture class="advantages__picture">
@@ -1714,7 +1719,7 @@
               <p class="advantages__item-description">Тело, ум и эмоциональное состояние</p>
             </div>
     
-            <div class="advantages__item">
+            <div class="advantages__item down-fade to_animate">
               <div class="advantages__item-wrap">
                 <h3 class="advantages__item-title">Поддержка семьи</h3>
                 <picture class="advantages__picture">
@@ -1733,11 +1738,12 @@
       <div class="container">
         <div class="offer__header">
           <div class="offer__badge section-badge">[ Что мы можем предложить ]</div>
-          <h2 class="offer__title section-title">Формы предоставления услуг <br> <span>клиники «Здравум»</span></h2>
+          <h2 class="offer__title section-title left-fade to_animate">Формы предоставления услуг <br> <span>клиники
+              «Здравум»</span></h2>
         </div>
     
-        <div class="offer__inner">
-          <div class="offer__card">
+        <div class="offer__inner animation-group">
+          <div class="offer__card down-fade to_animate">
             <h3 class="offer__card-title">Амбулаторное лечение</h3>
             <picture class="offer__card-picture">
               <source srcset="assets/img/offer/1.webp" type="image/webp" />
@@ -1750,7 +1756,7 @@
               </p>
             </div>
           </div>
-          <div class="offer__card">
+          <div class="offer__card down-fade to_animate">
             <h3 class="offer__card-title">Выезд нарколога на дом</h3>
             <picture class="offer__card-picture">
               <source srcset="assets/img/offer/2.webp" type="image/webp" />
@@ -1763,7 +1769,7 @@
               </p>
             </div>
           </div>
-          <div class="offer__card">
+          <div class="offer__card down-fade to_animate">
             <h3 class="offer__card-title">Стационарное лечение и реабилитация</h3>
             <picture class="offer__card-picture">
               <source srcset="assets/img/offer/3.webp" type="image/webp" />
@@ -1776,7 +1782,7 @@
               </p>
             </div>
           </div>
-          <div class="offer__card">
+          <div class="offer__card down-fade to_animate">
             <h3 class="offer__card-title">Онлайн-консультации и сопровождение</h3>
             <picture class="offer__card-picture">
               <source srcset="assets/img/offer/1.webp" type="image/webp" />
@@ -1798,9 +1804,10 @@
       <div class="container licences__container">
         <div class="licences__inner-main">
           <div class="licences__content">
-            <div class="licences__header">
+            <div class="licences__header left-fade to_animate">
               <div class="licences__badge section-badge">[ Сертификаты ]</div>
-              <h2 class="licences__title section-title">Наши сертификаты <br> <span>и лицензии</span></h2>
+              <h2 class="licences__title section-title">Наши сертификаты <br> <span>и лицензии</span>
+              </h2>
               <div class="licences__descr">Подтверждение качества и безопасности предоставляемых услуг</div>
             </div>
             <a href="" class="licences__btn primary-btn standart-btn">Смотреть все документы</a>
@@ -1874,75 +1881,180 @@
     
     <section class="doctors section-padding">
       <div class="container doctors__container">
-        <div class="section-title doctors__title">Специалисты клининки</div>
+        <div class="doctors__header down-fade to_animate">
+          <div class="doctors__badge section-badge">[ Команда профессионалов ]</div>
+          <h2 class="doctors__title section-title">Персонал</h2>
+          <div class="doctors__descr">Команда сертифицированных специалистов с многолетним опытом в наркологии и психиатрии,
+            обеспечивающая комплексное лечение, индивидуальный подход к каждому пациенту
+            и сопровождение на всех этапах терапии</div>
+        </div>
+    
         <div class="doctors__inner custom-wrapper__swiper">
           <div class="swiper doctors-swiper">
             <div class="swiper-wrapper">
-              <a href="#" class="swiper-slide doctors__item">
-                <div class="doctors__top">
-                  <picture>
-                    <source srcset="assets/img/man.webp" type="image/webp" />
-                    <img src="assets/img/man.jpg" loading="lazy" alt="" />
-                  </picture>
-                  <span>Стаж: 10 лет</span>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Константинопольский Константин Константинович</p>
+                    <span class="current-subtitle">Главный врач клиники «Здравум», Врач-психиатр описание в две
+                      строки</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-                <div class="doctors__bottom">
-                  <p>Калюжная Марина Александровна</p>
-                  <span>Главный врач клиники</span>
+              </div>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Калюжная Марина Александровна</p>
+                    <span class="current-subtitle">Главный врач клиники</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-              </a>
-              <a href="#" class="swiper-slide doctors__item">
-                <div class="doctors__top">
-                  <picture>
-                    <source srcset="assets/img/woman.webp" type="image/webp" />
-                    <img src="assets/img/woman.jpg" loading="lazy" alt="" />
-                  </picture>
-                  <span>Стаж: 10 лет</span>
+              </div>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Калюжная Марина Александровна</p>
+                    <span class="current-subtitle">Главный врач клиники</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-                <div class="doctors__bottom">
-                  <p>Калюжная Марина Александровна</p>
-                  <span>Главный врач клиники</span>
+              </div>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Калюжная Марина Александровна</p>
+                    <span class="current-subtitle">Главный врач клиники</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-              </a>
-              <a href="#" class="swiper-slide doctors__item">
-                <div class="doctors__top">
-                  <picture>
-                    <source srcset="assets/img/woman.webp" type="image/webp" />
-                    <img src="assets/img/woman.jpg" loading="lazy" alt="" />
-                  </picture>
-                  <span>Стаж: 10 лет</span>
+              </div>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Калюжная Марина Александровна</p>
+                    <span class="current-subtitle">Главный врач клиники</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-                <div class="doctors__bottom">
-                  <p>Калюжная Марина Александровна</p>
-                  <span>Главный врач клиники</span>
+              </div>
+              <div class="swiper-slide">
+                <div class="doctors__item">
+                  <div class="doctors__top">
+                    <picture>
+                      <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
+                      <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                    </picture>
+                    <div class="doctors__top-wrap">
+                      <span>Стаж: 10 лет</span>
+                      <a href="#" class="doctors__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 13L13 1M13 1H2.95918M13 1V11.0408" stroke="#139297" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="doctors__bottom change__item-title">
+                    <p class="current-title">Калюжная Марина Александровна</p>
+                    <span class="current-subtitle">Главный врач клиники</span>
+                    <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
+                      data-path="popup-change">
+                      Записаться к специалисту
+                    </button>
+                  </div>
                 </div>
-              </a>
-              <a href="#" class="swiper-slide doctors__item">
-                <div class="doctors__top">
-                  <picture>
-                    <source srcset="assets/img/man2.webp" type="image/webp" />
-                    <img src="assets/img/man2.jpg" loading="lazy" alt="" />
-                  </picture>
-                  <span>Стаж: 10 лет</span>
-                </div>
-                <div class="doctors__bottom">
-                  <p>Калюжная Марина Александровна</p>
-                  <span>Главный врач клиники</span>
-                </div>
-              </a>
-              <a href="#" class="swiper-slide doctors__item">
-                <div class="doctors__top">
-                  <picture>
-                    <source srcset="assets/img/man2.webp" type="image/webp" />
-                    <img src="assets/img/man2.jpg" loading="lazy" alt="" />
-                  </picture>
-                  <span>Стаж: 10 лет</span>
-                </div>
-                <div class="doctors__bottom">
-                  <p>Калюжная Марина Александровна</p>
-                  <span>Главный врач клиники</span>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
           <div class="swiper-btns doctors_swiper-btns">
@@ -1982,7 +2094,7 @@
               <p class="gallery__description to_animate down-fade">
                 Посмотрите, как мы создаём комфорт и поддержку для наших пациентов
               </p>
-              <a href="#" class="gallery__btn standart-btn primary-btn to_animate down-fade">
+              <a href="#" class="gallery__btn standart-btn primary-btn pulse-animation to_animate">
                 Смотреть все фотографии
               </a>
             </div>
@@ -1991,19 +2103,22 @@
                 <div class="stat__value">
                   16 <span class="stat__unit">лет</span>
                 </div>
-                <div class="stat__label">обратились</div>
+                <div class="stat__label">Пациентов обратились
+                  к нашу клинику</div>
               </div>
     
               <div class="gallery__stat to_animate down-fade">
                 <div class="stat__value">5 000+</div>
-                <div class="stat__label">обратились</div>
+                <div class="stat__label">Пациентов обратились
+                  к нашу клинику</div>
               </div>
     
               <div class="gallery__stat to_animate down-fade">
                 <div class="stat__value">
-                  12 <span class="stat__unit">врачей</span>
+                  12 <span class="stat__unit">бригад</span>
                 </div>
-                <div class="stat__label">обратились</div>
+                <div class="stat__label">Пациентов обратились
+                  к нашу клинику</div>
               </div>
             </div>
           </div>
@@ -2063,39 +2178,39 @@
               </div>
             </div>
             <div class="gallery__thumb">
-              <div thumbsslider="" class="swiper mySwiper to_animate down-fade gallery__thumb">
+              <div thumbsslider="" class="swiper mySwiper gallery__thumb animation-group">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/1.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 1">
                     </picture>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/2.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 2" decoding="async">
                     </picture>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/3.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 3" decoding="async">
                     </picture>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/1.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 1">
                     </picture>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/2.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 2" decoding="async">
                     </picture>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide to_animate down-fade">
                     <picture>
                       <img width="150" height="150" src="assets/img/offer/3.webp"
                         class="attachment-thumbnail size-thumbnail" alt="Фото клиники 3" decoding="async">
@@ -2114,7 +2229,7 @@
     <section class="reviews section-padding">
       <div class="container reviews__container swiper__container">
         <div class="reviews__badge section-badge">[ Что говорят о нас ]</div>
-        <div class="section-title reviews__title">Отзывы наших <br> <span>пациентов</span></div>
+        <div class="section-title reviews__title left-fade to_animate">Отзывы наших <br> <span>пациентов</span></div>
         <div class="reviews__inner custom-wrapper__swiper">
           <div class="swiper-btns reviews_swiper-btns">
             <div class="slider-button slider-button_prev reviews-button_prev reviews__slider-button_prev"><svg
@@ -2294,47 +2409,35 @@
       </div>
     </section>
     
+    <section class="contacts">
+      <div id="map__container" class="contacts__map">
+        <div id="map" style="width: 100%; height: 100%;">
     
-    
-    <!-- <section class="consultation">
-      <div class="container consultation__container">
-        <div class="consultation__inner-second">
-          <div class="consultation__item">
-            <h2 class="consultation__title">
-              Запишитесь на бесплатную консультацию по телефону
-            </h2>
-            <p class="consultation__subtitle">
-              Заполните форму и специалист перезвонит вам для консультации
-            </p>
-            <form class="consultation__form form">
-              <input type="text" class="consultation__form-input" required placeholder="Ваше имя" />
-              <input type="tel" class="consultation__form-input" required placeholder="+7 (___) ___-__-__" />
-              <button class="section__plashka-btn standart-btn consultation__btn" type="submit">
-                Оставить заявку
-              </button>
-            </form>
-            <div class="policy">
-              Нажимая на кнопку «Оставить заявку», вы соглашаетесь с
-              <a href="#">политикой конфиденциальности</a>
-            </div>
+        </div>
+        <div class="contacts__inner to_animate right_fade">
+          <h2 class="contacts__title">Остались вопросы?</h2>
+          <div class="contacts__description">
+            Оставьте заявку на обратный звонок и мы перезвоним вам в течение 15 минут!
           </div>
-          <picture class="consultation__picture-second">
-            <source srcset="assets/img/iphone.webp" type="image/webp" />
-            <img src="assets/img/iphone.jpg" loading="lazy" alt="" />
-          </picture>
-          <div class="iphone__wrap">
-            <a href="/">
-              <picture class="iphone__logo-picture">
-                <source srcset="assets/img/icons/logo.svg" type="image/svg" />
-                <img src="assets/img/icons/logo.png" />
-              </picture>
-            </a>
-            <span>Номер горячей линиии</span>
-            <a class="iphone__tel" href="tel:79273212323">+7 (927) 321-23-23</a>
-          </div>
+          <form class="contacts__form form">
+            <input type="text" class="contacts__form-input form__input" required placeholder="Ваше имя" />
+            <input type="tel" class="contacts__form-input form__input" required placeholder="Ваш номер телефона" />
+            <label class="contacts__policy-checkbox policy-checkbox">
+              <input type="checkbox" checked required>
+              <span class="contacts__policy-text policy-text">
+                Нажимая кнопку я соглашаюсь с <a href="#" target="_blank">политикой конфединциальности</a> и <a href="#"
+                  target="_blank">пользовательским соглашением</a>
+              </span>
+            </label>
+            <button class="standart-btn contacts__btn popup-btn tertiary-btn"  data-path="popup-change">
+              Оставить заявку
+            </button>
+          </form>
         </div>
       </div>
     </section>
+    
+    <!-- 
     
     <section class="faq">
       <div class="container">
@@ -2462,57 +2565,6 @@
     </section>
     
     
-    <section class="callback section-offset">
-      <div class="container">
-        <div class="callback__inner">
-          <div class="title__wrap">
-            <div class="callback__title">
-              Остались вопросы? Мы вам перезвоним!
-            </div>
-            <div class="callback__descr">
-              Заполните форму и специалист перезвонит вам для консультации
-            </div>
-            <div class="social-media">
-              <a href="" class="social-media__item">
-                <picture class="social-media__picture">
-                  <source srcset="assets/img/icons/social/vk.svg" type="image/svg" />
-                  <img class="social-media__img" src="assets/img/icons/social/vk.png" />
-                </picture>
-              </a>
-              <a href="" class="social-media__item">
-                <picture class="social-media__picture">
-                  <source srcset="assets/img/icons/social/tg.svg" type="image/svg" />
-                  <img class="social-media__img" src="assets/img/icons/social/tg.png" />
-                </picture>
-              </a>
-              <a href="" class="social-media__item">
-                <picture class="social-media__picture">
-                  <source srcset="assets/img/icons/social/wa.svg" type="image/svg" />
-                  <img class="social-media__img" src="assets/img/icons/social/wa.png" />
-                </picture>
-              </a>
-            </div>
-          </div>
-          <form class="callback__form form">
-            <div class="callback__form-input-wrap">
-              <input type="text" class="consultation__form-input callback__input" required placeholder="Ваше имя" />
-              <input type="tel" class="consultation__form-input callback__input" required
-                placeholder="+7 (___) ___-__-__" />
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-            <div class="callback__form-bottom-wrap">
-              <button class="section__plashka-btn standart-btn">
-                Оставить заявку
-              </button>
-              <div class="policy callback__policy">
-                Нажимая на кнопку «Оставить заявку», вы соглашаетесь с
-                <a href="#">политикой конфиденциальности</a>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
     
     <section class="articles section-padding-bottom">
       <div class="container articles__container swiper__container">
@@ -2601,417 +2653,363 @@
 </main>
     <footer class="footer" id="footer">
       <div class="container">
-        <div class="footer-top">
-          <div class="footer__wrap">
-            <a href="index.html" class="footer__logo logo desktop">
-              <picture class="footer__logo-picture logo__picture">
-                <source srcset="assets/img/icons/logo.svg" type="image/svg" />
-                <img src="assets/img/icons/logo.png" />
-              </picture>
-              <div class="logo__text footer__logo-text">
-                <p class="footer__logo-name">Наркологическая клиника</p>
-                <span>Наркопомощь</span>
-                <p class="footer__logo-certificate">
-                  Лицензия №Л041-01181-16/00340737
-                </p>
-              </div>
-            </a>
-            <div class="footer__text">
-              <p>Амбулаторные услуги оказываются ООО «Наше здоровье»</p>
-              <p>
-                ИНН 7705550380, ОГРН 47746027417,Лицензия: Л041-01137-77/00293272 по
-                адресу: г. Москва, ул. Дубининская, д. 68
-              </p>
+        <div class="footer__top">
+          <div class="footer__info">
+            <div class="footer__btn-inner">
+              <button class="popup-btn standart-btn tertiary-btn footer__btn" data-path="popup-change">
+                Обратный звонок
+              </button>
+              <a href="tel:+79273212323" class="standart-btn primary-btn footer__btn quaternary-btn">
+                8 927 321-23-23
+              </a>
             </div>
-    
-            <div class="footer__info">
-              <a href="tel:+79273212323" class="footer__phone"
-                >+7 (927) 321-23-23</a
-              >
-              <div class="footer__item footer__address">
+            <div class="footer__item footer__address">
+              <span>Адрес:</span>
+              <div class="footer__address-inner">
                 <button data-path="popup__city" class="popup-btn footer__address-btn">Астрахань,</button>
                 <p class="footer__address-text">Немировича-Данченко, 197а</p>
               </div>
-              <p>Круглосуточно, 24/7</p>
-              <a class="footer__mail" href="mailto:indexpochta@gmail.com"
-                >indexpochta@gmail.com</a
-              >
             </div>
-            <div class="footer__social social">
-              <a href="#" class="social__link">
-                <picture class="social__picture">
-                  <source
-                    srcset="assets/img/icons/social/tg-blue.svg"
-                    type="image/svg+xml"
-                  />
-                  <img src="assets/img/icons/social/tg-blue.png" />
-                </picture>
-              </a>
-              <a href="#" class="social__link">
-                <picture class="social__picture">
-                  <source
-                    srcset="assets/img/icons/social/vk-blue.svg"
-                    type="image/svg+xml"
-                  />
-                  <img src="assets/img/icons/social/vk-blue.png" />
-                </picture>
-              </a>
-              <a href="#" class="social__link">
-                <picture class="social__picture">
-                  <source
-                    srcset="assets/img/icons/social/eye.svg"
-                    type="image/svg+xml"
-                  />
-                  <img src="assets/img/icons/social/eye.png" />
-                </picture>
-              </a>
+            <div class="footer__item footer__mail">
+              <span>Электронная почта:</span>
+              <a href="mailto:indexpochta@gmail.com">info@zdravum.ru</a>
             </div>
-            <button
-              class="popup-btn standart-btn secondary-btn footer__btn"
-              data-path="popup__call"
-            >
-              Вызвать врача
-            </button>
-            <div class="footer__pay pay">
-              <picture class="pay__picture">
-                <source
-                  srcset="assets/img/icons/pay/spb.svg"
-                  type="image/svg+xml"
-                />
-                <img src="assets/img/icons/pay/spb.png" />
-              </picture>
-              <picture class="pay__picture">
-                <source
-                  srcset="assets/img/icons/pay/mir.svg"
-                  type="image/svg+xml"
-                />
-                <img src="assets/img/icons/pay/mir.png" />
-              </picture>
-              <picture class="pay__picture">
-                <source
-                  srcset="assets/img/icons/pay/visa.svg"
-                  type="image/svg+xml"
-                />
-                <img src="assets/img/icons/pay/visa.png" />
-              </picture>
-              <picture class="pay__picture">
-                <source srcset="assets/img/icons/pay/ms.svg" type="image/svg+xml" />
-                <img src="assets/img/icons/pay/ms.png" />
-              </picture>
-              <picture class="pay__picture">
-                <source
-                  srcset="assets/img/icons/pay/rasrochka.svg"
-                  type="image/svg+xml"
-                />
-                <img src="assets/img/icons/pay/rasrochka.png" />
-              </picture>
+            <div class="footer__item footer__social">
+              <span>Наши социальные сети:</span>
+              <div class="footer__social-inner social">
+                <a href="#" class="social__link">
+                  <picture class="social__picture">
+                    <source srcset="assets/img/icons/social/wa.svg" type="image/svg+xml" />
+                    <img src="assets/img/icons/social/wa.png" alt="whatsapp" />
+                  </picture>
+                </a>
+                <a href="#" class="social__link">
+                  <picture class="social__picture">
+                    <source srcset="assets/img/icons/social/tg.svg" type="image/svg+xml" />
+                    <img src="assets/img/icons/social/tg.png" alt="telegram" />
+                  </picture>
+                </a>
+                <a href="#" class="social__link">
+                  <picture class="social__picture">
+                    <source srcset="assets/img/icons/social/vk.svg" type="image/svg+xml" />
+                    <img src="assets/img/icons/social/vk.png" alt="vkontakte" />
+                  </picture>
+                </a>
+              </div>
             </div>
-            <li class="footer__plashka mobile">
-              <p>Действуют мобильные медицинские бригады</p>
-              <ul>
-                <li class="footer__link">
-                  <a href="#">Политика конфиденциальности</a>
-                </li>
-                <li class="footer__link">
-                  <a href="#">Карта сайта</a>
-                </li>
-              </ul>
-            </li>
-          </div>
     
-          <ul class="footer__nav">
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
+            <div class="footer__pay pay">
+              <div class="footer__pay-title">Способы оплаты:</div>
+              <div class="footer__pay-inner">
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/1.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/1.png" alt="Наличные" />
+                  </picture>
+                  <span>Наличные</span>
+                </div>
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/2.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/2.png" alt="Карты" />
+                  </picture>
+                  <span>Карты</span>
+                </div>
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/3.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/3.png" alt="QR-код" />
+                  </picture>
+                  <span>QR-код</span>
+                </div>
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/4.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/4.png" alt="Перевод" />
+                  </picture>
+                  <span>Перевод</span>
+                </div>
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/5.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/5.png" alt="Рассрочка" />
+                  </picture>
+                  <span>Рассрочка</span>
+                </div>
+                <div class="footer__pay-item">
+                  <picture class="pay__picture">
+                    <source srcset="assets/img/pay/6.svg" type="image/svg+xml" />
+                    <img src="assets/img/pay/6.png" alt="СБП" />
+                  </picture>
+                  <span>СБП</span>
+                </div>
               </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-              <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item panel-link">
-             <div class="footer__nav-title-wrap">
-                <a class="footer__nav-title" href="#">Нарколог на дом</a>
-                <button class="panel-title">
-                  <picture
-                    ><source
-                      srcset="assets/img/icons/panel-arrow.svg"
-                      type="image/svg+xml" />
-                    <img src="assets/img/icons/panel-arrow.png"
-                  /></picture>
-                </button>
-              </div>
-              <ul class="panel-body footer__panel-body">
-                <li class="footer__link hide-item">
-                  <a href="#"> Анонимная наркологическая помощь</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#"> Вызвать нарколога на дом</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Детоксикация от наркотиков</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании в стационаре</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Лечение наркомании амбулаторно</a>
-                </li>
-                <li class="footer__link hide-item">
-                  <a href="#">Снятие ломки</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item">
-              <ul class="footer__nav-other">
-                <li class="footer__nav-title">
-                  <a href="#">Прайс-лист</a>
-                </li>
-                <li class="footer__nav-title">
-                  <a href="#">Акции</a>
-                </li>
-                <li class="footer__nav-title">
-                  <a href="#">Частые вопрсоы</a>
-                </li>
-                <li class="footer__nav-title">
-                  <a href="#">Статьи</a>
-                </li>
-                <li class="footer__nav-title">
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav-item footer__plashka desktop">
-              <p>Действуют мобильные медицинские бригады</p>
-              <ul>
-                <li class="footer__link">
-                  <a href="#">Политика конфиденциальности</a>
-                </li>
-                <li class="footer__link">
-                  <a href="#">Карта сайта</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <a href="index.html" class="footer__logo logo mobile">
-            <picture class="footer__logo-picture logo__picture">
-              <source srcset="assets/img/icons/logo.svg" type="image/svg" />
-              <img src="assets/img/icons/logo.png" />
-            </picture>
-            <div class="logo__text footer__logo-text">
-              <p class="footer__logo-name">Наркологическая клиника</p>
-              <span>Наркопомощь</span>
-              <p class="footer__logo-certificate">
-                Лицензия №Л041-01181-16/00340737
-              </p>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-bottom__text">
-            <p>
-              Сайт носит исключительно информационный характер и не является
-              публичной офертой. Имеются противопоказания, необходимо
-              проконсультироваться со специалистом. 18+ Все права на сайт
-              принадлежат частной коммерческой компании. На сайте не размещается
-              реклама. Сайт использует cookies. © 2024
-            </p>
+    
+          </div>
+          <div class="footer__top-inner">
+            <ul class="footer__nav">
+              <li class="footer__nav-item panel-link">
+                <div class="footer__nav-title-wrap">
+                  <a class="footer__nav-title" href="#">О клинике</a>
+                  <button class="panel-title">
+                    <picture>
+                      <source srcset="assets/img/icons/panel-arrow.svg" type="image/svg+xml" />
+                      <img src="assets/img/icons/panel-arrow.png" />
+                    </picture>
+                  </button>
+                </div>
+                <ul class="panel-body footer__panel-body">
+                  <li class="footer__link hide-item">
+                    <a href="#">Отзывы</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лицензии и сертификаты</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Врачи</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Блог</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Контакты</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Прайс-лист</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Фотогалерея</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Акции</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Программы</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">FAQ</a>
+                  </li>
+    
+                </ul>
+              </li>
+              <li class="footer__nav-item panel-link">
+                <div class="footer__nav-title-wrap">
+                  <a class="footer__nav-title" href="#">Вывод из запоя</a>
+                  <button class="panel-title">
+                    <picture>
+                      <source srcset="assets/img/icons/panel-arrow.svg" type="image/svg+xml" />
+                      <img src="assets/img/icons/panel-arrow.png" />
+                    </picture>
+                  </button>
+                </div>
+                <ul class="panel-body footer__panel-body">
+                  <li class="footer__link hide-item">
+                    <a href="#"> Анонимная наркологическая помощь</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#"> Вызвать нарколога на дом</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Детоксикация от наркотиков</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании в стационаре</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании амбулаторно</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Снятие ломки</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__nav-item panel-link">
+                <div class="footer__nav-title-wrap">
+                  <a class="footer__nav-title" href="#">Нарколог на дом</a>
+                  <button class="panel-title">
+                    <picture>
+                      <source srcset="assets/img/icons/panel-arrow.svg" type="image/svg+xml" />
+                      <img src="assets/img/icons/panel-arrow.png" />
+                    </picture>
+                  </button>
+                </div>
+                <ul class="panel-body footer__panel-body">
+                  <li class="footer__link hide-item">
+                    <a href="#"> Анонимная наркологическая помощь</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#"> Вызвать нарколога на дом</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Детоксикация от наркотиков</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании в стационаре</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании амбулаторно</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Снятие ломки</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__nav-item panel-link">
+                <div class="footer__nav-title-wrap">
+                  <a class="footer__nav-title" href="#">Лечение алкоголизма </a>
+                  <button class="panel-title">
+                    <picture>
+                      <source srcset="assets/img/icons/panel-arrow.svg" type="image/svg+xml" />
+                      <img src="assets/img/icons/panel-arrow.png" />
+                    </picture>
+                  </button>
+                </div>
+                <ul class="panel-body footer__panel-body">
+                  <li class="footer__link hide-item">
+                    <a href="#"> Анонимная наркологическая помощь</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#"> Вызвать нарколога на дом</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Детоксикация от наркотиков</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании в стационаре</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании амбулаторно</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Снятие ломки</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__nav-item panel-link">
+                <div class="footer__nav-title-wrap">
+                  <a class="footer__nav-title" href="#">Кодирование от алкоголзима</a>
+                  <button class="panel-title">
+                    <picture>
+                      <source srcset="assets/img/icons/panel-arrow.svg" type="image/svg+xml" />
+                      <img src="assets/img/icons/panel-arrow.png" />
+                    </picture>
+                  </button>
+                </div>
+                <ul class="panel-body footer__panel-body">
+                  <li class="footer__link hide-item">
+                    <a href="#"> Анонимная наркологическая помощь</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#"> Вызвать нарколога на дом</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Детоксикация от наркотиков</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании в стационаре</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Лечение наркомании амбулаторно</a>
+                  </li>
+                  <li class="footer__link hide-item">
+                    <a href="#">Снятие ломки</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="footer__wrap">
+              <div class="footer__links">
+                <ul>
+                  <li class="footer__link">
+                    <a href="#">Политика конфиденциальности</a>
+                  </li>
+                  <li class="footer__link">
+                    <a href="#">Карта сайта</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__text">
+                <p>Вся информация на сайте не является публичной офертой, несёт сугубо информационный характер, и не служит
+                  для
+                  постановки диагноза и назначения лечения. Есть противопоказания, необходимо проконсультироваться с врачом.
+                  Консультационные услуги, оказываемые по телефону, мессенджерам и в соцсетях носят исключительно
+                  информационный
+                  характер и не являются медицинскими услугами. Оставаясь на сайте вы соглашаетесь на использование cookies.
+                  18+
+                </p>
+                <p>
+                  Все права защищены © 2025 zdravum.ru
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-</div>
+        <div class="footer__bottom">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="335" viewBox="0 0 1800 335" fill="none">
+            <g opacity="0.5">
+              <path
+                d="M109.694 293.86C90.106 293.86 73.0643 290.986 58.5689 285.24C44.0736 279.493 31.9289 272.049 22.1347 262.906C12.4712 253.634 5.09295 243.773 0 233.325L35.6507 210.208C38.7848 217.913 43.486 225.162 49.7542 231.953C56.153 238.745 64.3801 244.295 74.4354 248.605C84.6213 252.785 96.9619 254.874 111.457 254.874C125.953 254.874 137.901 252.719 147.304 248.409C156.706 243.969 163.693 238.092 168.263 230.778C172.964 223.333 175.315 214.975 175.315 205.702C175.315 194.862 172.442 186.503 166.696 180.626C161.081 174.618 153.572 170.439 144.17 168.088C134.767 165.606 124.581 164.17 113.612 163.778C104.471 163.517 97.8761 163.321 93.8278 163.19C89.7796 162.929 87.0372 162.798 85.6008 162.798C84.2949 162.798 83.0543 162.798 81.879 162.798V124.009C83.3155 124.009 85.7966 124.009 89.3225 124.009C92.979 124.009 96.7661 124.009 100.684 124.009C104.601 123.878 107.801 123.748 110.282 123.617C126.475 122.833 139.534 118.85 149.459 111.667C159.514 104.483 164.541 94.2963 164.541 81.1053C164.541 67.9142 159.644 57.5312 149.85 49.9561C140.187 42.3811 127.454 38.5936 111.653 38.5936C96.6355 38.5936 83.7072 42.0546 72.8684 48.9766C62.0295 55.768 53.6719 64.192 47.7954 74.2485L17.6294 45.8421C27.0318 32.7817 39.8948 21.8762 56.2183 13.1257C72.5419 4.37524 91.4119 0 112.828 0C124.973 0 136.726 1.63255 148.087 4.89766C159.449 8.03215 169.634 12.8645 178.645 19.3947C187.656 25.9249 194.773 34.2183 199.996 44.2748C205.35 54.2008 208.027 66.0205 208.027 79.7339C208.027 93.4474 205.22 105.855 199.604 116.956C194.12 128.058 186.742 136.873 177.47 143.404C190.398 148.236 200.519 155.876 207.832 166.325C215.145 176.642 218.801 189.833 218.801 205.898C218.801 223.921 214.035 239.528 204.502 252.719C195.099 265.78 182.171 275.902 165.717 283.085C149.393 290.268 130.719 293.86 109.694 293.86Z"
+                fill="url(#paint0_linear_2001_855)" />
+              <path
+                d="M246.356 335V249.389C256.02 249.389 263.986 246.973 270.254 242.14C276.522 237.177 281.484 230.451 285.141 221.962C288.928 213.342 291.801 203.547 293.76 192.576C295.849 181.605 297.416 170.047 298.461 157.901C300.028 141.444 301.334 125.38 302.379 109.708C303.554 93.9045 304.599 77.5789 305.513 60.731C306.557 43.883 307.667 25.5331 308.843 5.68127L489.447 5.87719V249.389H510.406V335H469.271V287.982H287.296V335H246.356ZM313.544 249.389H448.507V44.4708L346.648 44.2748C345.734 58.6413 344.951 72.2895 344.298 85.2193C343.645 98.1491 342.796 111.21 341.751 124.401C340.837 137.461 339.662 151.501 338.225 166.52C336.789 180.887 335.287 193.098 333.72 203.155C332.153 213.081 329.802 221.701 326.668 229.015C323.665 236.328 319.29 243.12 313.544 249.389Z"
+                fill="url(#paint1_linear_2001_855)" />
+              <path
+                d="M553.332 287.982V5.87719H667.336C670.078 5.87719 673.473 6.00779 677.522 6.269C681.57 6.39961 685.422 6.79142 689.079 7.44444C704.749 9.92591 717.808 15.2807 728.255 23.5088C738.833 31.7368 746.734 42.1199 751.957 54.6579C757.181 67.1959 759.792 81.04 759.792 96.1901C759.792 111.471 757.181 125.38 751.957 137.918C746.734 150.456 738.833 160.839 728.255 169.067C717.808 177.295 704.749 182.65 689.079 185.132C685.422 185.654 681.505 186.046 677.326 186.307C673.277 186.568 669.948 186.699 667.336 186.699H594.271V287.982H553.332ZM594.271 147.909H665.769C668.38 147.909 671.253 147.779 674.387 147.518C677.652 147.256 680.721 146.799 683.594 146.146C691.952 144.187 698.677 140.596 703.77 135.371C708.863 130.017 712.519 123.878 714.739 116.956C716.959 110.034 718.069 103.112 718.069 96.1901C718.069 89.268 716.959 82.4113 714.739 75.6199C712.519 68.6978 708.863 62.6247 703.77 57.4006C698.677 52.0458 691.952 48.3889 683.594 46.4298C680.721 45.6462 677.652 45.1238 674.387 44.8626C671.253 44.6014 668.38 44.4708 665.769 44.4708H594.271V147.909Z"
+                fill="url(#paint2_linear_2001_855)" />
+              <path
+                d="M763.676 287.982L855.349 5.87719H914.31L1005.98 287.982H963.477L879.051 30.5614H889.629L806.183 287.982H763.676ZM811.276 224.313V185.915H958.58V224.313H811.276Z"
+                fill="url(#paint3_linear_2001_855)" />
+              <path
+                d="M1041.13 287.982V5.87719H1152C1169.89 5.87719 1184.9 9.53411 1197.05 16.8479C1209.19 24.1618 1218.33 33.6306 1224.47 45.2544C1230.61 56.7476 1233.68 68.8938 1233.68 81.693C1233.68 97.2349 1229.83 110.557 1222.12 121.658C1214.55 132.759 1204.3 140.334 1191.37 144.383L1190.98 134.784C1209 139.224 1222.84 147.909 1232.5 160.839C1242.17 173.638 1247 188.593 1247 205.702C1247 222.288 1243.67 236.72 1237.01 248.997C1230.48 261.274 1220.88 270.873 1208.21 277.795C1195.68 284.587 1180.46 287.982 1162.57 287.982H1041.13ZM1082.65 248.997H1156.3C1165.58 248.997 1173.87 247.234 1181.18 243.708C1188.63 240.181 1194.44 235.153 1198.62 228.623C1202.92 221.962 1205.08 214.06 1205.08 204.918C1205.08 196.429 1203.19 188.789 1199.4 181.997C1195.74 175.075 1190.39 169.655 1183.34 165.737C1176.42 161.688 1168.25 159.664 1158.85 159.664H1082.65V248.997ZM1082.65 121.07H1151.41C1158.98 121.07 1165.77 119.568 1171.78 116.564C1177.92 113.43 1182.75 108.989 1186.27 103.243C1189.93 97.3655 1191.76 90.3129 1191.76 82.0848C1191.76 71.114 1188.1 62.1023 1180.79 55.0497C1173.48 47.9971 1163.68 44.4708 1151.41 44.4708H1082.65V121.07Z"
+                fill="url(#paint4_linear_2001_855)" />
+              <path
+                d="M1314.67 287.982L1350.32 214.909L1251.98 5.87719H1298.02L1371.67 171.418L1447.28 5.87719H1490.96L1358.94 287.982H1314.67Z"
+                fill="url(#paint5_linear_2001_855)" />
+              <path
+                d="M1521.65 287.982V5.87719H1558.67L1660.92 218.044L1762.59 5.87719H1800V287.787H1761.22V94.8187L1670.13 287.982H1651.52L1560.24 94.8187V287.982H1521.65Z"
+                fill="url(#paint6_linear_2001_855)" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint2_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint3_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint4_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint5_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+              <linearGradient id="paint6_linear_2001_855" x1="866" y1="335" x2="866" y2="3.0845e-06"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#139297" />
+                <stop offset="1" stop-color="#65BFC3" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+    </footer></div>
     <div class="popup" data-target="popup__call">
       <div class="popup__body">
         <div class="popup__content">
@@ -3041,10 +3039,12 @@
             >
               <span>Оставить заявку</span>
             </button>
-            <p class="form__politic popup__politic">
-              Нажимая кнопку «Оставить заявку», вы соглашаетесь с
-              <a href="#" rel="nofollow">политикой конфиденциальности</a>
-            </p>
+            <label class="policy-checkbox popup__policy-checkbox">
+              <input type="checkbox" checked required>
+              <span class="policy-text">
+                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
+              </span>
+            </label>
           </form>
         </div>
       </div>
@@ -3078,10 +3078,12 @@
             >
               <span>Оставить заявку</span>
             </button>
-            <p class="form__politic popup__politic">
-              Нажимая кнопку «Оставить заявку», вы соглашаетесь с
-              <a href="#" rel="nofollow">политикой конфиденциальности</a>
-            </p>
+            <label class="policy-checkbox popup__policy-checkbox">
+              <input type="checkbox" checked required>
+              <span class="policy-text">
+                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
+              </span>
+            </label>
           </form>
         </div>
       </div>
@@ -3117,10 +3119,12 @@
             >
               <span>Оставить заявку</span>
             </button>
-            <p class="form__politic popup__politic">
-              Нажимая кнопку «Оставить заявку», вы соглашаетесь с
-              <a href="#" rel="nofollow">политикой конфиденциальности</a>
-            </p>
+            <label class="policy-checkbox popup__policy-checkbox">
+              <input type="checkbox" checked required>
+              <span class="policy-text">
+                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
+              </span>
+            </label>
           </form>
         </div>
       </div>
@@ -3159,10 +3163,12 @@
             >
               <span>Отправить</span>
             </button>
-            <p class="form__politic popup__politic">
-              Нажимая кнопку «Отправить», вы соглашаетесь с
-              <a href="#" rel="nofollow">политикой конфиденциальности</a>
-            </p>
+            <label class="policy-checkbox popup__policy-checkbox">
+              <input type="checkbox" checked required>
+              <span class="policy-text">
+                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
+              </span>
+            </label>
           </form>
         </div>
       </div>

@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
               let currentTitile = currentItem.querySelector(".current-title");
               let currentSubtitile = currentItem.querySelector(".current-subtitle");
               originaTitle.innerHTML =
-                "Записаться на приём к врачу:" + currentTitile.innerHTML;
+                "Записаться к специалисту:" + currentTitile.innerHTML;
               if (currentSubtitile && originaSubtitle) {
                 originaSubtitle.innerHTML = currentSubtitile.innerHTML;
               }
@@ -606,22 +606,45 @@ document.addEventListener("DOMContentLoaded", function () {
             const map = document.querySelector("#map");
 
             if (map) {
+              const markerCoordinates = [47.21280619894176, 39.726343006841795];
+              const centerCoordinates = [47.21280619894176, 39.726343006841795]
+
               var myMap = new ymaps.Map("map", {
-                center: [22, 22, 22],
-                zoom: 14,
+                center: centerCoordinates,
+                zoom: 16,
               });
 
               myGeoObject = new ymaps.GeoObject();
               myMap.geoObjects.add(
-                new ymaps.Placemark(myMap.getCenter(), {
-                  preset: "islands#redDotIconWithCaption",
-                  iconLayout: "default#image",
-                  iconImageHref: "assets/img/map-pin_map.svg",
-                  iconImageSize: [31, 31],
-                  iconImageOffset: [-5, -38],
-                })
+                new ymaps.Placemark(
+                  markerCoordinates,
+                  {
+                    balloonContent: "Наркологическая клиника Здравум",
+                  },
+                  {
+                    iconLayout: "default#image",
+                    iconImageHref: "assets/img/icons/map-marker.svg",
+                    iconImageSize: [80, 80],
+                    iconImageOffset: [-40, -80],
+                  }
+                )
               );
+
+              // Добавляем прямоугольник, обозначающий область
+              var rectangle = new ymaps.Rectangle(
+                bounds,
+                {},
+                {
+                  fill: false,
+                  stroke: true,
+                  strokeColor: "#FF0000",
+                  strokeWidth: 2,
+                }
+              );
+              myMap.geoObjects.add(rectangle);
+
               myMap.behaviors.disable(["scrollZoom"]);
+              myMap.setBounds(bounds, { checkZoomRange: true });
             }
           }
         }, 500);
@@ -630,6 +653,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   /* end yandex map */
+
   /* end show-more */
   function reviewsHide() {
     const reviews = document.querySelectorAll(".reviews__item");
@@ -860,28 +884,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const directionsSliderCheck = document.querySelectorAll(".directions");
-  if (directionsSliderCheck.length > 0) {
-    directionsSliderCheck.forEach((slider) => {
-      const swiperDirections = new Swiper(slider.querySelector(".swiper"), {
-        direction: "horizontal",
-        navigation: {
-          nextEl: slider.querySelector(".directions__slider-button_next"),
-          prevEl: slider.querySelector(".directions__slider-button_prev"),
-        },
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 32,
-
-        breakpoints: {
-          900: {
-            slidesPerView: 2,
-            spaceBetween: 32,
-          },
-        },
-      });
-    });
-  }
   const reviewsSliderCheck = document.querySelectorAll(".reviews");
   if (reviewsSliderCheck.length > 0) {
     reviewsSliderCheck.forEach((slider) => {
@@ -938,20 +940,22 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: slider.querySelector(".doctors__slider-button_prev"),
         },
         slidesPerView: 1.2,
+        centeredSlides: true,
+        initialSlide: 2,
         grabCursor: true,
         spaceBetween: 10,
         breakpoints: {
           1020: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 5,
+            spaceBetween: 0,
           },
           700: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 15,
           },
           450: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 15,
           },
         },
       });
@@ -1029,6 +1033,7 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: window.innerWidth < 1024 ? 5.2 : 4,
           freeMode: true,
           watchSlidesProgress: true,
+          grabCursor: true,
         });
 
         swiper2 = new Swiper(".mySwiper2", {

@@ -322,8 +322,42 @@ h4 {
   }
 }
 
+.social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
-
+  &__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: $secondary-color;
+      & picture {
+        & img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+    & picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > img {
+        object-fit: contain;
+        width: 22px;
+        height: auto;
+      }
+    }
+  }
+}
 
 textarea {
   align-items: center;
@@ -337,7 +371,6 @@ textarea {
     color: #fff;
   }
 }
-
 
 /* btn */
 .standart-btn {
@@ -552,33 +585,6 @@ textarea {
     color: $primary-color;
     text-transform: uppercase;
   }
-}
-
-.social {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.social__link {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
-  padding: 0;
-  transition: filter 0.3s linear, scale 0.3s linear;
-
-  &:hover {
-    filter: hue-rotate(-30deg);
-    scale: 1.2;
-  }
-}
-
-.social__picture {
-  width: 100%;
 }
 
 .tab-content {
@@ -842,7 +848,6 @@ textarea {
   .section-offset {
     margin-bottom: 70px;
   }
-
 }
 
 @media (max-width: 400px) {
@@ -874,14 +879,13 @@ textarea {
 @import "vendor/_advantages";
 @import "vendor/_offer";
 @import "vendor/_services";
-@import "vendor/_consultation";
+@import "vendor/_form";
 @import "vendor/_text";
 @import "vendor/_faq";
 @import "vendor/_reviews";
 @import "vendor/_doctors";
 @import "vendor/_licences";
 @import "vendor/_gallery";
-@import "vendor/_callback";
 @import "vendor/_articles";
 @import "vendor/_navigation";
 @import "vendor/_reviewer";
@@ -890,7 +894,6 @@ textarea {
 @import "vendor/_comments";
 @import "vendor/_contacts";
 @import "vendor/_tabs";
-@import "vendor/_privacy";
 @import "vendor/_notfound";
 @import "vendor/_pay";
 @import "vendor/_animations";
