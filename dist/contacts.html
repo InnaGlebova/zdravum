@@ -360,7 +360,7 @@
                 <a href="tel:+78005553535" class="standart-btn secondary-btn header__btn">
                   8 800 555-35-35
                 </a>
-                <button class="popup-btn standart-btn primary-btn header__btn" data-path="popup__doc">
+                <button class="popup-btn standart-btn primary-btn header__btn" data-path="popup-change">
                   Обратный звонок
                 </button>
               </div>
@@ -982,46 +982,6 @@
           </svg>
         </div>
     </footer></div>
-    <div class="popup" data-target="popup__call">
-      <div class="popup__body">
-        <div class="popup__content">
-          <picture class="close close-popup">
-            <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
-            <img src="assets/img/icons/close.png" alt="close_popup" />
-          </picture>
-          <p class="popup__title">Оставьте заявку!</p>
-          <p class="popup__subtitle">И мы перезвоним в течние одной минуты</p>
-    
-          <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <input
-              type="tel"
-              class="form__input popup__input"
-              placeholder="+7 (___)___-__-__"
-              required
-            />
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
-              <span>Оставить заявку</span>
-            </button>
-            <label class="policy-checkbox popup__policy-checkbox">
-              <input type="checkbox" checked required>
-              <span class="policy-text">
-                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
-              </span>
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
-    
     <div class="popup" data-target="popup-change">
       <div class="popup__body">
         <div class="popup__content">
@@ -1029,124 +989,34 @@
             <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
             <img src="assets/img/icons/close.png" alt="close_popup" />
           </picture>
-          <p class="popup__title original-title">Оставьте заявку!</p>
-          <p class="popup__subtitle original-subtitle">И мы перезвоним в течние одной минуты</p>
-          <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <input
-              type="tel"
-              class="form__input popup__input"
-              placeholder="+7 (___)___-__-__"
-              required
-            />
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
-              <span>Оставить заявку</span>
-            </button>
-            <label class="policy-checkbox popup__policy-checkbox">
-              <input type="checkbox" checked required>
-              <span class="policy-text">
-                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
-              </span>
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <div class="popup" data-target="popup__doc">
-      <div class="popup__body">
-        <div class="popup__content">
-          <picture class="close close-popup">
-            <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
-            <img src="assets/img/icons/close.png" alt="close_popup" />
+          <div class="popup__content-inner">
+            <p class="popup__title original-title">Вам нужна помощь прямо сейчас?</p>
+            <p class="popup__subtitle original-subtitle">Оставьте заявку на обратный звонок и мы перезвоним вам в течение 15
+              минут!</p>
+            <form class="popup__form form">
+              <input type="text" class="popup__form-input form__input" required placeholder="Ваше имя" />
+              <input type="tel" class="popup__form-input form__input" required placeholder="Ваш номер телефона" />
+              <label class="popup__policy-checkbox policy-checkbox">
+                <input type="checkbox" checked required>
+                <span class="popup__policy-text policy-text">
+                  Нажимая кнопку я соглашаюсь с <a href="#" target="_blank">политикой конфединциальности</a> и <a href="#"
+                    target="_blank">пользовательским соглашением</a>
+                </span>
+              </label>
+              <button class="standart-btn contacts__btn popup-btn tertiary-btn" data-path="popup-change">
+                Оставить заявку
+              </button>
+            </form>
+          </div>
+          <picture class="popup__picture">
+            <source srcset="assets/img/help/woman.webp" type="image/svg+xml" />
+            <img src="assets/img/help/woman.png" alt="change" />
           </picture>
-          <p class="popup__title original-title">Вызвать врача</p>
-          <p class="popup__subtitle">
-            Оставьте заявку и мы перезвоним в течние одной минуты
-          </p>
-          <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <input
-              type="tel"
-              class="form__input popup__input"
-              placeholder="+7 (___)___-__-__"
-              required
-            />
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
-              <span>Оставить заявку</span>
-            </button>
-            <label class="policy-checkbox popup__policy-checkbox">
-              <input type="checkbox" checked required>
-              <span class="policy-text">
-                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
-              </span>
-            </label>
-          </form>
         </div>
       </div>
     </div>
     
-    <div class="popup" data-target="popup__consult">
-      <div class="popup__body">
-        <div class="popup__content popup__content-consult">
-          <picture class="close close-popup">
-            <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
-            <img src="assets/img/icons/close.png" alt="close_popup" />
-          </picture>
-          <p class="popup__title original-title">
-            Получите консультацию специалиста бесплатно
-          </p>
-          <p class="popup__subtitle">
-            По телефону врач соберет первичный анамнез, сформирует бригаду, сообщит
-            о точной стоимости процедуры и времени прибытия нарколога.
-          </p>
-          <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <input
-              type="tel"
-              class="form__input popup__input"
-              placeholder="+7 (___)___-__-__"
-              required
-            />
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
-              <span>Отправить</span>
-            </button>
-            <label class="policy-checkbox popup__policy-checkbox">
-              <input type="checkbox" checked required>
-              <span class="policy-text">
-                Я согласен с <a href="privacy.html" target="_blank" rel="nofollow">политикой конфиденциальности</a>
-              </span>
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <div class="popup" data-target="popup__review">
+    <div class="popup" data-target="popup-review">
       <div class="popup__body">
         <div class="popup__content popup__content-reviews">
           <picture class="close close-popup">
@@ -1171,11 +1041,7 @@
           </picture>
           <p class="popup__title">Выберите свой город</p>
           <form class="popup__form-city form popup__form">
-            <input
-              type="search"
-              class="popup__input-city form__input"
-              placeholder="Введите название города"
-            />
+            <input type="search" class="popup__input-city form__input" placeholder="Введите название города" />
           </form>
           <ul class="city search-list">
             <li><a href="#" class="search-list__name">Челябинск</a></li>
@@ -1224,21 +1090,9 @@
             Оставляя отзыв, Вы помогаете нам стать лучше.
           </p>
           <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <textarea
-              type="text"
-              placeholder="Текст отзыва"
-              class="popup__textarea"
-            ></textarea>
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
+            <input type="text" class="form__input popup__input" placeholder="Ваше имя" required />
+            <textarea type="text" placeholder="Текст отзыва" class="popup__textarea"></textarea>
+            <button class="standart-btn primary-btn form__btn popup__btn" type="submit">
               <span>Отправить</span>
             </button>
             <p class="form__politic popup__politic">
@@ -1259,23 +1113,10 @@
           <p class="popup__title">Задать вопрос специалистам</p>
           <p class="popup__subtitle">Задайте вопрос нашему специалисту.</p>
           <form class="form popup__form">
-            <input
-              type="text"
-              class="form__input popup__input"
-              placeholder="Ваше имя"
-              required
-            />
-            <input
-              type="tel"
-              class="form__input popup__input"
-              placeholder="+7 (___)___-__-__"
-              required
-            />
+            <input type="text" class="form__input popup__input" placeholder="Ваше имя" required />
+            <input type="tel" class="form__input popup__input" placeholder="+7 (___)___-__-__" required />
             <textarea placeholder="Вопрос" class="popup__textarea"></textarea>
-            <button
-              class="standart-btn primary-btn form__btn popup__btn"
-              type="submit"
-            >
+            <button class="standart-btn primary-btn form__btn popup__btn" type="submit">
               <span>Отправить</span>
             </button>
             <p class="form__politic popup__politic">
@@ -1303,9 +1144,7 @@
             <p class="popup__subtitle">
               Дежурный специалист свяжется с вами в течение 1 минуты
             </p>
-            <a href="#"
-              >Узнайте, какую помощь можно оказать больному до приезда врача.</a
-            >
+            <a href="#">Узнайте, какую помощь можно оказать больному до приезда врача.</a>
           </div>
         </div>
       </div>
@@ -1313,25 +1152,23 @@
     
     
     <div class="popup" data-target="popup__error">
-        <div class="popup__body">
-          <div class="popup__content popup__content-response">
-            <picture class="close close-popup">
-              <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
-              <img src="assets/img/icons/close.png" alt="close_popup" />
+      <div class="popup__body">
+        <div class="popup__content popup__content-response">
+          <picture class="close close-popup">
+            <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
+            <img src="assets/img/icons/close.png" alt="close_popup" />
+          </picture>
+          <div class="popup__response-wrap">
+            <picture>
+              <source srcset="assets/img/icons/error.svg" type="image/svg+xml" />
+              <img src="assets/img/icons/error.png" alt="user" />
             </picture>
-            <div class="popup__response-wrap">
-              <picture>
-                <source srcset="assets/img/icons/error.svg" type="image/svg+xml" />
-                <img src="assets/img/icons/error.png" alt="user" />
-              </picture>
-              <p class="popup__title">Произошла ошибка</p>
-              <p class="popup__subtitle">
-                Попробуйте оставить заявку снова позже
-              </p>
-            </div>
+            <p class="popup__title">Произошла ошибка</p>
+            <p class="popup__subtitle">
+              Попробуйте оставить заявку снова позже
+            </p>
           </div>
         </div>
       </div>
-    
-</body>
+    </div></body>
 </html>

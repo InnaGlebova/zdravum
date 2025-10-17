@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
               let currentTitile = currentItem.querySelector(".current-title");
               let currentSubtitile = currentItem.querySelector(".current-subtitle");
               originaTitle.innerHTML =
-                "Записаться к специалисту:" + currentTitile.innerHTML;
+                "Записаться к специалисту: " + currentTitile.innerHTML;
               if (currentSubtitile && originaSubtitle) {
                 originaSubtitle.innerHTML = currentSubtitile.innerHTML;
               }
@@ -939,23 +939,31 @@ document.addEventListener("DOMContentLoaded", function () {
           nextEl: slider.querySelector(".doctors__slider-button_next"),
           prevEl: slider.querySelector(".doctors__slider-button_prev"),
         },
-        slidesPerView: 1.2,
-        centeredSlides: true,
-        initialSlide: 2,
+        effect: "coverflow",
         grabCursor: true,
-        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        initialSlide: 2,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 500,
+          modifier: 0.2,
+          slideShadows: false,
+        },
         breakpoints: {
-          1020: {
-            slidesPerView: 5,
-            spaceBetween: 0,
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
           },
-          700: {
+          768: {
             slidesPerView: 3,
-            spaceBetween: 15,
+            spaceBetween: 20,
           },
-          450: {
-            slidesPerView: 2,
-            spaceBetween: 15,
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
           },
         },
       });
@@ -992,29 +1000,33 @@ document.addEventListener("DOMContentLoaded", function () {
           type: "bullets",
           clickable: true,
         },
-        slidesPerView: 3,
-        initialSlide: 2,
-        centerSlides: true,
-        loop: false,
+        effect: "coverflow",
         grabCursor: true,
-        spaceBetween: 40,
-        // breakpoints: {
-        //   1024: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 30,
-        //     initialSlide: 3,
-        //   },
-        //   768: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20,
-        //     initialSlide: 1,
-        //   },
-        //   500: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 20,
-        //     initialSlide: 0,
-        //   },
-        // },
+        centeredSlides: true,
+        initialSlide: 2,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 500,
+          modifier: 0.2,
+          slideShadows: false,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        },
       });
     });
   }

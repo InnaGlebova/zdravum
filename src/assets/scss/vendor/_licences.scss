@@ -3,6 +3,40 @@
 .licences {
   margin: 80px 0;
   padding: 100px 0;
+
+  .swiper {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+  }
+
+  .swiper-slide {
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    height: auto;
+    transform: scale(0.6);
+    filter: grayscale(100%);
+
+    &.swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+      filter: grayscale(0%);
+      z-index: 2;
+
+      &.licences__item {
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+  &__btn {
+    max-width: fit-content;
+  }
+
   &__inner-main {
     display: flex;
     gap: 100px;
@@ -35,8 +69,8 @@
   &-decor {
     position: absolute;
     top: 46%;
-    left: 50%;
-    transform: translate(-50%, -54%);
+    left: 51%;
+    transform: translate(-51%, -54%);
     width: 461px;
     height: 625px;
     background: url(../img/licences/doc.png) no-repeat center center;
@@ -85,6 +119,20 @@
   }
 }
 
+.licences_swiper-btns {
+  position: absolute;
+  top: 60%;
+  width: calc(220px + 112px);
+  left: 50%;
+  transform: translate(-50%, -60%);
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.licences-pagination.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 15px;
+}
+
 .licences__item {
   position: relative;
   background-color: $primary-background;
@@ -106,38 +154,6 @@
     max-height: 375px;
     border-radius: 5px;
     margin: 0 auto;
-  }
-}
-
-.licences-swiper {
-  margin-bottom: 0;
-  overflow: visible;
-  
-  // Увеличение центрального слайда и отступов
-  .swiper-slide {
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: center center;
-    
-    // Соседние слайды - уменьшенные и полупрозрачные
-    &:not(.swiper-slide-active) {
-      transform: scale(0.85);
-      opacity: 0.7;
-    }
-    
-    // Центральный активный слайд - увеличенный
-    &.swiper-slide-active {
-      transform: scale(1.1);
-      z-index: 2;
-    }
-  }
-  
-  // Увеличение отступов между слайдами
-  .swiper-wrapper {
-    align-items: center;
-    justify-content: center;
   }
 }
 

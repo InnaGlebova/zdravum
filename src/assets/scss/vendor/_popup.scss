@@ -19,32 +19,96 @@
       transform: rotateY(0);
     }
   }
+
+  &__body {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 15px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 20px;
+    gap: 10px;
+    padding: 42px 50px;
+    transition: transform 0.3s linear;
+    background: $primary-gradient;
+    transform: rotateY(90deg);
+    color: #fff;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 608px;
+      top: 47px;
+      width: 1730px;
+      height: 628px;
+      background: url("../img/help/pattern.png") center center no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    &-inner {
+      max-width: 460px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    display: block;
+    right: 57px;
+    bottom: -50px;
+    max-width: 535px;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+
+  }
+
+  &__title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 46px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-align: start;
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+    width: 100%;
+    display: block;
+    text-align: start;
+    font-size: 18px;
+  }
+
+  &__textarea {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #dbe2e7;
+    color: rgba(0, 0, 0, 0.425);
+    padding: 15px 10px;
+    min-height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.425);
+    }
+  }
 }
 
-.popup__body {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 15px;
-}
-.popup__content {
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 20px;
-  gap: 10px;
-  padding: 42px 50px;
-  transition: transform 0.3s linear;
-  background: $primary-gradient;
-  transform: rotateY(90deg);
-}
-.popup__content_city,
-.popup__content-consult {
+
+.popup__content_city {
   max-width: 700px;
 }
 
@@ -93,26 +157,7 @@
 .popup__response-wrap .popup__subtitle {
   margin-bottom: 0;
 }
-.popup__title {
-  width: 100%;
-  font-weight: 600;
-  font-size: 38px;
-  margin-bottom: 15px;
-  line-height: 1.2;
-  text-align: center;
-}
 
-.popup__subtitle {
-  margin-bottom: 35px;
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-}
-.popup__input {
-  width: 100%;
-  border: 1px solid #dbe2e7;
-}
 .popup__input-city {
   width: 100%;
   padding-left: 40px;
@@ -132,65 +177,29 @@
     // background: url("../img/icons/search-mini.svg") center center no-repeat;
   }
 }
-.popup__textarea {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #dbe2e7;
-  color: rgba(0, 0, 0, 0.425);
-  padding: 15px 10px;
-  min-height: 150px;
-  max-height: 150px;
-  overflow-y: auto;
-  &::placeholder {
-    color: rgba(0, 0, 0, 0.425);
-  }
-}
-.popup__form-subtitle {
-  display: block;
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 24px;
-  width: 100%;
 
-  text-align: left;
-}
-.popup__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  align-items: center;
-  margin: 0 auto;
-  & > * {
-    flex-basis: 100%;
-  }
-}
+// .popup__form-subtitle {
+//   display: block;
+//   font-size: 28px;
+//   font-weight: 400;
+//   margin-bottom: 24px;
+//   width: 100%;
+
+//   text-align: left;
+// }
+// .popup__form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   width: 100%;
+//   align-items: center;
+//   margin: 0 auto;
+//   & > * {
+//     flex-basis: 100%;
+//   }
+// }
 
 
-
-.popup__textarea {
-  padding: 17px 20px;
-  border-radius: 8px;
-  width: 100%;
-  align-items: center;
-  background-color: #f2f7f9;
-  color: #738285;
-  border-radius: 8px;
-  border: none;
-  font-size: 13px;
-}
-.form__politic {
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.popup__btn {
-  width: 100%;
-  margin-top: 0;
-  padding: 17px 20px;
-}
 .close {
   cursor: pointer;
   position: absolute;
@@ -265,17 +274,7 @@
     }
   }
 }
-.popup__politic {
-  font-size: 12px;
-  color: #0000009f;
-  & a {
-    transition: color 0.3s linear;
-    text-decoration: underline;
-    &:hover {
-      color: $primary-color;
-    }
-  }
-}
+
 
 
 @media (max-width: 950px) {

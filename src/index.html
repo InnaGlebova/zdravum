@@ -7,7 +7,7 @@
 
     <div class="intro__content">
       <picture class="intro__title to_animate fade-in">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="335" viewBox="0 0 1800 335" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1730" height="335" viewBox="0 0 1800 335" fill="none">
           <path
             d="M109.694 293.86C90.106 293.86 73.0643 290.986 58.5689 285.24C44.0736 279.493 31.9289 272.049 22.1347 262.906C12.4712 253.634 5.09295 243.773 0 233.325L35.6507 210.208C38.7848 217.913 43.486 225.162 49.7542 231.953C56.153 238.745 64.3801 244.295 74.4354 248.605C84.6213 252.785 96.9619 254.874 111.457 254.874C125.953 254.874 137.901 252.719 147.304 248.409C156.706 243.969 163.693 238.092 168.263 230.778C172.964 223.333 175.315 214.975 175.315 205.702C175.315 194.862 172.442 186.503 166.696 180.626C161.081 174.618 153.572 170.439 144.17 168.088C134.767 165.606 124.581 164.17 113.612 163.778C104.471 163.517 97.8761 163.321 93.8278 163.19C89.7796 162.929 87.0372 162.798 85.6008 162.798C84.2949 162.798 83.0543 162.798 81.879 162.798V124.009C83.3155 124.009 85.7966 124.009 89.3225 124.009C92.979 124.009 96.7661 124.009 100.684 124.009C104.601 123.878 107.801 123.748 110.282 123.617C126.475 122.833 139.534 118.85 149.459 111.667C159.514 104.483 164.541 94.2963 164.541 81.1053C164.541 67.9142 159.644 57.5312 149.85 49.9561C140.187 42.3811 127.454 38.5936 111.653 38.5936C96.6355 38.5936 83.7072 42.0546 72.8684 48.9766C62.0295 55.768 53.6719 64.192 47.7954 74.2485L17.6294 45.8421C27.0318 32.7817 39.8948 21.8762 56.2183 13.1257C72.5419 4.37524 91.4119 0 112.828 0C124.973 0 136.726 1.63255 148.087 4.89766C159.449 8.03215 169.634 12.8645 178.645 19.3947C187.656 25.9249 194.773 34.2183 199.996 44.2748C205.35 54.2008 208.027 66.0205 208.027 79.7339C208.027 93.4474 205.22 105.855 199.604 116.956C194.12 128.057 186.742 136.873 177.47 143.404C190.398 148.236 200.519 155.876 207.832 166.325C215.145 176.642 218.801 189.833 218.801 205.898C218.801 223.921 214.035 239.528 204.502 252.719C195.099 265.78 182.171 275.902 165.717 283.085C149.393 290.268 130.719 293.86 109.694 293.86Z"
             fill="#03363C" />
@@ -111,7 +111,7 @@
         </p>
         <div class="help__buttons">
           <button class="popup-btn help__btn standart-btn tertiary-btn pulse-animation to_animate" type="button"
-            data-path="popup__call">
+            data-path="popup-change">
             Срочный звонок
           </button>
           <a href="tel:+78005553535" class="help__btn standart-btn quaternary-btn pulse-animation to_animate">
@@ -1152,7 +1152,7 @@
             </svg>
             <span>8 800 555-35-35</span>
           </a>
-          <button class="assistance__btn primary-btn standart-btn popup-btn" data-path="popup__call">
+          <button class="assistance__btn primary-btn standart-btn popup-btn" data-path="popup-change">
             Обратиться за помощью
           </button>
         </div>
@@ -1228,10 +1228,10 @@
         <div class="advantages__item down-fade to_animate">
           <div class="advantages__item-wrap">
             <h3 class="advantages__item-title">Комфортные условия</h3>
-            < <picture class="advantages__picture">
+            <picture class="advantages__picture">
               <source srcset="assets/img/advantages/3.svg" type="image/webp">
               <img src="assets/img/advantages/3.png" alt="icon">
-              </picture>
+            </picture>
           </div>
           <p class="advantages__item-description">Пространство для спокойного восстановления</p>
         </div>
@@ -1381,7 +1381,7 @@
           </h2>
           <div class="licences__descr">Подтверждение качества и безопасности предоставляемых услуг</div>
         </div>
-        <a href="" class="licences__btn primary-btn standart-btn">Смотреть все документы</a>
+        <a href="#" class="licences__btn primary-btn standart-btn to_animate pulse-animation">Смотреть все документы</a>
       </div>
       <div class="licences__inner custom-wrapper__swiper">
         <div class="licences-decor"></div>
@@ -1467,8 +1467,8 @@
             <div class="doctors__item">
               <div class="doctors__top">
                 <picture>
-                  <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                  <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                  <source srcset="assets/img/help/woman.webp" type="image/webp" />
+                  <img src="assets/img/help/woman.png" loading="lazy" alt="" />
                 </picture>
                 <div class="doctors__top-wrap">
                   <span>Стаж: 10 лет</span>
@@ -1481,9 +1481,8 @@
                 </div>
               </div>
               <div class="doctors__bottom change__item-title">
-                <p class="current-title">Константинопольский Константин Константинович</p>
-                <span class="current-subtitle">Главный врач клиники «Здравум», Врач-психиатр описание в две
-                  строки</span>
+                <p class="current-title">Калюжная Марина Александровна</p>
+                <span class="current-subtitle">Главный врач клиники</span>
                 <button class="popup-btn standart-btn primary-btn header__btn doctors__btn change__item-btn"
                   data-path="popup-change">
                   Записаться к специалисту
@@ -1522,8 +1521,8 @@
             <div class="doctors__item">
               <div class="doctors__top">
                 <picture>
-                  <source srcset="assets/img/intro/doctor.webp" type="image/webp" />
-                  <img src="assets/img/intro/doctor.jpg" loading="lazy" alt="" />
+                  <source srcset="assets/img/service/man.webp" type="image/webp" />
+                  <img src="assets/img/service/man.jpg" loading="lazy" alt="" />
                 </picture>
                 <div class="doctors__top-wrap">
                   <span>Стаж: 10 лет</span>
@@ -1694,7 +1693,7 @@
         </div>
       </div>
 
-      <div class="gallery__inner custom-wrapper__swiper">
+      <div class="gallery__inner custom-wrapper__swiper to_animate right-fade">
         <div class="swiper-btns gallery_swiper-btns">
           <div class="slider-button slider-button_prev gallery-button_prev gallery__slider-button_prev"><svg
               xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
@@ -1714,7 +1713,7 @@
           </div>
         </div>
         <div class="gallery-pagination swiper-pagination"></div>
-        <div class="swiper mySwiper2 to_animate right-fade">
+        <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="assets/img/offer/1.webp" data-fancybox="gallery">
@@ -1749,39 +1748,39 @@
           </div>
         </div>
         <div class="gallery__thumb">
-          <div thumbsslider="" class="swiper mySwiper gallery__thumb animation-group">
+          <div thumbsslider="" class="swiper mySwiper gallery__thumb">
             <div class="swiper-wrapper">
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slidee">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/1.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 1">
                 </picture>
               </div>
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slide">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/2.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 2" decoding="async">
                 </picture>
               </div>
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slide">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/3.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 3" decoding="async">
                 </picture>
               </div>
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slide">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/1.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 1">
                 </picture>
               </div>
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slide">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/2.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 2" decoding="async">
                 </picture>
               </div>
-              <div class="swiper-slide to_animate down-fade">
+              <div class="swiper-slide">
                 <picture>
                   <img width="150" height="150" src="assets/img/offer/3.webp"
                     class="attachment-thumbnail size-thumbnail" alt="Фото клиники 3" decoding="async">
@@ -1845,7 +1844,7 @@
               продолжительная ремиссия. Также она проходит лечение амбулаторно,
               что позволяет нашей семье жить нормальной жизнью.
             </div>
-            <button class="reviews__btn popup-btn" data-path="popup__review">
+            <button class="reviews__btn popup-btn" data-path="popup-review">
               Читать далее
             </button>
             <div class="reviews__bottom">
@@ -1873,7 +1872,7 @@
               институт. Хороших специалистов искали долго. Наконец нашли службу
               психиатрической помощи. Т.к.
             </div>
-            <button class="reviews__btn popup-btn" data-path="popup__review">
+            <button class="reviews__btn popup-btn" data-path="popup-review">
               Читать далее
             </button>
             <div class="reviews__bottom">
@@ -1905,7 +1904,7 @@
               продолжительная ремиссия. Также она проходит лечение амбулаторно,
               что позволяет нашей семье жить нормальной жизнью.
             </div>
-            <button class="reviews__btn popup-btn" data-path="popup__review">
+            <button class="reviews__btn popup-btn" data-path="popup-review">
               Читать далее
             </button>
             <div class="reviews__bottom">
@@ -1937,7 +1936,7 @@
               продолжительная ремиссия. Также она проходит лечение амбулаторно,
               что позволяет нашей семье жить нормальной жизнью.
             </div>
-            <button class="reviews__btn popup-btn" data-path="popup__review">
+            <button class="reviews__btn popup-btn" data-path="popup-review">
               Читать далее
             </button>
             <div class="reviews__bottom">
@@ -1965,7 +1964,7 @@
               институт. Хороших специалистов искали долго. Наконец нашли службу
               психиатрической помощи. Т.к.
             </div>
-            <button class="reviews__btn popup-btn" data-path="popup__review">
+            <button class="reviews__btn popup-btn" data-path="popup-review">
               Читать далее
             </button>
             <div class="reviews__bottom">
@@ -2000,7 +1999,7 @@
               target="_blank">пользовательским соглашением</a>
           </span>
         </label>
-        <button class="standart-btn contacts__btn popup-btn tertiary-btn"  data-path="popup-change">
+        <button class="standart-btn contacts__btn popup-btn tertiary-btn" data-path="popup-change">
           Оставить заявку
         </button>
       </form>
