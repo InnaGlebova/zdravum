@@ -26,43 +26,127 @@
   });
 });
 
-/* comments */
-document.addEventListener("DOMContentLoaded", function () {
-  const commentsInner = document.querySelector(".comments__inner");
-  if (commentsInner) {
-    const commentsItems = commentsInner.querySelectorAll(".comments__item");
-    const showMoreBtn = commentsInner.querySelector(".comments__btn");
+/* show-more */
+function initShowMoreForContainer(showMoreInner) {
+  if (!showMoreInner || showMoreInner.dataset.showMoreInitialized === "true") {
+    return;
+  }
 
-    let visibleItemsCount = 4;
-    const itemsPerClick = 4;
+  const showMoreItems = showMoreInner.querySelectorAll(".show-more-item");
+  const showMoreBtn = showMoreInner.querySelector(".show-more-btn");
 
-    function updateVisibility() {
-      commentsItems.forEach((item, index) => {
-        if (index < visibleItemsCount) {
-          item.classList.remove("latent");
-        } else {
-          item.classList.add("latent");
-        }
-      });
+  const isGalleryPage = showMoreInner.classList.contains("gallery-page");
+  const hideBtnText = "Скрыть";
+  const originalBtnText = showMoreBtn ? showMoreBtn.textContent.trim() : "";
+  const initialVisibleCount = isGalleryPage ? 6 : 8;
+  const itemsPerClick = isGalleryPage ? 6 : 8;
+  let visibleItemsCount = initialVisibleCount;
 
-      if (visibleItemsCount >= commentsItems.length) {
-        showMoreBtn.classList.add("latent");
+  function updateVisibility() {
+    showMoreItems.forEach((item, index) => {
+      if (index < visibleItemsCount) {
+        item.classList.remove("latent");
       } else {
-        showMoreBtn.classList.remove("latent");
+        item.classList.add("latent");
+      }
+    });
+
+    if (!showMoreBtn) return;
+
+    if (visibleItemsCount >= showMoreItems.length) {
+      showMoreBtn.classList.remove("latent");
+      showMoreBtn.classList.add("visible");
+      showMoreBtn.classList.add("expanded");
+      if (showMoreBtn.textContent.trim() !== hideBtnText) {
+        showMoreBtn.textContent = hideBtnText;
+      }
+    } else {
+      showMoreBtn.classList.remove("expanded");
+      showMoreBtn.classList.remove("latent");
+      if (showMoreItems.length > initialVisibleCount) {
+        showMoreBtn.classList.add("visible");
+      } else {
+        showMoreBtn.classList.remove("visible");
+      }
+      if (originalBtnText && showMoreBtn.textContent.trim() !== originalBtnText) {
+        showMoreBtn.textContent = originalBtnText;
       }
     }
+  }
 
-    updateVisibility();
+  updateVisibility();
 
+  if (showMoreBtn) {
     showMoreBtn.addEventListener("click", function () {
+      if (showMoreBtn.classList.contains("expanded")) {
+        visibleItemsCount = initialVisibleCount;
+        updateVisibility();
+        return;
+      }
       visibleItemsCount += itemsPerClick;
       updateVisibility();
     });
 
-    if (commentsItems.length > visibleItemsCount) {
+    if (showMoreItems.length > initialVisibleCount) {
       showMoreBtn.classList.remove("latent");
+      showMoreBtn.classList.add("visible");
+      showMoreBtn.textContent = originalBtnText || showMoreBtn.textContent;
+    } else {
+      showMoreBtn.classList.remove("visible");
+      showMoreBtn.classList.remove("expanded");
+      showMoreBtn.classList.add("latent");
     }
   }
+
+  showMoreInner.dataset.showMoreInitialized = "true";
+}
+
+function initShowMoreAll() {
+  document
+    .querySelectorAll(".show-more-inner")
+    .forEach((container) => initShowMoreForContainer(container));
+}
+
+function refreshShowMoreAll() {
+  document.querySelectorAll(".show-more-inner").forEach((container) => {
+    const items = container.querySelectorAll(".show-more-item");
+    const btn = container.querySelector(".show-more-btn");
+    const isGallery = container.classList.contains("gallery-page");
+    const initialCount = isGallery ? 6 : 8;
+
+    // If not initialized yet, initialize
+    if (!container.dataset.showMoreInitialized) {
+      initShowMoreForContainer(container);
+      return;
+    }
+
+    let visibleCount = btn && btn.classList.contains("expanded")
+      ? items.length
+      : initialCount;
+
+    items.forEach((item, idx) => {
+      if (idx < visibleCount) {
+        item.classList.remove("latent");
+      } else {
+        item.classList.add("latent");
+      }
+    });
+
+    if (btn) {
+      if (items.length > initialCount) {
+        btn.classList.add("visible");
+        btn.classList.remove("latent");
+      } else {
+        btn.classList.remove("visible");
+        btn.classList.remove("expanded");
+        btn.classList.add("latent");
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initShowMoreAll();
 });
 
 /* panel */
@@ -504,6 +588,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (list_buttons[index]) {
         list_buttons[index].classList.add("active");
       }
+
+      // Обновляем контент при смене вкладки
+      setTimeout(() => {
+        reviewsHide();
+        refreshShowMoreAll();
+      }, 50);
     }
   }
   new Tabs().initTabs();
@@ -656,15 +746,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* end show-more */
   function reviewsHide() {
+    // Ищем отзывы во всех табах
     const reviews = document.querySelectorAll(".reviews__item");
     if (reviews.length > 0) {
       reviews.forEach((item) => {
         if (!item.classList.contains("reviews__item_original")) {
           const reviewsText = item.querySelector(".reviews__text");
-          const reviewsBtn = item.querySelector(".reviews__btn ");
+          const reviewsBtn = item.querySelector(".reviews__btn");
           item.style.scale = "1";
           item.style.display = "flex";
-          if (reviewsBtn) {
+          if (reviewsBtn && reviewsText) {
             if (reviewsText.offsetHeight > 150) {
               reviewsText.classList.add("hidden");
               reviewsBtn.classList.add("active");

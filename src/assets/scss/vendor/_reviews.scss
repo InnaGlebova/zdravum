@@ -139,18 +139,6 @@
     }
   }
 
-  &-main__inner {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    & > * {
-      flex-basis: calc(50% - 10px);
-    }
-  }
-
-  &-main__item {
-    background-color: #fff;
-  }
 
   &__header-top {
     width: 100%;
@@ -264,15 +252,6 @@
 
   .rewiews-swiper {
     padding: 0 10px;
-  }
-}
-
-@media (max-width: 660px) {
-  .reviews-main__inner {
-    gap: 10px;
-    & > * {
-      flex-basis: 100%;
-    }
   }
 }
 

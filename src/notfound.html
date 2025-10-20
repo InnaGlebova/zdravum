@@ -1,26 +1,82 @@
-<section class="notfound color-bg section-padding-bottom">
+<section class="notfound section-offset-bottom section-offset-top">
   <div class="container">
-    <ul class="breadcrumbs">
-      <li><a href="/">Главная</a></li>
-      <li>404</li>
-    </ul>
     <div class="notfound__inner">
-      <div class="notfound__404">404</div>
       <div class="notfound__wrap">
-        <h1>Страница не найдена</h1>
+        <h1 class="notfound__404" htmlFor="404">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 870 372" fill="none">
+            <path
+              d="M161.882 364.56V302.312H0V253.208L116.555 7.43999H176.078L59.5228 253.208H161.882V156.488H214.681V253.208H250.295V302.312H214.681V364.56H161.882Z"
+              fill="#03363C" />
+            <path
+              d="M435.109 372C410.702 372 389.118 366.709 370.356 356.128C351.594 345.381 336.817 330.667 326.025 311.984C315.399 293.301 310.086 271.808 310.086 247.504V124.496C310.086 100.192 315.399 78.6987 326.025 60.016C336.817 41.3333 351.594 26.7013 370.356 16.12C389.118 5.37333 410.702 0 435.109 0C459.516 0 481.1 5.37333 499.862 16.12C518.624 26.7013 533.318 41.3333 543.944 60.016C554.736 78.6987 560.132 100.192 560.132 124.496V247.504C560.132 271.808 554.736 293.301 543.944 311.984C533.318 330.667 518.624 345.381 499.862 356.128C481.1 366.709 459.516 372 435.109 372ZM435.109 322.4C448.392 322.4 460.429 319.259 471.221 312.976C482.179 306.528 490.896 297.931 497.371 287.184C503.847 276.272 507.084 264.12 507.084 250.728V120.776C507.084 107.549 503.847 95.5627 497.371 84.816C490.896 73.904 482.179 65.3067 471.221 59.024C460.429 52.576 448.392 49.352 435.109 49.352C421.826 49.352 409.706 52.576 398.748 59.024C387.956 65.3067 379.322 73.904 372.847 84.816C366.371 95.5627 363.134 107.549 363.134 120.776V250.728C363.134 264.12 366.371 276.272 372.847 287.184C379.322 297.931 387.956 306.528 398.748 312.976C409.706 319.259 421.826 322.4 435.109 322.4Z"
+              fill="#03363C" />
+            <path
+              d="M781.587 364.56V302.312H619.705V253.208L736.26 7.43999H795.783L679.228 253.208H781.587V156.488H834.386V253.208H870V302.312H834.386V364.56H781.587Z"
+              fill="#03363C" />
+          </svg>
+        </h1>
         <p>
-          Страницы не существует или она удалена!Перейдите на главную или
-          воспользуйтесь поиском.
+          К сожалению, страница, которую вы ищете, не существует
         </p>
-        <div class="notfound__btn-wrap">
-            <input
-            type="search"
-            class="articles__search-input search-input"
-            placeholder="Поиск по сайту"
-          />
-          <a class="secondary-btn standart-btn">перейти на главную</a>
+        <a href="#" class="primary-btn standart-btn notfound__btn">Вернуться на главную</a>
+      </div>
+      <div class="notfound__links">
+        <div class="notfound__links-title">Вы можете попробовать найти то, что вам нужно, в следующих категориях:</div>
+        <div class="services__inner">
+          <a href="#" class="services__item">
+            <p>Стационарное лечение алкоголизма</p>
+            <div class="services__arrow"></div>
+          </a>
+          <a href="#" class="services__item">
+            <p>Нарколог на дом</p>
+            <div class="services__arrow"></div>
+          </a>
+          <a href="#" class="services__item">
+            <p>Нарколог на дом</p>
+            <div class="services__arrow"></div>
+          </a>
+          <a href="#" class="services__item">
+            <p>Нарколог на дом</p>
+            <div class="services__arrow"></div>
+          </a>
+          <a href="#" class="services__item">
+            <p>Нарколог на дом</p>
+            <div class="services__arrow"></div>
+          </a>
+          <a href="#" class="services__item">
+            <p>Нарколог на дом</p>
+            <div class="services__arrow"></div>
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts">
+  <div id="map__container" class="contacts__map">
+    <div id="map" style="width: 100%; height: 100%;">
+
+    </div>
+    <div class="contacts__inner to_animate right_fade">
+      <h2 class="contacts__title">Остались вопросы?</h2>
+      <div class="contacts__description">
+        Оставьте заявку на обратный звонок и мы перезвоним вам в течение 15 минут!
+      </div>
+      <form class="contacts__form form">
+        <input type="text" class="contacts__form-input form__input" required placeholder="Ваше имя" />
+        <input type="tel" class="contacts__form-input form__input" required placeholder="Ваш номер телефона" />
+        <label class="contacts__policy-checkbox policy-checkbox">
+          <input type="checkbox" checked required>
+          <span class="contacts__policy-text policy-text">
+            Нажимая кнопку я соглашаюсь с <a href="#" target="_blank">политикой конфединциальности</a> и <a href="#"
+              target="_blank">пользовательским соглашением</a>
+          </span>
+        </label>
+        <button class="standart-btn contacts__btn popup-btn tertiary-btn" data-path="popup-change">
+          Оставить заявку
+        </button>
+      </form>
     </div>
   </div>
 </section>

@@ -1,0 +1,17 @@
+/* doctors-page */
+
+.doctors-page {
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__item {
+        flex-basis: calc(25% - 15px);
+        height: auto;
+    }
+}
+
+/* doctors-page media */
+@media (max-width: 768px) {}

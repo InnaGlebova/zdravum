@@ -2,17 +2,13 @@
 
 .notfound__inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: center;
   gap: 110px;
 }
 
-.notfound__404 {
-  color: $primary-color;
-  font-size: 400px;
-  font-weight: bold;
-  font-family: "Bebas Neue";
-  line-height: 1;
-}
 
 .notfound__wrap {
   & h1 {
@@ -26,13 +22,14 @@
     margin-bottom: 80px;
   }
 }
-.notfound__btn-wrap {
-  display: flex;
-  gap: 20px;
-  & > * {
-    flex-basis: calc(50% - 10px);
-    min-width: calc(50% - 10px);
-  }
+
+.notfound__btn {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.notfound__links-title {
+  margin-bottom: 50px;
 }
 
 /* notfound media */

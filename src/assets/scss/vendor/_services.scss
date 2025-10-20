@@ -58,7 +58,8 @@ margin-bottom: 60px;
   font-size: 18px;
   font-weight: 600;
   &:hover {
-    background: rgba($primary-color, 0.3);
+    background: $primary-color;
+    color: white;
   }
 }
 
