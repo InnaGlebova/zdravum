@@ -8491,7 +8491,7 @@ template {
     font-weight: 400;
 }
 
-.gallery-page__inner {
+.gallery-main__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
