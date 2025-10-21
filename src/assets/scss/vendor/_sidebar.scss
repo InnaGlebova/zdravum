@@ -1,0 +1,59 @@
+/* sidebar */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__inner,
+  & .theiaStickySidebar &__inner {
+    background-color: $primary-background;
+    padding: 10px;
+    border-radius: $border-radius-medium;
+  }
+}
+
+.sidebar__tabs__wrapper,
+.sidebar .theiaStickySidebar .sidebar__tabs__wrapper {
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 16px;
+}
+
+.sidebar__tab,
+.sidebar .theiaStickySidebar .sidebar__tab {
+  border-radius: 12px;
+  &.active {
+    border-radius: 12px;
+  }
+}
+
+.sidebar__hide-inner,
+.sidebar .theiaStickySidebar .sidebar__hide-inner {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sidebar__hide-item-title,
+.sidebar .theiaStickySidebar .sidebar__hide-item-title {
+  background: white;
+  font-size: 18px;
+  padding: 30px;
+  transition: opacity 0.3s linear;
+
+  &::after,
+  &::before {
+    top: 55%;
+  }
+}
+
+.sidebar__hide-item,
+.sidebar .theiaStickySidebar .sidebar__hide-item {
+  background: transparent;
+  border-color: transparent;
+
+  &.active {
+    background: transparent;
+    border-color: transparent;
+  }
+}

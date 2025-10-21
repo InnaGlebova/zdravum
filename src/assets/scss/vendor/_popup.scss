@@ -131,7 +131,7 @@
 }
 
 
-.popup__response-wrap {
+.popup__success-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,12 +161,12 @@
   }
 }
 
-.popup__response-wrap .popup__title {
+.popup__success-wrap .popup__title {
   max-width: 313px;
   margin-bottom: 30px;
 }
 
-.popup__response-wrap .popup__subtitle {
+.popup__success-wrap .popup__subtitle {
   margin-bottom: 0;
 }
 

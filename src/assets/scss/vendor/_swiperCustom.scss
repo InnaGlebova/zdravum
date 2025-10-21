@@ -3,6 +3,14 @@
   width: 100%;
   position: relative;
   margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* Fix for Swiper overflow warning */
+.swiper img,
+.swiper video,
+.swiper canvas {
+  overflow: hidden;
 }
 .swiper-pag {
   pointer-events: none;

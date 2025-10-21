@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     {{> head }}
 </head>
+
 <body>
-<div class="page">
-    {{> header }}
-<main class="main">
-    {{> body }}
-</main>
-    {{> footer }} 
-</div>
-    {{> popups }} 
+    <div class="page">
+        {{> header }}
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+    </div>
+    {{> popups }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/ResizeSensor.js"></script>
+    <script src="/assets/js/theia-sticky-sidebar.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.theiaStickySidebar').theiaStickySidebar({
+                additionalMarginTop: 150,
+                additionalMarginBottom: 30,
+                minWidth: 1024
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -601,59 +601,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // navigation
 
-  const articleNavigation = document.querySelector(".navigation");
-  if (articleNavigation) {
-    const jsScrollBlockList = document.querySelectorAll(
-      ".text__content h1, .text__content h2, .text__content h3, .text__content h4, .text__content h5"
-    );
+  const articleNavigations = document.querySelectorAll(".navigation");
+  if (articleNavigations.length > 0) {
+    articleNavigations.forEach((articleNavigation) => {
+      // Находим ближайший текстовый блок в той же секции
+      const section = articleNavigation.closest('section');
+      const textContent = section ? section.querySelector('.text__content') : null;
+      
+      if (!textContent) return;
+      
+      const jsScrollBlockList = textContent.querySelectorAll(
+        "h1, h2, h3, h4, h5"
+      );
 
-    if (jsScrollBlockList.length > 0) {
-      for (let i = 0; i < jsScrollBlockList.length; i += 1) {
-        const jsScrollBlock = jsScrollBlockList[i];
-        const titleBlock = jsScrollBlock.textContent;
-        const articleNavigationList =
-          document.querySelector(".navigation__list");
-        const articleNavigationItem = document.createElement("li");
-        const articleNavigationLink = document.createElement("a");
-        articleNavigationItem.classList.add("navigation__item");
-        if (jsScrollBlock.tagName == "H1") {
-          articleNavigationItem.classList.add("title-h1");
+      if (jsScrollBlockList.length > 0) {
+        for (let i = 0; i < jsScrollBlockList.length; i += 1) {
+          const jsScrollBlock = jsScrollBlockList[i];
+          const titleBlock = jsScrollBlock.textContent;
+          const articleNavigationList =
+            articleNavigation.querySelector(".navigation__list");
+          const articleNavigationItem = document.createElement("li");
+          const articleNavigationLink = document.createElement("a");
+          articleNavigationItem.classList.add("navigation__item");
+          if (jsScrollBlock.tagName == "H1") {
+            articleNavigationItem.classList.add("title-h1");
+          }
+          if (jsScrollBlock.tagName == "H2") {
+            articleNavigationItem.classList.add("title-h2");
+          } else if (jsScrollBlock.tagName == "H3") {
+            articleNavigationItem.classList.add("title-h3");
+          } else if (jsScrollBlock.tagName == "H4") {
+            articleNavigationItem.classList.add("title-h4");
+          } else if (jsScrollBlock.tagName == "H5") {
+            articleNavigationItem.classList.add("title-h5");
+          } else if (jsScrollBlock.tagName == "H6") {
+            articleNavigationItem.classList.add("title-h6");
+          }
+          articleNavigationLink.classList.add("navigation__link");
+          jsScrollBlock.setAttribute("id", `${i}`);
+          articleNavigationLink.setAttribute("href", `$${i}`);
+          articleNavigationLink.textContent = " " + titleBlock;
+          articleNavigationItem.append(articleNavigationLink);
+          articleNavigationList.append(articleNavigationItem);
         }
-        if (jsScrollBlock.tagName == "H2") {
-          articleNavigationItem.classList.add("title-h2");
-        } else if (jsScrollBlock.tagName == "H3") {
-          articleNavigationItem.classList.add("title-h3");
-        } else if (jsScrollBlock.tagName == "H4") {
-          articleNavigationItem.classList.add("title-h4");
-        } else if (jsScrollBlock.tagName == "H5") {
-          articleNavigationItem.classList.add("title-h5");
-        } else if (jsScrollBlock.tagName == "H6") {
-          articleNavigationItem.classList.add("title-h6");
-        }
-        articleNavigationLink.classList.add("navigation__link");
-        jsScrollBlock.setAttribute("id", `${i}`);
-        articleNavigationLink.setAttribute("href", `$${i}`);
-        articleNavigationLink.textContent = " " + titleBlock;
-        articleNavigationItem.append(articleNavigationLink);
-        articleNavigationList.append(articleNavigationItem);
-      }
-      document.querySelectorAll('a[href^="$"').forEach((link) => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          let href = this.getAttribute("href").substring(1);
-          const scrollTarget = document.getElementById(href);
-          const topOffset = 280;
-          const elementPosition = scrollTarget.getBoundingClientRect().top;
-          const offsetPosition = elementPosition - topOffset;
-          window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth",
+        articleNavigation.querySelectorAll('a[href^="$"').forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            let href = this.getAttribute("href").substring(1);
+            const scrollTarget = document.getElementById(href);
+            const topOffset = 280;
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - topOffset;
+            window.scrollBy({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
           });
         });
-      });
-    } else {
-      articleNavigation.querySelector(".navigation").remove();
-    }
+      } else {
+        articleNavigation.remove();
+      }
+    });
   }
 
   // end navigation
@@ -687,7 +695,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
           const script = document.createElement("script");
           script.type = "text/javascript";
-          script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+          script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=YOUR_API_KEY";
           document.head.appendChild(script);
         }
         setTimeout(function () {
@@ -720,21 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 )
               );
 
-              // Добавляем прямоугольник, обозначающий область
-              var rectangle = new ymaps.Rectangle(
-                bounds,
-                {},
-                {
-                  fill: false,
-                  stroke: true,
-                  strokeColor: "#FF0000",
-                  strokeWidth: 2,
-                }
-              );
-              myMap.geoObjects.add(rectangle);
-
               myMap.behaviors.disable(["scrollZoom"]);
-              myMap.setBounds(bounds, { checkZoomRange: true });
             }
           }
         }, 500);
@@ -1363,36 +1357,5 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // }
 // /* end  filter */
-
-// Intro wave animation
-document.addEventListener("DOMContentLoaded", function () {
-  const introTitle = document.querySelector('.intro__title');
-  if (introTitle) {
-    const spans = introTitle.querySelectorAll('span');
-
-    // Функция для остановки анимации
-    function stopWaveAnimation() {
-      spans.forEach(span => {
-        span.style.animation = 'letterAppear 0.6s ease-out forwards';
-        span.style.animationFillMode = 'forwards';
-      });
-    }
-
-    // Останавливаем волновую анимацию через 4 секунды после загрузки страницы
-    setTimeout(() => {
-      stopWaveAnimation();
-    }, 4000);
-
-    // Также останавливаем при взаимодействии пользователя
-    spans.forEach(span => {
-      span.addEventListener('animationend', function (e) {
-        if (e.animationName === 'wave') {
-          span.style.animation = 'letterAppear 0.6s ease-out forwards';
-          span.style.animationFillMode = 'forwards';
-        }
-      });
-    });
-  }
-});
 
 
