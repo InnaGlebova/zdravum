@@ -15,6 +15,12 @@
     height: 100%;
   }
 
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

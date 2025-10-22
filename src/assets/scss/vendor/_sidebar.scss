@@ -1,4 +1,9 @@
 /* sidebar */
+.sidebar .theiaStickySidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
 .sidebar {
   display: flex;

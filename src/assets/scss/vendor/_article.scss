@@ -1,0 +1,71 @@
+/* article */
+.article-intro {
+  &__main-inner {
+    background-color: $primary-background;
+    padding: 40px;
+    border-radius: $border-radius-large;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    align-items: stretch;
+    gap: 170px;
+
+    &-picture {
+      height: auto;
+      flex-basis: calc(20% - 85px);
+      opacity: 0.2;
+      & img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+
+  &__header-wrap {
+    flex-basis: calc(80% - 85px);
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+  &__picture {
+    border-radius: $border-radius-large;
+    overflow: hidden;
+
+    & img {
+      max-height: 600px;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
+
+.article-reading {
+  background-color: $primary-background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  padding-left: 24px;
+  border-radius: $border-radius-medium;
+
+  &__icon {
+    background-color: $primary-color;
+    border-radius: $border-radius-small;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+  }
+}
