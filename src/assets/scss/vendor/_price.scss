@@ -41,7 +41,6 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1.56;
-  color: #333333;
   flex-basis: 70%;
 }
 
@@ -54,9 +53,26 @@
   text-align: right;
 }
 
+.price__cost-btn {
+  font-weight: 600;
+  color: $primary-color;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+}
+
 .price__btn {
   flex-basis: 15%;
   text-align: right;
+}
+
+.price-page__content {
+  flex-direction: column;
+  &>* {
+    width: 100%;
+  }
 }
 
 /* price media */

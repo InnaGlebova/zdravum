@@ -92,7 +92,8 @@ scrollbar-button {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #34899c;
+  background-color: $primary-color;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,12 +101,12 @@ scrollbar-button {
 }
 
 ::-webkit-resizer {
-  width: 8px;
+  width: 14px;
   height: 0px;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 14px;
 }
 
 a,
@@ -682,6 +683,50 @@ textarea {
   }
 }
 
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-title {
+    font-size: 38px;
+  }
+
+  .page-subtitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .breadcrumbs,
+  .breadcrumbs-white {
+    margin-bottom: 40px;
+    padding-top: 15px;
+  }
+
+  .page-header {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-offset-top {
+    padding-top: 100px;
+  }
+
+  .section-offset-bottom {
+    padding-bottom: 100px;
+  }
+
+  .section-offset {
+    margin-bottom: 100px;
+  }
+
+}
+
 @media (max-width: 1024px) {
   $border-radius-large: 20px;
   $border-radius-medium: 16px;
@@ -730,49 +775,7 @@ textarea {
   }
 }
 
-@media (max-width: 1200px) {
-  .page-title {
-    font-size: 38px;
-  }
 
-  .page-subtitle {
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-
-  .breadcrumbs,
-  .breadcrumbs-white {
-    margin-bottom: 40px;
-    padding-top: 15px;
-  }
-
-  .page-header {
-    margin-bottom: 20px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  .section-offset-top {
-    padding-top: 100px;
-  }
-
-  .section-offset-bottom {
-    padding-bottom: 100px;
-  }
-
-  .section-offset {
-    margin-bottom: 100px;
-  }
-
-}
-
-@media (max-width: 1440px) {
-  .container {
-    padding: 0 40px;
-  }
-}
 
 @media (max-width: 768px) {
 
@@ -851,7 +854,6 @@ textarea {
 @import "vendor/_reviewer";
 @import "vendor/_filter";
 @import "vendor/_literature";
-@import "vendor/_comments";
 @import "vendor/_contacts";
 @import "vendor/_tabs";
 @import "vendor/_notfound";
@@ -867,3 +869,4 @@ textarea {
 @import "vendor/_equipment.scss";
 @import "vendor/_programs.scss";
 @import "vendor/_article.scss";
+@import "vendor/_doctor-detail.scss";

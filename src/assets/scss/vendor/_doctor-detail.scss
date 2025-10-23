@@ -1,0 +1,323 @@
+/* doctor-detail */
+.doctor-detail {
+  &-intro {
+    &__main-inner {
+      background-color: $primary-background;
+      padding: 60px;
+      border-radius: $border-radius-large;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      & > picture {
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        & img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__inner {
+      display: flex;
+      gap: 170px;
+    }
+
+    &__header {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      max-width: 1000px;
+    }
+
+    &__header-wrap {
+      flex-basis: calc(80% - 85px);
+    }
+
+    &__title {
+      text-align: start;
+    }
+
+    &__subtitle {
+      margin-bottom: 50px;
+    }
+
+    &__picture-wrap {
+      position: relative;
+      display: flex;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -153px;
+        background: url(../img/intro/doc-badge.png);
+        width: 336px;
+        height: 641px;
+        z-index: 2;
+      }
+    }
+
+    &__picture {
+      z-index: 3;
+      display: flex;
+      align-items: end;
+      overflow: hidden;
+      & img {
+        width: 100%;
+        max-width: 336px;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.doctor-detail-badges {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 70px;
+
+  &__item {
+    background-color: #ffffff;
+    border-radius: $border-radius-medium;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    max-width: fit-content;
+  }
+
+  &__icon {
+    background-color: $primary-color;
+    border-radius: $border-radius-small;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.doctor-detail__spec {
+  picture {
+    &:before {
+      content: "";
+      background: url(../img/icons/bag.svg);
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+.doctor-detail__stage {
+  picture {
+    &:before {
+      content: "";
+      background: url(../img/icons/diplom.svg);
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+.doctor-detail-education {
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    border: 1px solid rgba($primary-color, 0.5);
+    border-radius: $border-radius-medium;
+    padding: 24px;
+    flex-basis: calc(25% - 7.6px);
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__year {
+    background: $primary-background;
+    color: $secondary-color;
+    border-radius: $border-radius-small;
+    padding: 12px;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  &__text {
+    color: $secondary-color;
+  }
+
+  @media (max-width: 992px) {
+    &__item {
+      flex: 1 1 calc(50% - 12px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__item {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.licences-page__inner.doctor-detail__licences {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    &>* {
+        flex-basis: calc(20% - 8px);
+        width: calc(20% - 8px);
+    }
+    
+    @media (max-width: 1200px) {
+        &>* {
+            flex-basis: calc(25% - 7.5px);
+            width: calc(25% - 7.5px);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        &>* {
+            flex-basis: calc(33.333% - 6.67px);
+            width: calc(33.333% - 6.67px);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        &>* {
+            flex-basis: calc(50% - 5px);
+            width: calc(50% - 5px);
+        }
+    }
+}
+
+.doctor-detail-shedule {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__day {
+    background-color: #ffffff;
+    border-radius: $border-radius-medium;
+    flex-basis: calc(14.28% - 8.57px);
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid rgba($primary-color, 0.5);
+    font-weight: 600;
+  }
+
+  &__day-name {
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  &__time {
+    font-weight: 600;
+    color: $primary-color;
+    line-height: 1.3;
+  }
+
+  &__day-off {
+    font-weight: 600;
+    color: $primary-color;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      gap: 12px;
+    }
+
+    &__day {
+      min-width: 100px;
+      max-width: 120px;
+      padding: 16px 12px;
+    }
+
+    &__day-name {
+      font-size: 14px;
+    }
+
+    &__time,
+    &__day-off {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__container {
+      gap: 8px;
+    }
+
+    &__day {
+      min-width: 80px;
+      max-width: 100px;
+      padding: 12px 8px;
+    }
+
+    &__day-name {
+      font-size: 13px;
+    }
+
+    &__time,
+    &__day-off {
+      font-size: 11px;
+    }
+  }
+}

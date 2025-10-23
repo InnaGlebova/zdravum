@@ -82,72 +82,23 @@
     }
   }
 
-  // Адаптивность
-  @media (max-width: 1024px) {
-    &__inner {
-      gap: 40px;
-    }
+}
 
-    &__title {
-      font-size: 32px;
-    }
+@media (max-width: 1024px) {
 
-    &__image {
-      flex: 0 0 250px;
-    }
+  .help {
+    margin: 40px 0;
   }
+}
 
-  @media (max-width: 768px) {
-    padding: 40px 0;
-
-    &__inner {
-      flex-direction: column;
-      gap: 30px;
-      text-align: center;
-    }
-
-    &__content {
-      max-width: 100%;
-    }
-
-    &__title {
-      font-size: 28px;
-    }
-
-    &__buttons {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    &__image {
-      flex: none;
-      max-width: 250px;
-    }
-
-    &::before {
-      width: 100%;
-      opacity: 0.2;
-    }
+@media (max-width: 768px) {
+  .help {
+    margin: 30px 0;
   }
+}
 
-  @media (max-width: 480px) {
-    padding: 30px 0;
-
-    &__title {
-      font-size: 24px;
-    }
-
-    &__description {
-      font-size: 14px;
-    }
-
-    &__btn {
-      padding: 12px 24px;
-      font-size: 14px;
-    }
-
-    &__buttons {
-      gap: 15px;
-    }
+@media (max-width: 480px) {
+  .help {
+    margin: 20px 0;
   }
 }

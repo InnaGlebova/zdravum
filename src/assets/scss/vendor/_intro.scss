@@ -3,6 +3,9 @@
 .intro {
   overflow: hidden;
 
+  &__content {
+    position: relative;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
@@ -33,34 +36,32 @@
     margin-bottom: 60px;
   }
 
-
   &__cards {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 10px;
     margin: 0 auto;
     background: $primary-color;
     border-radius: $border-radius-large;
     padding: 30px;
-    position: relative;
-    z-index: 2;
+    z-index: 1;
+    overflow: hidden;
   }
 
-  
   &__doctor {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
     width: 633px;
-    height: 796px;
+    height: auto;
   }
 
   &__doctor-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 20px;
   }
 
@@ -68,7 +69,8 @@
     background: $tertiary-color;
     border-radius: $border-radius-medium;
     padding: 24px;
-    z-index: 1;
+    z-index: 4;
+    height: 100%;
 
     &-wrap {
       max-width: 500px;
@@ -123,29 +125,35 @@
 
 /* intro media */
 
+@media (max-width: 1820px) {
+  .intro__cards {
+    margin-top: 300px;
+  }
+  .intro__doctor {
+    z-index: 2;
+    width: 50%;
+  }
+
+  .intro__cards {
+    & > * {
+      flex-basis: calc(50% - 5px);
+    }
+  }
+  .intro__card-wrap {
+    max-width: calc(50% - 5px);
+  }
+}
+
 @media (max-width: 1200px) {
-  .intro {
-    &__title {
-      font-size: 100px;
-      
-      span {
-        animation: letterAppear 0.6s ease-out forwards;
-      }
-    }
+  .intro__doctor {
+    bottom: 200px;
+    z-index: 1;
+    width: 60%;
+  }
 
-    &__doctor {
-      width: 240px;
-      height: 300px;
-    }
-
-    &__cards {
-      gap: 25px;
-      padding: 30px;
-    }
-
-    &__card {
-      padding: 25px;
-    }
+  .intro__cards {
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -156,130 +164,79 @@
     &__header {
       flex-direction: column;
       gap: 20px;
-      text-align: center;
+      text-align: start;
+      align-items: start;
       margin-bottom: 40px;
     }
+  }
 
-    &__header-slogan {
-      text-align: center;
-      max-width: none;
+  .intro__doctor {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    padding: 40px 0;
+  }
+
+  .intro__doctor {
+    width: 80%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .intro__cards {
+    flex-wrap: wrap;
+    & > * {
+      flex-basis: 100%;
     }
+  }
 
-    &__logo {
-      margin-bottom: 60px;
-      min-height: 320px;
-    }
-
-
-    &__doctor {
-      width: 200px;
-      height: 250px;
-    }
-
-    &__cards {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 25px;
-    }
-
-    &__card {
-      padding: 20px;
-    }
-
-    &__card-title {
-      font-size: 18px;
-    }
-
-    &__card-text {
-      font-size: 14px;
+  .intro__card-wrap {
+    max-width: 100%;
+    & > * {
+      flex-basis: 100%;
     }
   }
 }
 
-@media (max-width: 768px) {
-  .intro {
-    padding: 40px 0;
+@media (max-width: 600px) {
+  .intro__doctor {
+    width: 100%;
+    top: 50px;
+  }
+  .intro__header {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
 
-    &__header {
-      margin-bottom: 30px;
-    }
+  .intro__header-slogan,
+  .intro__header-text {
+    font-size: 14px;
+  }
 
-    &__header-text,
-    &__header-slogan {
-      font-size: 14px;
-    }
+  .intro__header-slogan {
+    text-align: start;
+  }
+  .intro__card-title {
+    font-size: 16px;
+  }
+  .intro__card-text {
+    font-style: 14px;
+  }
+  .intro__cards {
+    padding: 16px;
+  }
+  .intro__card {
+    padding: 16px;
+  }
 
-    &__logo {
-      margin-bottom: 40px;
-      min-height: 250px;
-    }
-
-
-    &__doctor {
-      width: 160px;
-      height: 200px;
-    }
-
-    &__cards {
-      gap: 15px;
-      padding: 20px;
-    }
-
-    &__card {
-      padding: 15px;
-    }
-
-    &__card-header {
-      margin-bottom: 15px;
-      gap: 10px;
-    }
-
-    &__card-title {
-      font-size: 16px;
-    }
-
-    &__card-text {
-      font-size: 13px;
-    }
-
-    &__card-icon {
-      width: 35px;
-      height: 35px;
-
-      svg {
-        width: 18px;
-        height: 18px;
-      }
-    }
+  .intro__card-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .intro {
-    &__doctor {
-      width: 140px;
-      height: 180px;
-    }
-
-    &__card-title {
-      font-size: 15px;
-    }
-
-    &__card-text {
-      font-size: 12px;
-    }
-  }
 }
-
-
-@keyframes titleAppear {
-  0% {
-    opacity: 0;
-    transform: translateY(250px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-

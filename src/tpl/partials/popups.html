@@ -19,7 +19,7 @@
                 target="_blank">пользовательским соглашением</a>
             </span>
           </label>
-          <button class="standart-btn contacts__btn popup-btn tertiary-btn" data-path="popup-change">
+          <button class="standart-btn contacts__btn popup-btn tertiary-btn">
             Оставить заявку
           </button>
         </form>
@@ -94,9 +94,42 @@
     </div>
   </div>
 </div>
+
+<div class="popup popup-search" data-target="popup__search">
+  <div class="popup__body popup-search__body">
+    <div class="popup__content search-wrapper popup-search__content">
+      <div class="container">
+        <picture class="close close-popup popup-search__close">
+          <source srcset="/assets/img/icons/close.svg" type="image/svg+xml">
+          <img src="/assets/img/icons/close.png" alt="close_popup">
+        </picture>
+        <form class="popup__form-search form popup__form">
+          <input type="search" placeholder="Что ищите?" required="" class="form__input search__input popup-search__input">
+        </form>
+        <ul class="search search-list">
+          <li><a href="#" class="search-list__name">категория</a></li>
+          <li><a href="#" class="search-list__name">алкоголизм</a></li>
+          <li><a href="#" class="search-list__name">алкоголизм</a></li>
+          <li><a href="#" class="search-list__name">наркомания</a></li>
+          <li><a href="#" class="search-list__name">наркомания</a></li>
+          <li><a href="#" class="search-list__name">вывод из запоя</a></li>
+          <li><a href="#" class="search-list__name">вывод из запоя</a></li>
+          <li><a href="#" class="search-list__name">вывод из запоя</a></li>
+          <li><a href="#" class="search-list__name">категория</a></li>
+          <li><a href="#" class="search-list__name">категория</a></li>
+          <li><a href="#" class="search-list__name">категория</a></li>
+          <li><a href="#" class="search-list__name">категория</a></li>
+          <li><a href="#" class="search-list__name">наркомания</a></li>
+          <li><a href="#" class="search-list__name">наркомания</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="popup" data-target="popup__review-call">
   <div class="popup__body">
-    <div class="popup__content">
+    <div class="popup__content popup__content-review-call">
       <picture class="close close-popup">
         <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
         <img src="assets/img/icons/close.png" alt="close_popup" />
@@ -107,21 +140,25 @@
       </p>
       <form class="form popup__form">
         <input type="text" class="form__input popup__input" placeholder="Ваше имя" required />
-        <textarea type="text" placeholder="Текст отзыва" class="popup__textarea"></textarea>
-        <button class="standart-btn primary-btn form__btn popup__btn" type="submit">
-          <span>Отправить</span>
+        <textarea type="text" placeholder="Текст отзыва" class="form__textarea"></textarea>
+        <label class="popup__policy-checkbox policy-checkbox">
+          <input type="checkbox" checked required>
+          <span class="popup__policy-text policy-text">
+            Нажимая кнопку я соглашаюсь с <a href="#" target="_blank">политикой конфединциальности</a> и <a href="#"
+              target="_blank">пользовательским соглашением</a>
+          </span>
+        </label>
+        <button class="standart-btn contacts__btn popup-btn tertiary-btn" >
+          Оставить отзыв
         </button>
-        <p class="form__politic popup__politic">
-          Нажимая кнопку "Отправить", вы соглашаетесь с
-          <a href="#" rel="nofollow">политикой конфиденциальности</a>
-        </p>
       </form>
     </div>
   </div>
 </div>
+
 <div class="popup" data-target="popup__question">
   <div class="popup__body">
-    <div class="popup__content">
+    <div class="popup__content popup__content-question">
       <picture class="close close-popup">
         <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
         <img src="assets/img/icons/close.png" alt="close_popup" />
@@ -130,15 +167,18 @@
       <p class="popup__subtitle">Задайте вопрос нашему специалисту.</p>
       <form class="form popup__form">
         <input type="text" class="form__input popup__input" placeholder="Ваше имя" required />
-        <input type="tel" class="form__input popup__input" placeholder="+7 (___)___-__-__" required />
-        <textarea placeholder="Вопрос" class="popup__textarea"></textarea>
-        <button class="standart-btn primary-btn form__btn popup__btn" type="submit">
-          <span>Отправить</span>
+        <input type="tel" class="popup__form-input form__input" required placeholder="Ваш номер телефона" />
+        <textarea type="text" placeholder="Вопрос" class="form__textarea"></textarea>
+        <label class="popup__policy-checkbox policy-checkbox">
+          <input type="checkbox" checked required>
+          <span class="popup__policy-text policy-text">
+            Нажимая кнопку я соглашаюсь с <a href="#" target="_blank">политикой конфединциальности</a> и <a href="#"
+              target="_blank">пользовательским соглашением</a>
+          </span>
+        </label>
+        <button class="standart-btn contacts__btn popup-btn tertiary-btn">
+          Оставить заявку
         </button>
-        <p class="form__politic popup__politic">
-          Нажимая кнопку "Отправить", вы соглашаетесь с
-          <a href="#" rel="nofollow">политикой конфиденциальности</a>
-        </p>
       </form>
     </div>
   </div>
@@ -151,7 +191,7 @@
         <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
         <img src="assets/img/icons/close.png" alt="close_popup" />
       </picture>
-      <div class="popup__success-wrap">
+      <div class="popup__response-wrap">
         <picture>
           <source srcset="assets/img/icons/success.svg" type="image/svg+xml" />
           <img src="assets/img/icons/success.png" alt="user" />
@@ -160,7 +200,6 @@
         <p class="popup__subtitle">
           Дежурный специалист свяжется с вами в течение 1 минуты
         </p>
-        <a href="#">Узнайте, какую помощь можно оказать больному до приезда врача.</a>
       </div>
     </div>
   </div>
@@ -174,7 +213,7 @@
         <source srcset="assets/img/icons/close.svg" type="image/svg+xml" />
         <img src="assets/img/icons/close.png" alt="close_popup" />
       </picture>
-      <div class="popup__success-wrap">
+      <div class="popup__response-wrap">
         <picture>
           <source srcset="assets/img/icons/error.svg" type="image/svg+xml" />
           <img src="assets/img/icons/error.png" alt="user" />
