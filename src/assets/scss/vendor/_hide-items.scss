@@ -175,24 +175,38 @@
     &:after {
       height: 10px;
       right: 16px;
+      background-color: $primary-color;
+    }
+
+    &.active {
+      &:after {
+        background-color: white;
+        
+      }
     }
   }
 
   .hide__item-title,
   .theiaStickySidebar .hide__item-title {
+    &.active {
+      &:before {
+        background-color: white;
+        
+      }
+    }
     &:before {
       width: 10px;
       right: 27px;
+      background-color: $primary-color;
+      
     }
   }
+  
 
   .hide__item,
   .theiaStickySidebar .hide__item {
     &:before {
-      width: 25px;
-      height: 25px;
-      right: 20px;
-      top: 12px;
+      display: none;
     }
   }
 

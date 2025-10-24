@@ -6,7 +6,7 @@
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  
+
   &.active {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +27,12 @@
   display: none;
 }
 
+.tabs-mobile.active .tabs__close {
+  display: block;
+  margin-left: auto;
+  padding: 10px;
+}
+
 .tabs__title {
   color: $secondary-color;
   font-size: 32px;
@@ -41,7 +47,7 @@
 .tabs__wrapper {
   margin-bottom: 60px;
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   width: 100%;
   background-color: $primary-background;
   padding: 10px;
@@ -73,24 +79,11 @@
   &:hover {
     color: #fff;
     background: $primary-gradient;
-    transform: translateY(-2px);
   }
 
   &.active {
     color: #fff;
     background: $primary-gradient;
-  }
-
-  & > p {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.1;
-  }
-
-  & > span {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.1;
   }
 }
 .tabs__active {
@@ -117,7 +110,7 @@
     position: relative;
     width: 100%;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
 
     &:before {
       border-right: 3px solid $primary-color;
@@ -146,7 +139,7 @@
     font-size: 12px;
     width: 100%;
     color: $primary-color;
-    background-color: #dff0ee;
+    background-color: $primary-background;
   }
 
   .tabs__container {
@@ -177,7 +170,7 @@
   .tabs__wrapper {
     display: flex;
     flex-direction: column;
-    background-color: #dff0ee;
+    background-color: $primary-background;
     width: 100%;
     border-radius: 5px;
     padding: 2px;
@@ -199,7 +192,6 @@
 
     &:hover {
       background-color: #349c844f;
-      transform: translateX(5px);
     }
 
     &.active {
@@ -210,7 +202,7 @@
 
   .tabs {
     border-radius: 5px;
-    background-color: #349c844f;
+    background-color: $primary-background;
     margin-bottom: 40px;
   }
 

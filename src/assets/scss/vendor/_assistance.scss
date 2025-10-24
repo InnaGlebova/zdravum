@@ -2,8 +2,6 @@
 
 .assistance {
   padding: 80px 0;
-
-
   &__inner {
     display: flex;
     gap: 10px;
@@ -126,7 +124,6 @@
     height: auto;
   }
 
-
   &__stats-circle {
     width: 285px;
     height: 285px;
@@ -144,7 +141,6 @@
       transform: translate(-50%, -50%);
     }
 
-
     & picture {
       position: absolute;
       display: block;
@@ -152,7 +148,6 @@
       height: 285px;
       top: 0;
       left: 0;
-
 
       & img {
         width: 285px;
@@ -163,14 +158,9 @@
   }
 }
 
-
 // Адаптивность
 @media (max-width: 1200px) {
   .assistance {
-    &__inner {
-      gap: 60px;
-    }
-
     &__info-block {
       padding: 30px;
     }
@@ -183,11 +173,13 @@
 
 @media (max-width: 1024px) {
   .assistance {
-    padding: 60px 0;
+    padding: 40px 0;
 
     &__inner {
-      grid-template-columns: 1fr;
-      gap: 50px;
+      flex-wrap: wrap;
+      & > * {
+        flex-basis: 100%;
+      }
     }
     &__title {
       font-size: 36px;
@@ -219,10 +211,28 @@
 
 @media (max-width: 768px) {
   .assistance {
-    padding: 50px 0;
+    padding: 20px 0;
 
+    &__stats-circle {
+      width: 185px;
+      height: 185px;
+
+      &-value {
+        font-size: 34px;
+      }
+
+      & picture {
+        width: 185px;
+        height: 185px;
+
+        & img {
+          width: 185px;
+          height: 185px;
+        }
+      }
+    }
     &__inner {
-      gap: 40px;
+      gap: 10px;
     }
 
     &__title {
@@ -247,9 +257,9 @@
       }
     }
 
-
     &__stats {
       padding: 20px;
+      max-width: 100%;
     }
 
     &__stats-description {
@@ -269,6 +279,11 @@
         font-size: 24px;
       }
     }
+  }
+
+  .assistance__header {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 

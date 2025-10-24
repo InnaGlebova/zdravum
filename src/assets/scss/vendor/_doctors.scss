@@ -10,13 +10,11 @@
     transform: scale(0.6);
     filter: grayscale(100%);
 
-
     &.swiper-slide-active {
       opacity: 1;
       transform: scale(1);
       filter: grayscale(0%);
       z-index: 2;
-
     }
   }
 
@@ -94,6 +92,8 @@
       border-radius: $border-radius-small;
       line-height: 1;
       border: 1px solid rgba($primary-color, 0.2);
+      height: 46px;
+      font-size: 14px;
     }
 
     & a {
@@ -106,6 +106,7 @@
       justify-content: center;
       transition: background-color 0.3s linear;
       border: 1px solid rgba($primary-color, 0.2);
+     
       &:hover {
         background-color: $primary-color;
       }
@@ -182,17 +183,25 @@
 }
 
 /* doctors media */
-
-@media (max-width: 780px) {
-
-  .doctors__bottom {
-    padding: 15px 20px;
-  }
-
+@media (max-width: 1024px) {
   .doctors__bottom p {
     font-size: 16px;
   }
-
+}
+@media (max-width: 768px) {
+  .doctors {
+    .swiper {
+      margin-bottom: 0;
+    }
+    .swiper-slide {
+      opacity: 1;
+      transform: scale(1);
+      filter: grayscale(0%);
+    }
+  }
+  .doctors__bottom {
+    padding:10px;
+  }
   .doctors__top {
     padding: 10px 10px 0 10px;
   }
@@ -201,6 +210,16 @@
     max-width: 156px;
     min-height: 250px;
     min-width: 156px;
+  }
+
+  .swiper-btns.doctors_swiper-btns {
+    display: none;
+  }
+  .doctors__bottom p {
+    font-size: 16px;
+  }
+  .doctors__descr {
+    text-align: start;
   }
 }
 

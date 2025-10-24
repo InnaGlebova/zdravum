@@ -452,8 +452,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const tabsClose = document.querySelectorAll(".tabs__close");
       let currentTab = 0;
       if (tabActiveName) {
+        const pElement = tabsButtonList[currentTab].querySelector('p');
         tabActiveName.querySelector(".tabs__active-text").textContent =
-          tabsButtonList[currentTab].textContent;
+          pElement ? pElement.textContent : tabsButtonList[currentTab].textContent;
       }
 
       for (let index = 0; index < tabsButtonList.length; index++) {
@@ -470,8 +471,9 @@ document.addEventListener("DOMContentLoaded", function () {
               index: currentTab,
             });
             if (tabActiveName) {
+              const pElement = tabsButtonList[index].querySelector('p');
               tabActiveName.querySelector(".tabs__active-text").textContent =
-                tabsButtonList[index].textContent;
+                pElement ? pElement.textContent : tabsButtonList[index].textContent;
               tabActiveName.closest(".tabs").classList.remove("active");
               document.querySelector("html").classList.remove("lock");
             }
@@ -607,9 +609,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Находим ближайший текстовый блок в той же секции
       const section = articleNavigation.closest('section');
       const textContent = section ? section.querySelector('.text__content') : null;
-      
+
       if (!textContent) return;
-      
+
       const jsScrollBlockList = textContent.querySelectorAll(
         "h1, h2, h3, h4, h5"
       );
@@ -960,7 +962,19 @@ document.addEventListener("DOMContentLoaded", function () {
         grabCursor: true,
         spaceBetween: 10,
         breakpoints: {
-          750: {
+          320: {
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+          },
+          560: {
+            slidesPerView:2.3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3.3,
+            spaceBetween: 10,
+          },
+          1300: {
             slidesPerView: 4.3,
             spaceBetween: 10,
           },
@@ -989,6 +1003,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         breakpoints: {
           750: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
             slidesPerView: 4,
             spaceBetween: 10,
           },
@@ -1024,52 +1042,44 @@ document.addEventListener("DOMContentLoaded", function () {
           nextEl: slider.querySelector(".doctors__slider-button_next"),
           prevEl: slider.querySelector(".doctors__slider-button_prev"),
         },
-        effect: "coverflow",
+        pagination: {
+          el: ".doctors-pagination",
+          type: "bullets",
+          clickable: true,
+        },
         grabCursor: true,
-        centeredSlides: true,
         slidesPerView: "auto",
         spaceBetween: 20,
         initialSlide: 2,
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 500,
-          modifier: 0.2,
-          slideShadows: false,
-        },
         breakpoints: {
           320: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 20,
+            centeredSlides: false,
           },
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            centeredSlides: true,
           },
-          1024: {
+          1200: {
+            effect: "coverflow",
+            centeredSlides: true,
             slidesPerView: 5,
             spaceBetween: 20,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 500,
+              modifier: 0.2,
+              slideShadows: false,
+            },
           },
         },
       });
     });
   }
 
-  const doctorCheck = document.querySelectorAll(".doctor");
-  if (doctorCheck.length > 0) {
-    doctorCheck.forEach((slider) => {
-      const swiperTabs = new Swiper(slider.querySelector(".swiper"), {
-        direction: "horizontal",
-        navigation: {
-          nextEl: slider.querySelector(".doctor__slider-button_next"),
-          prevEl: slider.querySelector(".doctor__slider-button_prev"),
-        },
-        slidesPerView: 1,
-        grabCursor: true,
-        spaceBetween: 10,
-      });
-    });
-  }
 
   const licencesSliderCheck = document.querySelectorAll(".licences");
   if (licencesSliderCheck.length > 0) {
@@ -1085,31 +1095,45 @@ document.addEventListener("DOMContentLoaded", function () {
           type: "bullets",
           clickable: true,
         },
-        effect: "coverflow",
         grabCursor: true,
-        centeredSlides: true,
         initialSlide: 2,
-        slidesPerView: "auto",
         spaceBetween: 10,
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 500,
-          modifier: 0.2,
-          slideShadows: false,
-        },
         breakpoints: {
           320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            slidesPerView: 1.3,
+            centeredSlides: false,
+            spaceBetween: 10,
+          },
+          500: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
+            effect: "coverflow",
+            centeredSlides: true,
             slidesPerView: 5,
             spaceBetween: 20,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 500,
+              modifier: 0.2,
+              slideShadows: false,
+            },
+          },
+          1024: {
+            effect: "coverflow",
+            centeredSlides: true,
+            slidesPerView: 5,
+            spaceBetween: 20,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 500,
+              modifier: 0.2,
+              slideShadows: false,
+            },
           },
         },
       });
@@ -1127,7 +1151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!swiper) {
         swiper = new Swiper(".mySwiper", {
           spaceBetween: 8,
-          slidesPerView: window.innerWidth < 1024 ? 5.2 : 4,
+          slidesPerView: window.innerWidth < 1024 ? 3 : 4,
           freeMode: true,
           watchSlidesProgress: true,
           grabCursor: true,
@@ -1170,82 +1194,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // gallery slider end
 
 
-  const doctorLicencesCheck = document.querySelectorAll(
-    ".doctor-licences"
-  );
-  if (doctorLicencesCheck.length > 0) {
-    doctorLicencesCheck.forEach((slider) => {
-      const swiperDoctorLicences = new Swiper(
-        slider.querySelector(".swiper"),
-        {
-          direction: "horizontal",
-          navigation: {
-            nextEl: slider.querySelector(".doctor-licences-button_next"),
-            prevEl: slider.querySelector(".doctor-licences-button_prev"),
-          },
-          slidesPerView: 1.2,
-          grabCursor: true,
-          spaceBetween: 20,
-          breakpoints: {
-            500: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-          },
-        }
-      );
-    });
-  }
-  const articlesSliderCheck = document.querySelectorAll(".articles");
-  if (articlesSliderCheck.length > 0) {
-    articlesSliderCheck.forEach((slider) => {
-      const swiperArticles = new Swiper(slider.querySelector(".swiper"), {
-        direction: "horizontal",
-        navigation: {
-          nextEl: slider.querySelector(".articles__slider-button_next"),
-          prevEl: slider.querySelector(".articles__slider-button_prev"),
-        },
-        slidesPerView: 1.1,
-        grabCursor: true,
-        spaceBetween: 10,
-        breakpoints: {
-          1140: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          650: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        },
-      });
-    });
-  }
-  const programsCheck = document.querySelectorAll(".programs");
-  if (programsCheck.length > 0) {
-    programsCheck.forEach((slider) => {
-      const swiperPrograms = new Swiper(slider.querySelector(".swiper"), {
-        direction: "horizontal",
-        navigation: {
-          nextEl: slider.querySelector(".programs__slider-button_next"),
-          prevEl: slider.querySelector(".programs__slider-button_prev"),
-        },
-        slidesPerView: 1.1,
-        grabCursor: true,
-        spaceBetween: 10,
-        breakpoints: {
-          900: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        },
-      });
-    });
-  }
 
   // end Sliders
 });

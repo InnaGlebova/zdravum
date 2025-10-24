@@ -44,15 +44,32 @@
     &:hover {
       background: $primary-gradient;
       color: #fff;
-      
+
       .offer__card-picture {
         opacity: 0;
         visibility: hidden;
       }
-      
+
       .offer__card-hover-text {
         opacity: 1;
         visibility: visible;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &:hover {
+        background: $primary-background;
+        color: $secondary-color;
+
+        .offer__card-picture {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .offer__card-hover-text {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
     }
   }
@@ -62,20 +79,21 @@
     bottom: 10px;
     left: 10px;
     right: 10px;
-    max-height: 232px;
+    height: 50%;
+    width: calc(100% - 20px);
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: $border-radius-large;
 
     & img {
-      width: auto;
-      max-height: 232px;
+      width: 100%;
+      max-height: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: $border-radius-large;
     }
   }
-
 
   &__card-title {
     font-size: 24px;
@@ -85,137 +103,52 @@
   &__card-description {
     max-height: 232px;
   }
+}
 
-  // Адаптивность
-  @media (max-width: 1200px) {
-    &__inner {
-      gap: 20px;
-    }
+/* offer  media */
 
-    &__card--primary {
-      padding: 30px;
-    }
-
-    &__card-title {
-      .offer__card--primary & {
-        font-size: 22px;
-      }
-    }
-
-    &__card-description {
-      font-size: 15px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    padding: 60px 0;
-
-    &__title {
-      font-size: 36px;
-    }
-
-    &__inner {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-      gap: 20px;
-    }
-
-    &__card--primary {
-      grid-column: 1 / 3;
-      grid-row: 1;
-      height: 300px;
-      padding: 25px;
-    }
-
-    &__card--secondary {
-      height: 250px;
-    }
-
-    &__card-title {
-      .offer__card--primary & {
-        font-size: 20px;
-      }
-
-      .offer__card--secondary & {
-        padding: 16px 16px 0;
-        font-size: 18px;
-      }
-    }
-
-    &__card-description {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 50px 0;
-
-    &__title {
-      font-size: 30px;
-    }
-
-    &__inner {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    &__card--primary {
-      grid-column: 1;
-      grid-row: 1;
-      height: auto;
-      padding: 20px;
-    }
-
-    &__card--secondary {
-      height: 200px;
-    }
-
-    &__card-title {
-      .offer__card--primary & {
-        font-size: 18px;
-      }
-
-      .offer__card--secondary & {
-        padding: 12px 12px 0;
-        font-size: 16px;
-      }
-    }
-
-    &__card-description {
-      font-size: 13px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 40px 0;
-
-    &__title {
-      font-size: 26px;
-    }
-
-    &__card--primary {
-      padding: 16px;
-    }
-
-    &__card--secondary {
-      height: 180px;
-    }
-
-    &__card-title {
-      .offer__card--primary & {
-        font-size: 16px;
-      }
-
-      .offer__card--secondary & {
-        padding: 10px 10px 0;
-        font-size: 14px;
-      }
-    }
-
-    &__card-description {
-      font-size: 12px;
+@media (max-width: 1600px) {
+  .offer__inner {
+    flex-wrap: wrap;
+    & > * {
+      flex-basis: calc(50% - 5px);
     }
   }
 }
 
-/* offer  media */
+@media (max-width: 1024px) {
+  .offer__card-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer__card-title {
+    font-size: 18px;
+    order: 1;
+  }
+  .offer__card-description {
+    order: 2;
+  }
+  .offer__card {
+    gap: 10px;
+    padding: 20px;
+    border-radius: $border-radius-small;
+    height: fit-content;
+  }
+  .offer__inner {
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+
+  .offer__card-picture {
+    position: static;
+    order: 3;
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+}

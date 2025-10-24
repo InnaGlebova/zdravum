@@ -120,93 +120,77 @@
       color: $secondary-color;
     }
   }
+}
 
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .installment {
     padding: 60px 0;
+    margin: 60px 0;
+  }
+  .installment__inner {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 
-    &__inner {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      text-align: center;
-    }
+  .installment__content {
+    gap: 80px;
+  }
 
-    &__content {
-      padding-right: 0;
-    }
-
-    &__title {
-      font-size: 32px;
-    }
-
-    &__cards {
-      flex-direction: row;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    &__card {
-      flex: 1;
-      max-width: 150px;
+  .installment__cards {
+    max-width: 100%;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 0;
+    & > * {
+      flex-basis: calc(33.333% - 6.66667px);
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 50px 0;
-
-    &__title {
-      font-size: 28px;
-    }
-
-    &__description {
-      font-size: 16px;
-    }
-
-    &__cards {
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    &__card {
-      max-width: 100%;
-    }
-
-    &__visual {
-      height: 200px;
-    }
+  .installment__card .card__label {
+    font-size: 16px;
   }
 
-  @media (max-width: 480px) {
+  .installment__title {
+    font-size: 42px;
+  }
+
+  .installment__card .card__value {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .installment {
     padding: 40px 0;
+    margin: 40px 0;
+  }
+  .installment__title {
+    font-size: 32px;
+  }
+  .installment__card {
+    gap: 24px;
+  }
 
-    &__title {
-      font-size: 24px;
-    }
+  .installment__content {
+    gap: 50px;
+    max-width: 100%;
+  }
 
-    &__description {
-      font-size: 15px;
-    }
+  .installment__card .card__label {
+    font-size: 14px;
+  }
 
-    &__btn {
-      padding: 12px 24px;
-      font-size: 14px;
-    }
+  .installment__card .card__value {
+    font-size: 32px;
+  }
 
-    &__visual {
-      height: 150px;
-    }
-
-    .terminal {
-      width: 100px;
-      height: 70px;
-
-      &__body {
-        height: 50px;
-      }
-
-      &__screen {
-        width: 84px;
-        height: 34px;
-      }
+  .installment__cards {
+    flex-direction: column;
+    & > * {
+      flex-basis: 100%;
     }
   }
+}
+
+@media (max-width: 480px) {
 }

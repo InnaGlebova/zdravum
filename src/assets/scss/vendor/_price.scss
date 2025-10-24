@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  padding: 16px 36px;
+  padding: 16px;
 
   & > tbody > tr {
     display: flex;
@@ -77,30 +77,31 @@
 
 /* price media */
 
-@media (max-width: 951px) {
+@media (max-width: 1024px) {
   .price__cost {
     font-size: 14px;
   }
 
   .price__table > tbody > tr > td {
-    padding: 10px 5px 10px 15px;
+    padding: 10px 5px 10px 0;
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 768px) {
   .price__item {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
     border-bottom: 1px solid $primary-color;
+  }
 
-    &:first-child {
-      border-top: 1px solid $primary-color;
-      padding-top: 10px;
-    }
+  .price__cost, .price__btn {
+    flex-basis: calc(50% - 5px);
+    width: calc(50% - 5px);
   }
 
   .price__table > tbody > tr > td {
     border-bottom: none;
-    padding: 10px 5px 10px 0;
+    padding: 10px;
   }
 
   .price__cost {
@@ -108,7 +109,6 @@
     gap: 5px;
     & span {
       display: block;
-      color: #738285;
       font-weight: 500;
     }
   }
@@ -129,7 +129,6 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 1.4;
-    white-space: nowrap;
   }
 
   &__list {
@@ -137,6 +136,7 @@
     gap: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
+    justify-content: center;
   }
 
   &__item {
@@ -145,8 +145,8 @@
     align-items: center;
     gap: 8px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: $border-radius-small;
+    background-color: #ffffff3b;
     backdrop-filter: blur(10px);
     width: 90px;
     height: 60px;
@@ -175,65 +175,34 @@
 }
 
 /* Payment methods media */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .payment-methods {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-
-    &__list {
-      justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    &__item {
+      border-radius: 20px;
     }
   }
+  
 }
 
 @media (max-width: 768px) {
   .payment-methods {
-    padding: 30px 20px;
-    margin-top: 40px;
-
-    &__title {
-      font-size: 18px;
-    }
-
+    flex-direction: column;
+    border-radius: $border-radius-small;
+gap: 10px;
     &__list {
-      gap: 15px;
+      gap: 5px;
     }
-
     &__item {
-      padding: 12px 16px;
-      min-width: 80px;
-    }
-
-    &__icon {
-      width: 28px;
-      height: 28px;
-    }
-
-    &__label {
-      font-size: 12px;
+      border-radius: $border-radius-small;
+      padding: 5px;
     }
   }
 }
 
 @media (max-width: 480px) {
   .payment-methods {
-    &__list {
-      gap: 10px;
-    }
 
-    &__item {
-      padding: 10px 12px;
-      min-width: 70px;
-    }
-
-    &__icon {
-      width: 24px;
-      height: 24px;
-    }
-
-    &__label {
-      font-size: 11px;
-    }
   }
 }

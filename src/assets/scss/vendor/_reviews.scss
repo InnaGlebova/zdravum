@@ -10,7 +10,6 @@
     margin-bottom: 60px;
   }
 
-
   &__header {
     display: flex;
     align-items: stretch;
@@ -139,7 +138,6 @@
     }
   }
 
-
   &__header-top {
     width: 100%;
     display: flex;
@@ -245,13 +243,42 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .reviews__container {
     padding: 0;
   }
 
   .rewiews-swiper {
     padding: 0 10px;
+  }
+  .swiper-btns.reviews_swiper-btns {
+    display: none;
+  }
+
+  .reviews-pagination.swiper-pagination-horizontal.swiper-pagination-bullets {
+    margin: 0 10px;
+  }
+
+  .reviews__title {
+    padding: 0 10px;
+  }
+
+  .reviews__bottom span {
+    font-size: 14px;
+  }
+
+  .reviews__header-wrapper,
+  .reviews__item {
+    gap: 8px;
+  }
+
+  .reviews__item {
+    border-radius: $border-radius-small;
+  }
+
+  .reviews__bottom {
+    border-radius: $border-radius-small;
+    padding: 10px;
   }
 }
 

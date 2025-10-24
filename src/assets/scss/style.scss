@@ -2,19 +2,20 @@
 $primary-color: #139297;
 $secondary-color: #03363c;
 $tertiary-color: #dbffff;
-$primary-gradient: linear-gradient(90deg,
-    rgba(0, 115, 122, 1) 0%,
-    rgba(1, 184, 180, 1) 100%);
+$primary-gradient: linear-gradient(
+  90deg,
+  rgba(0, 115, 122, 1) 0%,
+  rgba(1, 184, 180, 1) 100%
+);
 
 $primary-background: #edf6f6;
 
-/* Border radius variables */
 $border-radius-large: 30px;
 $border-radius-medium: 20px;
-$border-radius-small: 12px;
-
+$border-radius-small: 14px;
 
 html {
+  font-size: 18px;
   &::before {
     position: fixed;
     display: block;
@@ -337,7 +338,7 @@ a {
       justify-content: center;
       align-items: center;
 
-      &>img {
+      & > img {
         object-fit: contain;
         width: 22px;
         height: auto;
@@ -366,7 +367,6 @@ textarea {
   font-weight: 600;
   display: flex;
   justify-content: center;
-  white-space: nowrap;
   border-radius: $border-radius-large;
   text-align: center;
   align-items: center;
@@ -534,7 +534,7 @@ textarea {
   align-items: center;
   flex-shrink: 0;
 
-  &>img {
+  & > img {
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -608,12 +608,12 @@ textarea {
 }
 
 .sitemap-page__content {
-  &>ul {
+  & > ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 
-    &>li {
+    & > li {
       flex-basis: calc(33.333% - 7.5px);
       background-color: $primary-background;
       border-radius: $border-radius-medium;
@@ -622,12 +622,12 @@ textarea {
       padding: 40px;
       gap: 40px;
 
-      &>a {
+      & > a {
         font-size: 24px;
         font-weight: 700;
       }
 
-      &>ul {
+      & > ul {
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -690,9 +690,6 @@ textarea {
 }
 
 @media (max-width: 1200px) {
-  .page-title {
-    font-size: 38px;
-  }
 
   .page-subtitle {
     margin-bottom: 20px;
@@ -724,14 +721,12 @@ textarea {
   .section-offset {
     margin-bottom: 100px;
   }
-
 }
 
 @media (max-width: 1024px) {
-  $border-radius-large: 20px;
-  $border-radius-medium: 16px;
-  $border-radius-small: 10px;
-
+  html {
+    font-size: 16px;
+  }
   h1 {
     font-weight: bold;
     font-size: 50px;
@@ -751,9 +746,42 @@ textarea {
     font-weight: bold;
     font-size: 20px;
   }
+
+  .section-title {
+    font-size: 42px;
+  }
+  .page-title {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  .section-offset-top {
+    padding-top: 70px;
+  }
+
+  .section-offset-bottom {
+    padding-bottom: 70px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+  html, body {
+    font-size: 14px;
+  }
+
+  .standart-btn {
+    padding: 17px 24px;
+    font-size: 14px;
+    font-weight: 600;
+  }
   h1 {
     font-weight: bold;
     font-size: 26px;
@@ -773,12 +801,19 @@ textarea {
     font-weight: bold;
     font-size: 16px;
   }
-}
 
+  .section-title {
+    font-size: 32px;
+    text-align: start;
+  }
+  .section-badge {
+    display: none;
+  }
 
-
-@media (max-width: 768px) {
-
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
   .breadcrumbs,
   .breadcrumbs-white,
   .breadcrumbs-white li,
@@ -788,10 +823,6 @@ textarea {
 
   .main__top {
     margin-bottom: 25px;
-  }
-
-  .page-title {
-    font-size: 25px;
   }
 
   .container {
@@ -811,18 +842,25 @@ textarea {
   }
 
   .section-offset-top {
-    padding-top: 70px;
+    padding-top: 40px;
   }
 
   .section-offset-bottom {
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
-  .section-offset {
-    margin-bottom: 70px;
+  .section-padding {
+    padding: 30px 0;
+  }
+
+  ::-webkit-resizer {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
   }
 }
-
 
 @import "vendor/_normalize";
 @import "vendor/_fonts";

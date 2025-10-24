@@ -45,16 +45,18 @@
     overflow: hidden;
 
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 608px;
-      top: 47px;
-      width: 1730px;
-      height: 628px;
-      background: url("../img/help/pattern.png") center center no-repeat;
+      background-image: url(/assets/img/help/pattern.png);
+      background-repeat: no-repeat;
       background-size: cover;
-      z-index: 1;
+      content: "";
+      height: 100%;
+      max-height: 628px;
+      pointer-events: none;
+      position: absolute;
+      right: -50%;
+      top: 0;
+      width: 100%;
+      z-index: 2;
     }
 
     &-inner {
@@ -68,7 +70,7 @@
         position: absolute;
         right: 200px;
         top: 0;
-          transform: translate(-200px, 0);
+        transform: translate(-200px, 0);
       }
     }
 
@@ -76,11 +78,11 @@
       flex-direction: column;
     }
 
-    &.popup__content-review-call, &.popup__content-question {
+    &.popup__content-review-call,
+    &.popup__content-question {
       flex-direction: column;
     }
   }
-
 
   &__picture {
     position: absolute;
@@ -89,9 +91,9 @@
     bottom: -50px;
     max-width: 535px;
     height: 100%;
+    max-height: 670px;
     object-fit: contain;
     z-index: 2;
-
   }
 
   &__title {
@@ -110,9 +112,7 @@
     text-align: start;
     font-size: 18px;
   }
-
 }
-
 
 .popup__content_city {
   max-width: 700px;
@@ -123,7 +123,6 @@
   background: $primary-gradient;
   padding: 20px;
 }
-
 
 .popup__response-wrap {
   display: flex;
@@ -265,12 +264,12 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
   .close {
     width: 12px;
     height: 12px;
-    top: -15px;
-    right: -15px;
+    top: 20px;
+    right: 20px;
   }
   .popup__body {
     padding-right: 20px;
@@ -278,6 +277,12 @@
   }
   .popup__content {
     padding: 40px 20px 40px;
+    border-radius: $border-radius-small;
+
+    &::before {
+      right: 0;
+      top: 50%;
+    }
   }
   .popup__title {
     font-size: 22px;
@@ -294,6 +299,19 @@
     flex-wrap: nowrap;
     flex-basis: 100%;
   }
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup__picture {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: -150px;
+  }
+  .popup__content-inner {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -305,5 +323,3 @@
     gap: 10px;
   }
 }
-
-

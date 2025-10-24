@@ -8,6 +8,10 @@
     position: absolute;
     top: 75%;
     transform: translateY(-75%);
+
+    & .swiper-wrapper {
+      max-height: 270px;
+    }
   }
 
   .swiper-slide {
@@ -31,6 +35,7 @@
 
   &__title {
     text-align: start;
+    margin: 0 0 24px 0;
   }
 
   &__btn {
@@ -147,23 +152,125 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 
   & img {
     z-index: 2;
     object-fit: cover;
     max-height: 375px;
-    border-radius: 5px;
     margin: 0 auto;
   }
 }
 
 /* licences media */
+@media (max-width: 1800px) {
+  .licences__inner-main {
+    gap: 10px;
+  }
 
+  .licences__content {
+    width: calc(40% - 5px);
+  }
+
+  .licences__inner {
+    width: calc(60% - 5px);
+  }
+}
+@media (max-width: 1800px) {
+  .licences__inner-main {
+    flex-wrap: wrap;
+    & > * {
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 1024px) {
+  .licences__inner-main {
+    gap: 80px;
+    & > * {
+      width: 100%;
+    }
+  }
+
+  .licences {
+    margin: 60px 0;
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 768px) {
-}
+  .licences-decor {
+    display: none;
+  }
 
-@media (max-width: 550px) {
+  .licences__inner {
+    background-color: transparent;
+    border-radius: 0;
+    min-height: auto;
+  }
+
+  .licences-decor-wrap:after {
+    display: none;
+  }
+
+  .licences-decor-wrap:before {
+    display: none;
+  }
+
+  .licences__inner-main {
+    gap: 30px;
+  }
+
+  .licences .swiper {
+    position: static;
+    transform: none;
+  }
+
+  .licences_swiper-btns {
+    display: none;
+  }
+
+  .licences {
+    & .swiper-pagination-horizontal.swiper-pagination-bullets {
+      background-color: white;
+    }
+
+    .swiper-slide {
+      opacity: 1;
+      transform: scale(1);
+      filter: grayscale(0%);
+      z-index: 2;
+    }
+  }
+  .licences__item {
+    padding: 0;
+  }
+
+  .licences-pagination.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+  }
+
+  .licences__picture {
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+    & img {
+      z-index: 2;
+      object-fit: cover;
+      max-height: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  .licences {
+    .swiper {
+      & .swiper-wrapper {
+        max-height: fit-content;
+      }
+    }
+  }
 }

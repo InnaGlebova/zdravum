@@ -173,6 +173,13 @@
   .intro__doctor {
     width: 70%;
   }
+  .intro__cards {
+    border-radius: 20px;
+  }
+
+  .intro__card {
+    border-radius: 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -202,6 +209,13 @@
 }
 
 @media (max-width: 600px) {
+  .intro__cards {
+    border-radius: $border-radius-small;
+  }
+
+  .intro__card {
+    border-radius: $border-radius-small;
+  }
   .intro__doctor {
     width: 100%;
     top: 50px;
@@ -223,7 +237,7 @@
     font-size: 16px;
   }
   .intro__card-text {
-    font-style: 14px;
+    font-size: 14px;
   }
   .intro__cards {
     padding: 16px;

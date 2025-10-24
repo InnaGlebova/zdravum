@@ -74,6 +74,12 @@
     &:hover {
       opacity: 0.8;
     }
+
+    & picture {
+      & img {
+        object-fit: cover;
+      }
+    }
   }
 
   & .swiper-slide-thumb-active {
@@ -164,86 +170,74 @@
 
 /* gallery media */
 
-@media (max-width: 1200px) {
-  .gallery__title {
-    font-size: 42px;
-  }
-
-  .gallery__stats {
-    gap: 30px;
-  }
-
-  .gallery__stat {
-    min-width: 180px;
-    padding: 30px 25px;
-  }
-
-  .stat__value {
-    font-size: 42px;
-
-    .stat__unit {
-      font-size: 20px;
+@media (max-width: 1725px) {
+  .gallery__main-inner {
+    flex-wrap: wrap;
+    & > * {
+      flex-basis: 100%;
+      max-width: 100%;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 60px 0;
   }
 }
 
 @media (max-width: 768px) {
   .gallery {
-    padding: 60px 0;
+    padding: 30px 0;
   }
-
-  .gallery__title {
-    font-size: 36px;
-
-    .gallery__title-accent {
-      margin-left: 10px;
-    }
-  }
-
-  .gallery__description {
-    font-size: 16px;
+  .stat__value {
+    font-size: 32px;
   }
 
   .gallery__stats {
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery__stat {
-    min-width: 160px;
-    padding: 25px 20px;
-  }
-
-  .stat__value {
-    font-size: 36px;
-
-    .stat__unit {
-      font-size: 18px;
+    & > * {
+      flex-basis: 100%;
+      gap: 20px;
+      border-radius: $border-radius-small;
     }
   }
-}
 
-@media (max-width: 480px) {
-  .gallery__title {
-    font-size: 28px;
-  }
-
-  .gallery__btn {
-    padding: 14px 24px;
+  .gallery__description, .stat__label {
     font-size: 14px;
   }
 
-  .gallery__stat {
-    min-width: 140px;
-    padding: 20px 15px;
+  .mySwiper2 {
+    border-radius: $border-radius-small;
+    & .swiper-slide {
+      border-radius: $border-radius-small;
+    }
+  }
+  .gallery__inner .gallery_swiper-btns {
+    top: 20%;
+    transform: translateY(-20%);
+    left: -10px;
+    right: -10px;
+    width: calc(100% + 20px);
+    justify-content: space-between;
+  }
+  .gallery__inner .gallery-pagination {
+    display: none;
   }
 
-  .stat__value {
-    font-size: 32px;
+  .gallery__wrapper {
+    gap: 30px;
+  }
 
-    .stat__unit {
-      font-size: 16px;
+  .mySwiper {
+    border-radius: $border-radius-small;
+    & .swiper-slide {
+      border-radius: $border-radius-small;
+      & picture {
+        max-height: 100px;
+        & img {
+          max-height: 100px;
+        }
+      }
     }
   }
 }
