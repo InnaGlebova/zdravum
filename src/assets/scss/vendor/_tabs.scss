@@ -54,13 +54,16 @@
   border-radius: $border-radius-large;
 }
 
-.one-line-tabs .tab {
+.one-line-tabs:not(.service-sidebar-tabs) .tab {
   width: 100%;
   min-width: fit-content;
+  max-width: fit-content;
   align-items: center;
   text-align: center;
 }
-
+.service-sidebar-tabs .tab {
+  width: 100%;
+}
 .tab {
   display: flex;
   flex-direction: column;
@@ -86,8 +89,14 @@
     background: $primary-gradient;
   }
 }
+
 .tabs__active {
   display: none;
+}
+
+.one-line-tabs:not(.service-sidebar-tabs) .tabs__wrapper {
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 /* tabs media */
@@ -106,7 +115,7 @@
 }
 
 @media (max-width: 660px) {
-  .tabs__active-text {
+  .tabs__active-text:not(.service-sidebar-tabs .tabs__active-text) {
     position: relative;
     width: 100%;
     text-align: left;
@@ -126,11 +135,11 @@
     }
   }
 
-  .tabs__active {
+  .tabs__active:not(.service-sidebar-tabs .tabs__active) {
     display: block;
   }
 
-  .tabs__active {
+  .tabs__active:not(.service-sidebar-tabs .tabs__active) {
     display: flex;
     padding: 15px 20px;
     align-items: center;
@@ -142,7 +151,7 @@
     background-color: $primary-background;
   }
 
-  .tabs__container {
+  .tabs__container:not(.service-sidebar-tabs .tabs__container) {
     position: fixed;
     height: 100%;
     top: 0;
@@ -158,7 +167,7 @@
     bottom: 0;
   }
 
-  .tabs__content {
+  .tabs__content:not(.service-sidebar-tabs .tabs__content) {
     width: 100%;
     min-height: 100%;
     display: flex;
@@ -167,7 +176,7 @@
     padding: 60px 20px 20px;
   }
 
-  .tabs__wrapper {
+  .tabs__wrapper:not(.service-sidebar-tabs .tabs__wrapper) {
     display: flex;
     flex-direction: column;
     background-color: $primary-background;
@@ -179,7 +188,7 @@
     transition: transform 0.3s ease;
   }
 
-  .tab {
+  .tab:not(.service-sidebar-tabs .tab) {
     padding: 15px 18px;
     border-radius: 5px;
     background: #fff;
@@ -200,13 +209,13 @@
     }
   }
 
-  .tabs {
+  .tabs:not(.service-sidebar-tabs .tabs) {
     border-radius: 5px;
     background-color: $primary-background;
     margin-bottom: 40px;
   }
 
-  .tabs.active {
+  .tabs.active:not(.service-sidebar-tabs .tabs.active) {
     & .tabs__wrapper {
       transform: scale(1);
       pointer-events: all;
@@ -219,7 +228,7 @@
     }
   }
 
-  .tab {
+  .tab:not(.service-sidebar-tabs .tab) {
     &.active {
       &:before {
         display: none;

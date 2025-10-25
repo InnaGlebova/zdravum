@@ -12,7 +12,7 @@
   transition: opacity 0.2s linear, top 0.4s linear, border-radius 0.3s linear;
   pointer-events: none;
   opacity: 0;
-  border-radius: 10px;
+  border-radius: $border-radius-small;
   z-index: 30;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .filter__current {
-  border-radius: 10px;
+  border-radius: $border-radius-small;
   position: relative;
   z-index: 31;
   width: 100%;

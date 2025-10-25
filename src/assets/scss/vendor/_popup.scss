@@ -224,7 +224,7 @@
     width: 6px;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: $border-radius-small;
   }
   & li {
     flex-basis: calc((100% - 40px) / 3);

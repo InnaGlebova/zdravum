@@ -57,7 +57,7 @@
 
 @media (max-width: 1400px) {
   .contacts__inner {
-    border-radius: 10px;
+    border-radius: $border-radius-small;
     right: 20px;
     max-width: 320px;
     padding: 20px;
@@ -65,13 +65,14 @@
   }
 }
 
+
 @media (max-width: 768px) {
   .contacts__map {
-    margin-top: 200px;
+    margin-top: 300px;
   }
 
   .contacts__inner {
-    top: -200px;
+    top: -300px;
     max-width: 100%;
     right: 0;
   }
@@ -80,13 +81,5 @@
     margin-bottom: 20px;
   }
 
-  .map {
-    height: 400px;
-  }
-}
 
-@media (max-width: 360px) {
-  .contacts__inner {
-    max-width: 280px;
-  }
 }

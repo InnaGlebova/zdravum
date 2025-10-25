@@ -3,6 +3,7 @@
   .swiper {
     margin-bottom: 0;
   }
+
   .swiper-slide {
     transition: all 0.3s ease;
     opacity: 0.6;
@@ -27,6 +28,7 @@
     text-align: center;
     margin: 0 auto;
   }
+
   &__item {
     background: $primary-background;
     border-radius: $border-radius-large;
@@ -106,16 +108,18 @@
       justify-content: center;
       transition: background-color 0.3s linear;
       border: 1px solid rgba($primary-color, 0.2);
-     
+
       &:hover {
         background-color: $primary-color;
       }
+
       & svg {
         path {
           stroke: $primary-color;
           transition: stroke 0.3s linear;
         }
       }
+
       &:hover svg {
         path {
           stroke: #fff;
@@ -150,9 +154,11 @@
     }
   }
 }
+
 .doctors__btn {
   margin-top: auto;
 }
+
 .doctors-swiper {
   overflow: visible;
   padding: 20px 0;
@@ -166,12 +172,14 @@
     height: auto;
   }
 }
+
 .doctors__inner {
   max-width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
+
 .doctors_swiper-btns {
   position: absolute;
   top: 50%;
@@ -187,24 +195,38 @@
   .doctors__bottom p {
     font-size: 16px;
   }
+
+  .doctors__header {
+    margin-bottom: 20px;
+  }
 }
+
 @media (max-width: 768px) {
   .doctors {
+
+    &__header {
+      margin-bottom: 0;
+    }
+
     .swiper {
       margin-bottom: 0;
     }
+
     .swiper-slide {
       opacity: 1;
       transform: scale(1);
       filter: grayscale(0%);
     }
   }
+
   .doctors__bottom {
-    padding:10px;
+    padding: 10px;
   }
+
   .doctors__top {
     padding: 10px 10px 0 10px;
   }
+
   .doctors__top picture img {
     max-height: 250px;
     max-width: 156px;
@@ -215,9 +237,11 @@
   .swiper-btns.doctors_swiper-btns {
     display: none;
   }
+
   .doctors__bottom p {
     font-size: 16px;
   }
+
   .doctors__descr {
     text-align: start;
   }
@@ -311,6 +335,7 @@
   display: flex;
   gap: 60px;
 }
+
 .doctor__btn {
   width: 100%;
 }
@@ -318,6 +343,7 @@
 .doctor-swiper {
   margin-bottom: 20px;
 }
+
 .doctor__card-photo {
   max-width: 315px;
   width: 100%;
@@ -358,6 +384,7 @@
   align-items: flex-start;
   max-width: 910px;
 }
+
 .doctor__stage {
   background-color: #34899c;
   border-radius: 5px;
@@ -378,6 +405,7 @@
 
 .doctor__text-item {
   margin-bottom: 60px;
+
   & h3 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -447,11 +475,13 @@
     }
   }
 }
+
 .doctor__profile {
   padding: 35px 40px;
   background-color: #fff;
   border-radius: 20px;
 }
+
 .doctor__btn-wrap {
   display: flex;
   gap: 10px;
@@ -495,13 +525,14 @@
   background-color: #e1ebef;
   border-radius: 20px;
   margin-bottom: 60px;
-  & > ul {
+
+  &>ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  & > h5 {
+  &>h5 {
     color: #001b21;
     font-size: 26px;
     line-height: 1;
@@ -514,19 +545,19 @@
   justify-content: space-between;
   border-image-width: 100%;
 
-  & > p {
+  &>p {
     font-size: 16px;
     color: #001b21;
     line-height: 1;
     width: fit-content;
   }
 
-  & > span {
+  &>span {
     width: 100%;
     border-bottom: 1px dashed #adc7d0;
   }
 
-  & > b {
+  &>b {
     font-size: 16px;
     font-weight: 600;
     color: $primary-color;
@@ -541,7 +572,7 @@
   margin-bottom: 60px;
 }
 
-.doctor__card-text-content-wrap > ol > li {
+.doctor__card-text-content-wrap>ol>li {
   padding: 7px 0;
 }
 
@@ -574,7 +605,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  & > * {
+  &>* {
     width: 40px;
     height: 40px;
     background-color: #ebf5f3;
@@ -670,9 +701,11 @@
     & h5 {
       font-size: 18px;
     }
+
     & p {
       font-size: 14px;
     }
+
     & span {
       font-size: 14px;
     }
@@ -700,10 +733,10 @@
       margin-bottom: 20px;
     }
   }
+
   .doctor__card-form {
     margin-bottom: 10px;
   }
 }
 
-@media (max-width: 550px) {
-}
+@media (max-width: 550px) {}

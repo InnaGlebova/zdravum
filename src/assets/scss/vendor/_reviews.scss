@@ -241,9 +241,16 @@
   .reviews__item.reviews__item_original {
     padding: 0;
   }
+  .reviews__title {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .reviews__title {
+    margin-bottom: 20px;
+  }
   .reviews__container {
     padding: 0;
   }

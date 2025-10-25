@@ -1,8 +1,9 @@
 /* consultation */
 
 .consultation {
-    border-radius: $border-radius-large;
-    overflow: hidden;
+  border-radius: $border-radius-large;
+  overflow: hidden;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -22,6 +23,7 @@
     left: 40px;
     z-index: 2;
   }
+
   &__title {
     font-size: 32px;
     margin-bottom: 30px;
@@ -36,12 +38,56 @@
     gap: 10px;
     align-items: center;
 
-    & > * {
-        width: 100%;
+    &>* {
+      width: 100%;
     }
   }
 
   &__description {
     margin-bottom: 40px;
   }
+}
+
+@media (max-width: 1400px) {
+
+  .consultation__title {
+    margin-bottom: 10px;
+  }
+
+  .consultation__badge {
+    margin-bottom: 10px;
+  }
+
+  .consultation__buttons {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .consultation__picture {
+    width: 100%;
+    max-height: 500px;
+
+    & img {
+      height: 100%;
+      max-height: 500px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .consultation__title {
+    font-size: 20px;
+  }
+
+  .consultation {
+    min-height: fit-content;
+    &__inner {
+     min-height: fit-content;
+    }
+  }
+
 }

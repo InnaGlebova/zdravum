@@ -10,7 +10,7 @@
 
 .hide__item,
 .theiaStickySidebar .hide__item {
-  border-radius: 10px;
+  border-radius: $border-radius-small;
   position: relative;
   border-radius: $border-radius-medium;
   background-color: #fff;
@@ -25,10 +25,12 @@
     height: 60px;
     background-color: $primary-color;
     right: 15px;
-    top: 18px;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: $border-radius-small;
     z-index: 1;
     pointer-events: none;
+    opacity: 1;
   }
 
   &.active {
@@ -36,6 +38,7 @@
 
     &:before {
       background-color: white;
+      opacity: 0;
     }
   }
 }
@@ -69,7 +72,8 @@
     background-color: white;
     position: absolute;
     right: 37px;
-    top: 46%;
+    top: 50%;
+    transform: translateY(-50%);
     transition: width 0.2s ease, color 0.2s ease;
     z-index: 2;
   }
@@ -80,7 +84,7 @@
     transition: height 0.2s ease;
     transform: translate3d(-15px, -50%, 0);
     right: 29px;
-    top: 47%;
+    top: 50%;
   }
 
   &.active {
@@ -89,12 +93,9 @@
 
     &::after {
       height: 0;
+
     }
 
-    &::after,
-    &::before {
-      background-color: $primary-color;
-    }
   }
 
   &:hover {
@@ -185,6 +186,10 @@
       }
     }
   }
+
+  // .hide__item-title:before {
+  //   top: 45%;
+  // }
 
   .hide__item-title,
   .theiaStickySidebar .hide__item-title {

@@ -164,8 +164,9 @@
 
 /* stocks  media */
 
-// Адаптивность
 @media (max-width: 1600px) {
+
+  
   .stocks__inner {
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +189,10 @@
 }
 
 @media (max-width: 1024px) {
+
+  .stocks {
+    padding: 40px 0;
+  }
   .stocks__header {
     flex-wrap: wrap;
     gap: 10px;
@@ -204,6 +209,12 @@
 }
 
 @media (max-width: 768px) {
+  .stocks {
+    padding: 20px 0;
+  }
+  .stocks__view-all-btn, .stocks__title {
+    margin-bottom: 0;
+  }
   .stocks__header {
     margin-bottom: 20px;
   }

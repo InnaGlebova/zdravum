@@ -6,6 +6,10 @@
   gap: 30px;
 }
 .reviewer {
+  border-radius: $border-radius-large;
+  overflow: hidden;
+  transition: border 0.3s linear;
+  border: 1px solid transparent;
   &:hover {
     border-color: $primary-color;
   }
@@ -17,7 +21,6 @@
   justify-content: space-between;
   width: 100%;
   background-color: $primary-background;
-  border-radius: 20px;
   padding: 40px;
 }
 
@@ -44,7 +47,7 @@
   height: 100%;
   max-width: 100px;
   max-height: 100px;
-  border-radius: 10px;
+  border-radius: $border-radius-small;
   background-color: white;
   overflow: hidden;
 
@@ -81,53 +84,53 @@
 
 /* reviewer media */
 
-@media (max-width: 951px) {
+
+
+@media (max-width: 1024px) {
+  .reviewer {
+    border-radius: $border-radius-medium;
+  }
   .reviewer__inner {
-    padding: 20px 44px 20px 20px;
+    padding: 30px;
+  }
+  .reviewer__inner-main {
+    gap: 20px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  .reviewer {
+    border-radius: $border-radius-small;
+  }
   .reviewer__inner {
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
-    border-radius: 10px;
+    padding: 20px;
+  }
+  .reviewer__inner-main {
+    gap: 10px;
+  }
+
+  .reviewer__block-name {
+    font-size: 16px;
+  }
+
+  .reviewer__badge {
+    margin-bottom: 10px;
+  }
+
+  .reviewer__block-spec {
+    margin-bottom: 0;
   }
 
   .reviewer__social-media-picture {
     width: 40px;
     height: 40px;
   }
+  .reviewer__block {
+    gap: 10px;
+    padding: 0;
+  }
 
   .reviewer__social-media-img {
     width: 16px;
-  }
-}
-
-@media (max-width: 550px) {
-  .reviewer__block-img {
-    border-radius: 5px;
-    max-height: 90px;
-    max-width: 90px;
-    min-height: 90px;
-    min-width: 90px;
-  }
-
-  .reviewer__block {
-    gap: 20px;
-  }
-
-
-  .reviewer__block-name {
-    font-size: 16px;
-  }
-
-  .reviewer__social-media span {
-    font-size: 16px;
-  }
-
-  .reviewer__block-spec {
-    font-size: 12px;
   }
 }

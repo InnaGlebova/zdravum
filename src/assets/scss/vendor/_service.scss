@@ -262,11 +262,19 @@
   .service-intro {
     margin: 30px 0;
   }
+
+  .service-advantages__item-title {
+    font-size: 18px;
+  }
+
 }
 
 @media (max-width: 768px) {
   .service-intro__main-inner {
     padding: 20px 20px 0 20px;
+  }
+  .service-advantages__item-title {
+    font-size: 16px;
   }
 
   .service-advantages__inner,
@@ -304,6 +312,17 @@
 
   .service-intro {
     margin: 20px 0;
+  }
+
+  .service-advantages__picture {
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  .service-advantages__item {
+    padding: 18px;
   }
 }
 

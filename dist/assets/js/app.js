@@ -963,19 +963,19 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 10,
         breakpoints: {
           320: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.2,
             spaceBetween: 10,
           },
           560: {
-            slidesPerView:2.3,
+            slidesPerView:2.2,
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 3.3,
+            slidesPerView: 3.2,
             spaceBetween: 10,
           },
           1300: {
-            slidesPerView: 4.3,
+            slidesPerView: 4.2,
             spaceBetween: 10,
           },
         },

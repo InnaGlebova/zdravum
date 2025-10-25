@@ -13,6 +13,9 @@
     gap: 10px;
     align-items: center;
     position: relative;
+    max-width: 100%;
+    overflow-x: auto;
+
     &::before {
       content: "";
       position: absolute;
@@ -35,12 +38,15 @@
       opacity: 0.1;
     }
   }
+
   &__plan:not(.programs__descr) {
     background-color: $primary-background;
     padding: 10px 0;
     border: 1px solid rgba($primary-color, 0.7);
     border-radius: $border-radius-large;
     flex-basis: calc(19% - 8px);
+    width: calc(19% - 8px);
+    min-width: 250px;
     color: $secondary-color;
     transition: all 0.2s linear;
     overflow: hidden;
@@ -73,6 +79,8 @@
     flex-direction: column;
     gap: 10px;
     flex-basis: calc(24% - 8px);
+    width: calc(24% - 8px);
+    min-width: 300px;
   }
 
   &__plan-header {
@@ -201,14 +209,34 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .programs__inner {
+    border-radius: $border-radius-medium;
+  }
+  .programs__header {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .programs {
+
+    &__inner {
+      border-radius: $border-radius-small;
+    }
+
+    &__header {
+      align-items: start;
+      text-align: start;
+    }
+
     &__title {
       font-size: 32px;
     }
 
     &__description {
       font-size: 16px;
+      align-items: start;
     }
 
     &__table {
@@ -217,12 +245,30 @@
     }
 
     &__feature {
-      width: 200px;
+      width: 210px;
+      max-width: 210px;
       padding: 15px 10px;
+      border-radius: $border-radius-small;
+    }
+
+    .programs__descr {
+      width: 210px;
+      max-width: 210px;
+      min-width: 210px;
+    }
+
+    .programs__cell {
+      padding: 5 10px;
+    }
+
+    .programs__inner:after,
+    .programs__inner:before {
+      left: 100px;
     }
 
     &__feature-header {
-      width: 200px;
+      width: 210px;
+      max-width: 210px;
     }
 
     &__cell {
@@ -233,6 +279,7 @@
     &__plan-header {
       padding: 20px 10px;
       font-size: 16px;
+      border-radius: $border-radius-small;
     }
 
     &__plan-title {
@@ -249,6 +296,17 @@
       grid-template-columns: 1fr;
       gap: 0;
     }
+
+    &__feature-text {
+      font-size: 14px;
+    }
+
+    &__feature-icon {
+      height: 40px;
+      width: 40px;
+      border-radius: $border-radius-small;
+    }
+
 
     &__btn {
       border-right: none;

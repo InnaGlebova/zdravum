@@ -133,7 +133,7 @@
   }
 
   .installment__content {
-    gap: 80px;
+    gap: 30px;
   }
 
   .installment__cards {
@@ -152,27 +152,37 @@
 
   .installment__title {
     font-size: 42px;
+    margin-bottom: 30px;
   }
 
   .installment__card .card__value {
     font-size: 42px;
   }
+  .installment__description {
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 768px) {
+  .installment__description {
+    font-size: 14px;
+  }
+
   .installment {
     padding: 40px 0;
     margin: 40px 0;
   }
   .installment__title {
     font-size: 32px;
+    margin-bottom: 20px;
   }
   .installment__card {
     gap: 24px;
   }
 
   .installment__content {
-    gap: 50px;
+    gap: 20px;
     max-width: 100%;
   }
 
@@ -188,6 +198,16 @@
     flex-direction: column;
     & > * {
       flex-basis: 100%;
+    }
+  }
+
+  .installment__buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    &>* {
+      max-width: 100%;
+      width: 100%;
     }
   }
 }

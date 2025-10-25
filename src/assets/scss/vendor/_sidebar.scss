@@ -28,6 +28,7 @@
 .sidebar__tab,
 .sidebar .theiaStickySidebar .sidebar__tab {
   border-radius: 12px;
+
   &.active {
     border-radius: 12px;
   }
@@ -44,6 +45,7 @@
   background: white;
   font-size: 18px;
   padding: 30px;
+  color: $secondary-color;
   transition: opacity 0.3s linear;
 
   &::after,
@@ -60,5 +62,46 @@
   &.active {
     background: transparent;
     border-color: transparent;
+  }
+}
+@media (max-width: 1024px) {
+
+  .sidebar .theiaStickySidebar .sidebar__inner,
+  .sidebar__inner {
+    border-radius: $border-radius-medium;
+  }
+
+  .sidebar .theiaStickySidebar {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  .sidebar .theiaStickySidebar .sidebar__inner,
+  .sidebar__inner {
+    border-radius: $border-radius-small;
+  }
+
+  
+  .sidebar .theiaStickySidebar {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 660px) {
+
+  .sidebar__tabs__wrapper,
+  .sidebar .theiaStickySidebar .sidebar__tabs__wrapper {
+    margin-bottom: 0;
+  }
+
+  .sidebar__tab.tab {
+    padding: 20px;
+  }
+
+  .sidebar .theiaStickySidebar .sidebar__hide-item-title,
+  .sidebar__hide-item-title {
+    font-size: 16px;
+    padding: 20px;
   }
 }
