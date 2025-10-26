@@ -2,6 +2,7 @@
 /*Общие */
 html {
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 html::before {
@@ -10879,7 +10880,7 @@ template {
         margin-top: 0;
     }
 }
-/* faq */
+/* hide */
 .hide__inner,
 .theiaStickySidebar .hide__inner {
     display: -webkit-box;
@@ -10944,7 +10945,7 @@ template {
     text-align: left;
     padding: 36px;
     padding-right: 70px;
-    border-radius: 20px;
+    border-radius: 14px;
     background-color: #edf6f6;
     cursor: pointer;
     display: -webkit-box;
@@ -11064,14 +11065,14 @@ template {
 
 .hide-item__item,
 .theiaStickySidebar .hide-item__item {
-    border-radius: 20px;
+    border-radius: 14px;
     width: 100%;
 }
 
 .hide-item__item > a,
 .theiaStickySidebar .hide-item__item > a {
     padding: 21px 30px;
-    border-radius: 20px;
+    border-radius: 14px;
     width: 100%;
     display: block;
 }
@@ -11081,7 +11082,7 @@ template {
     background-color: rgba(19, 146, 151, 0.1);
 }
 
-/* faq media */
+/* hide media */
 @media (max-width: 951px) {
     .hide__text,
   .theiaStickySidebar .hide__text {
@@ -11131,7 +11132,12 @@ template {
     }
 }
 /* faqs media */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .hide__item,
+  .theiaStickySidebar .hide__item {
+        border-radius: 14px;
+    }
+
     .hide__item:before,
   .theiaStickySidebar .hide__item:before {
         display: none;

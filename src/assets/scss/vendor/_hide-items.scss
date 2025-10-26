@@ -1,4 +1,4 @@
-/* faq */
+/* hide */
 
 .hide__inner,
 .theiaStickySidebar .hide__inner {
@@ -52,7 +52,7 @@
   text-align: left;
   padding: 36px;
   padding-right: 70px;
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-small;
   background-color: $primary-background;
   cursor: pointer;
   display: flex;
@@ -142,11 +142,11 @@
 }
 .hide-item__item,
 .theiaStickySidebar .hide-item__item {
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-small;
   width: 100%;
   & > a {
     padding: 21px 30px;
-    border-radius: $border-radius-medium;
+    border-radius: $border-radius-small;
     width: 100%;
     display: block;
 
@@ -156,7 +156,7 @@
   }
 }
 
-/* faq media */
+/* hide media */
 
 @media (max-width: 951px) {
   .hide__text,
@@ -224,9 +224,10 @@
 
 /* faqs media */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hide__item,
   .theiaStickySidebar .hide__item {
+    border-radius: $border-radius-small;
     &:before {
       display: none;
     }
