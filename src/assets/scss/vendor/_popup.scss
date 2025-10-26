@@ -63,16 +63,6 @@
       max-width: 460px;
     }
 
-    &.popup__content-reviews {
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 200px;
-        top: 0;
-        transform: translate(-200px, 0);
-      }
-    }
 
     &.popup__content_city {
       flex-direction: column;

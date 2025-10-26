@@ -4,14 +4,41 @@
     &__inner {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
     }
 
     &__item {
-        flex-basis: calc(25% - 15px);
+        flex-basis: calc(25% - 7.5px);
+        width: calc(25% - 7.5px);
         height: auto;
     }
 }
 
 /* doctors-page media */
-@media (max-width: 768px) {}
+@media (max-width: 1400px) {
+    .doctors-page {
+        &__item {
+            flex-basis: calc(33.333% - 6.6667px);
+            width: calc(33.333% - 6.6667px);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .doctors-page {
+        &__item {
+            flex-basis: calc(50% - 5px);
+            width: calc(50% - 5px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .doctors-page {
+        &__item {
+            flex-basis: 100%;
+            width: 100%;
+
+        }
+    }
+}

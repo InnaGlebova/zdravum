@@ -29,13 +29,32 @@
 }
 
 /* reviews-page media */
+@media (max-width: 1300px) {
+    .reviews-page {
+        &__inner {
+            &>* {
+                flex-basis: calc(33.333% - 6.6667px);
+            }
+        }
+    }
+}
 
-@media (max-width: 660px) {
-    .reviews-page__inner {
-        gap: 10px;
+@media (max-width: 1024px) {
+    .reviews-page {
+        &__inner {
+            &>* {
+                flex-basis: calc(50% - 5px);
+            }
+        }
+    }
+}
 
-        &>* {
-            flex-basis: 100%;
+@media (max-width: 768px) {
+    .reviews-page {
+        &__inner {
+            &>* {
+                flex-basis: 100%;
+            }
         }
     }
 }

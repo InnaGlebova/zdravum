@@ -41,11 +41,9 @@
 - [Карта сайта](https://innaglebova.github.io/zdravum/karta-sayta.html)
 - [Лицензии](https://innaglebova.github.io/zdravum/licences.html)
 - [Ошибка 404](https://innaglebova.github.io/zdravum/notfound.html)
-- [Оплата](https://innaglebova.github.io/zdravum/pay.html)
 - [Прайс](https://innaglebova.github.io/zdravum/price.html)
 - [Политика конфединциальности](https://innaglebova.github.io/zdravum/privacy.html)
 - [Отзывы](https://innaglebova.github.io/zdravum/reviews.html)
-- [Акции](https://innaglebova.github.io/zdravum/stocks.html)
 
 ## 🛠 Технологии
 
