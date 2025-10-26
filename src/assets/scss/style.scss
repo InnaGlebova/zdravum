@@ -16,6 +16,7 @@ $border-radius-small: 14px;
 
 html {
   font-size: 18px;
+  overflow-x: hidden;
   &::before {
     position: fixed;
     display: block;
@@ -791,6 +792,10 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  // Отключаем все ховер эффекты на мобильных устройствах
+  *:hover {
+    all: unset !important;
+  }
 
   .breadcrumbs {
     margin-bottom: 20px;
